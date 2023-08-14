@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>网易云音乐MP3音频获取 | zfrg&#39;s blog</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
+  <meta name="description" content="网易云音乐是有个网页版的，地址是：https:&#x2F;&#x2F;music.163.com&#x2F;。电脑如果装了IDM下载器，能听的可以直接用IDM捕获MP3。那如果没有IDM就没法获取了吗？ 不存在的，今天我就来教大家实现，无IDM获取网易云音乐MP3音频文件。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="网易云音乐MP3音频获取">
+<meta property="og:url" content="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/index.html">
+<meta property="og:site_name" content="zfrg&#39;s blog">
+<meta property="og:description" content="网易云音乐是有个网页版的，地址是：https:&#x2F;&#x2F;music.163.com&#x2F;。电脑如果装了IDM下载器，能听的可以直接用IDM捕获MP3。那如果没有IDM就没法获取了吗？ 不存在的，今天我就来教大家实现，无IDM获取网易云音乐MP3音频文件。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-08-05T08:07:03.000Z">
+<meta property="article:modified_time" content="2023-08-13T09:16:57.730Z">
+<meta property="article:author" content="zfrg">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="网易云音乐">
+<meta name="twitter:card" content="summary">
+
+  <meta name="keywords" content=",Python,网易云音乐">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color" content="#9C27B0">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="zfrg&#39;s blog">
+  <meta name="msapplication-starturl" content="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="zfrg&#39;s blog">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+
+  
+    <link rel="canonical" href="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue">
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">zfrg&#39;s blog</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://zfrg.github.io"></form>
+    <div class="search-result"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">zfrg</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>Welcome to my blog!</div>
+      </div>
+      
+        <div class="mdui-grid-tile-buttons">
+          <a href="mailto:zfruiguo2010@163.com" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'zfruiguo2010@163.com'}"><i class="mdui-icon material-icons">email</i></a>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="mdui-ripple sidebar_archives-count">4</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/Python/">Python<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/Github/" rel="tag">Github<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hexo/" rel="tag">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Python/" rel="tag">Python<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%BA%94%E7%94%A8%E5%A2%9E%E5%BC%BA/" rel="tag">应用增强<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/" rel="tag">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/timeline" class="mdui-list-item mdui-ripple">时间轴</a>
+    
+      <a href="/tagcloud" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">相册</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+          <a href="//code.xueersi.com/space/6534921/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">学而思编程</a>
+        
+          <a href="//github.com/zfrg/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">Github</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-9.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">网易云音乐MP3音频获取</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2023-08-05 / <i class="iconfont">&#xe601;</i> zfrg &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
+              
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=网易云音乐MP3音频获取&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&pic=http://zfrg.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=网易云音乐MP3音频获取&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&via=zfrg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&title=网易云音乐MP3音频获取" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=zfrg&#39;s blog&title=网易云音乐MP3音频获取&pics=http://zfrg.github.io/images/favicon.png&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&text=网易云音乐MP3音频获取" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <p>网易云音乐是有个网页版的，地址是：<a target="_blank" rel="noopener" href="https://music.163.com/">https://music.163.com/</a>。电脑如果装了IDM下载器，能听的可以直接用IDM捕获MP3。那如果没有IDM就没法获取了吗？</p>
+<p>不存在的，今天我就来教大家实现，无IDM获取网易云音乐MP3音频文件。</p>
+<span id="more"></span>
+<h2 id="%E5%8E%9F%E7%90%86" tabindex="-1">原理<a class="header-anchor" href="#%E5%8E%9F%E7%90%86" aria-hidden="true"></a></h2>
+<h3 id="%E9%9F%B3%E4%B9%90id" tabindex="-1">音乐ID<a class="header-anchor" href="#%E9%9F%B3%E4%B9%90id" aria-hidden="true"></a></h3>
+<p>电脑进入网页版网易云音乐，随便进一首歌，就会发现地址栏出现类似如下链接：</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://music.163.com/#/song?id=1950897620">https://music.163.com/#/song?id=1950897620</a></p>
+</blockquote>
+<p>链接中<code>?id=</code>后面的数字是不固定的，这首歌是<code>1950897620</code>，每首歌都是不一样的。<br>
+此处，大家一定猜到这串数字是音乐的ID</p>
+<p>为什么我要给大家讲这个ID呢？那肯定是后面要用嘛……</p>
+<h3 id="%E7%9B%B4%E9%93%BE" tabindex="-1">直链<a class="header-anchor" href="#%E7%9B%B4%E9%93%BE" aria-hidden="true"></a></h3>
+<p>随便在百度上搜一下就可以找到。<br>
+链接格式如下：</p>
+<p><code>https://music.163.com/song/media/outer/url?id=音乐ID.mp3</code></p>
+<p>以上面的那首歌为例，它的音乐ID是<code>1950897620</code>，则它的直链就是<a target="_blank" rel="noopener" href="https://music.163.com/song/media/outer/url?id=1950897620.mp3">https://music.163.com/song/media/outer/url?id=1950897620.mp3</a></p>
+<p>不信的可以自己试一下，右键将链接另存为即可。</p>
+<p>可惜，这个方法仅限于能直接听不用会员的音乐，会员音乐会404……</p>
+<h2 id="%E5%BA%94%E7%94%A8" tabindex="-1">应用<a class="header-anchor" href="#%E5%BA%94%E7%94%A8" aria-hidden="true"></a></h2>
+<h3 id="python%E7%A8%8B%E5%BA%8F" tabindex="-1">Python程序<a class="header-anchor" href="#python%E7%A8%8B%E5%BA%8F" aria-hidden="true"></a></h3>
+<p>讲完了获取直链的方法，相信大部分读者都已经学会了。<br>
+但这就是极限了吗？</p>
+<p>学过Python的基本上都知道怎么下载文件：<br>
+示例如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&#x27;https://music.163.com/song/media/outer/url?id=1950897620.mp3&#x27;</span></span><br><span class="line">r = requests.get(url, allow_redirect=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;/path/to/file.mp3&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<p>这里不详细说每行代码的作用了。</p>
+<p>利用上述代码，我们就可以稍作改进完成如下代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests     <span class="comment"># 导入requests库</span></span><br><span class="line"><span class="built_in">id</span> = <span class="built_in">input</span>(<span class="string">&#x27;请输入音乐ID：&#x27;</span>)     <span class="comment"># 询问音乐id，并保存到变量</span></span><br><span class="line">path = <span class="built_in">input</span>(<span class="string">&#x27;请输入保存路径：&#x27;</span>)     <span class="comment"># 询问保存路径，并保存到变量</span></span><br><span class="line">url = <span class="string">&#x27;https://music.163.com/song/media/outer/url?id=&#x27;</span>+<span class="built_in">id</span>+<span class="string">&#x27;.mp3&#x27;</span>     <span class="comment"># 应用直链</span></span><br><span class="line"><span class="comment"># 获取链接内容并保存到文件</span></span><br><span class="line">r = requests.get(url, allow_redirect=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<p>我们甚至可以引入<code>tkinter</code>等GUI库。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter</span><br><span class="line"><span class="keyword">import</span> tkinter.simpledialog</span><br><span class="line"><span class="keyword">import</span> tkinter.filedialog</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> webbrowser</span><br><span class="line"><span class="keyword">import</span> win10toast</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">toaster = win10toast.ToastNotifier()</span><br><span class="line"></span><br><span class="line">dmp3 = []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download</span>(<span class="params"><span class="built_in">id</span>, isid</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">id</span> <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(tkinter.filedialog.asksaveasfilename(defaultextension=<span class="string">&quot;.mp3&quot;</span>, filetypes=[(<span class="string">&quot;音频文件&quot;</span>, <span class="string">&quot;.mp3&quot;</span>)]),</span><br><span class="line">                  <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(requests.get(<span class="string">&quot;http://music.163.com/song/media/outer/url?id=&quot;</span> + <span class="built_in">id</span>).content)</span><br><span class="line">            f.close()</span><br><span class="line">        toaster.show_toast(<span class="string">&quot;网易云音乐 MP3音频下载工具&quot;</span>, <span class="string">&quot;下载完成！&quot;</span>, duration=<span class="number">10</span>, threaded=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">afid</span>():</span><br><span class="line">    <span class="built_in">id</span> = tkinter.simpledialog.askstring(<span class="string">&quot;输入音乐ID（不支持会员歌曲）&quot;</span>, <span class="string">&quot;音乐ID：&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">id</span>:</span><br><span class="line">        dmp3.append(threading.Thread(name=<span class="string">&quot;Download MP3 (ID:&quot;</span> + <span class="built_in">id</span> + <span class="string">&quot;)&quot;</span>, target=download, args=(<span class="built_in">id</span>, <span class="built_in">id</span>), daemon=<span class="literal">True</span>))</span><br><span class="line">        dmp3[<span class="built_in">len</span>(dmp3) - <span class="number">1</span>].start()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gotogw</span>():</span><br><span class="line">    webbrowser.<span class="built_in">open</span>(<span class="string">&quot;https://music.163.com/&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tk = tkinter.Tk()</span><br><span class="line">tkinter.Button(tk, text=<span class="string">&quot;下载MP3文件&quot;</span>, command=afid).pack()</span><br><span class="line">tkinter.Button(tk, text=<span class="string">&quot;打开官方网站&quot;</span>, command=gotogw).pack()</span><br><span class="line">tk.title(<span class="string">&quot;网易云音乐MP3音频下载工具&quot;</span>)</span><br><span class="line">tk.attributes(<span class="string">&quot;-topmost&quot;</span>, <span class="number">1</span>)</span><br><span class="line">tk.resizable(<span class="literal">True</span>, <span class="literal">False</span>)</span><br><span class="line">tk.mainloop()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+
+      
+      <blockquote>
+        
+        <strong>本文链接：</strong><br><a href="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">http://zfrg.github.io/2023/08/05/网易云音乐MP3音频获取/</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+        <a class="mdui-ripple article_categories-link" href="/categories/Python/">Python</a>
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/Python/" rel="tag">Python</a><a class="mdui-ripple article_tags-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐</a>
+      
+    </footer>
+    
+  </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'Python程序打包为exe'}">上一篇</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '推荐几个浏览器扩展'}">下一篇</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <comments>
+  <div align="center">
+      <div class="giscus-container">
+		  <script src="https://giscus.app/client.js"
+			data-repo="zfrg/zfrg.github.io"
+			data-repo-id="R_kgDOJ_cU7w"
+			data-category="Ideas"
+			data-category-id="DIC_kwDOJ_cU784CYgqM"
+			data-mapping="title"
+			data-strict="1"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="preferred_color_scheme"
+			data-lang="zh-CN"
+			crossorigin="Anonymous"
+			async>
+		  </script>
+	  </div>
+  </div>
+</comments>
+  </div>
+
+
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+      <a href="https://github.com/zfrg" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe7ab;</i></a>
+    
+    
+    
+    
+    
+      <a href="tencent://message/?uin=2308792628&Menu=yes" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe651;</i></a>
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2023 zfrg<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="iconfont">&#xe601;</i> <span id="busuanzi_value_site_uv"></span></span>
+    
+  </div>
+</footer>
+
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+  <script src="https://livefile.xesimg.com/programme/python_assets/40131fb01d7909616db41130f85a3ac4.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+</html>
