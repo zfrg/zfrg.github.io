@@ -6,7 +6,7 @@
   <link href="http://zfrg.github.io/atom.xml" rel="self"/>
   
   <link href="http://zfrg.github.io/"/>
-  <updated>2023-08-14T11:47:17.093Z</updated>
+  <updated>2023-08-15T05:43:22.922Z</updated>
   <id>http://zfrg.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Python使用指南</title>
+    <title>Python入门指南</title>
     <link href="http://zfrg.github.io/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
     <id>http://zfrg.github.io/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2023-08-10T04:06:29.000Z</published>
-    <updated>2023-08-14T11:47:17.093Z</updated>
+    <updated>2023-08-15T05:43:22.922Z</updated>
     
     
     <summary type="html">&lt;p&gt;Python是一个比较简单、易学的编程语言。&lt;br&gt;
@@ -104,7 +104,7 @@
     <link href="http://zfrg.github.io/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
     <id>http://zfrg.github.io/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/</id>
     <published>2023-07-30T07:42:21.000Z</published>
-    <updated>2023-08-14T12:56:45.415Z</updated>
+    <updated>2023-08-15T06:00:16.771Z</updated>
     
     
     <summary type="html">&lt;p&gt;作为互联网网民，谁还没个浏览器上网冲浪？浏览器已经成为了生活中重要的一部分，而浏览器扩展随之兴起。&lt;br&gt;
@@ -128,11 +128,18 @@
     <link href="http://zfrg.github.io/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
     <id>http://zfrg.github.io/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2023-07-30T00:27:39.000Z</published>
-    <updated>2023-08-14T12:56:54.131Z</updated>
+    <updated>2023-08-15T05:58:37.898Z</updated>
     
     
+      
+      
+        
+        
     <summary type="html">&lt;p&gt;如题，这篇文章主要讲如何使用Hexo和Github Pages搭建个人博客。&lt;br&gt;
-各位想尝试的读者可以先看一遍，再实践。&lt;/p&gt;</summary>
+各位想尝试的读者可以先看一遍，再实践。&lt;/p&gt;
+&lt;h2 id=&quot;%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7&quot;</summary>
+        
+      
     
     
     
