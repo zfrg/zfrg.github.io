@@ -60,7 +60,7 @@
       <link href="/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/"/>
       <url>/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/</url>
       
-        <content type="html"><![CDATA[<p>Python语言简单，易于理解，有很多优点。但是，我们如果想要发布我们的程序就会有个问题，Python程序的代码往往存在<code>.py</code>文件或<code>.pyw</code>文件中，这种文件必须在安装了Python环境后才能运行。这时，我们就需要将Python程序打包为exe。</p><span id="more"></span><p><strong>本文适合有类似困扰，且掌握Python基础知识的读者阅读</strong></p><h2 id="%E8%BF%87%E7%A8%8B" tabindex="-1">过程<a class="header-anchor" href="#%E8%BF%87%E7%A8%8B" aria-hidden="true"></a></h2><h3 id="%E5%87%86%E5%A4%87" tabindex="-1">准备<a class="header-anchor" href="#%E5%87%86%E5%A4%87" aria-hidden="true"></a></h3><p>文本所述方法需要先安装<code>auto-py-to-exe</code>库。<br>在cmd中执行如下命令：<br><code>python.exe -m pip install auto-py-to-exe</code></p><p>安装过程若没有报错，基本上可以说明安装完成。</p><p><strong>推荐将Python加入环境变量</strong></p><h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3><p>在cmd中执行<code>auto-py-to-exe</code>就可以了。</p><p>如果你安装了谷歌浏览器（是不是默认浏览器无所谓），运行后配置界面是一个新的没有地址栏等的窗口，否则是在浏览器新建一个标签页。<br><img src="/files/post-image-auto-py-to-exe.png" alt="auto-py-to-exe.png"><br>切记不要再auto-py-to-exe运行过程中关闭cmd终端窗口，否则都将关闭。</p><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
+        <content type="html"><![CDATA[<p>Python语言简单，易于理解，有很多优点。但是，我们如果想要发布我们的程序就会有个问题，Python程序的代码往往存在<code>.py</code>文件或<code>.pyw</code>文件中，这种文件必须在安装了Python环境后才能运行。这时，我们就需要将Python程序打包为exe。</p><span id="more"></span><p><strong>本文适合有类似困扰，且掌握Python基础知识的读者阅读</strong></p><h2 id="%E8%BF%87%E7%A8%8B" tabindex="-1">过程<a class="header-anchor" href="#%E8%BF%87%E7%A8%8B" aria-hidden="true"></a></h2><h3 id="%E5%87%86%E5%A4%87" tabindex="-1">准备<a class="header-anchor" href="#%E5%87%86%E5%A4%87" aria-hidden="true"></a></h3><p>文本所述方法需要先安装<code>auto-py-to-exe</code>库。<br>在cmd中执行如下命令：<br><code>python.exe -m pip install auto-py-to-exe</code></p><p>安装过程若没有报错，基本上可以说明安装完成。</p><p><strong>推荐将Python加入环境变量</strong></p><h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3><p>在cmd中执行<code>auto-py-to-exe</code>就可以了。</p><p>或者，你也可以将一下代码写入py文件并执行，也有同样的效果：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> auto_py_to_exe.__main__ <span class="keyword">import</span> run</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    sys.argv[<span class="number">0</span>] = re.sub(<span class="string">r&#x27;(-script\.pyw|\.exe)?$&#x27;</span>, <span class="string">&#x27;&#x27;</span>, sys.argv[<span class="number">0</span>])</span><br><span class="line">    sys.exit(run())</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如果你安装了谷歌浏览器（是不是默认浏览器无所谓），运行后配置界面是一个新的没有地址栏等的窗口，否则是在浏览器新建一个标签页。<br><img src="/files/post-image-auto-py-to-exe.png" alt="auto-py-to-exe.png"><br>切记不要再auto-py-to-exe运行过程中关闭cmd终端窗口，否则都将关闭。</p><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
       
       
       <categories>
@@ -97,9 +97,9 @@
       
         <tags>
             
-            <tag> 网易云音乐 </tag>
-            
             <tag> Python </tag>
+            
+            <tag> 网易云音乐 </tag>
             
         </tags>
       

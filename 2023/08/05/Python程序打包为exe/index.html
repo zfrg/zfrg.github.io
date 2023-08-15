@@ -21,7 +21,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://zfrg.github.io/files/post-image-auto-py-to-exe.png">
 <meta property="article:published_time" content="2023-08-05T09:30:22.000Z">
-<meta property="article:modified_time" content="2023-08-14T12:56:25.780Z">
+<meta property="article:modified_time" content="2023-08-15T01:18:55.209Z">
 <meta property="article:author" content="zfrg">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
@@ -190,7 +190,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-19.png" style="max-height: 240px;">
+      <img src="/images/random/material-13.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">Python程序打包为exe</div>
@@ -252,6 +252,8 @@
 <p><strong>推荐将Python加入环境变量</strong></p>
 <h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3>
 <p>在cmd中执行<code>auto-py-to-exe</code>就可以了。</p>
+<p>或者，你也可以将一下代码写入py文件并执行，也有同样的效果：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> auto_py_to_exe.__main__ <span class="keyword">import</span> run</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    sys.argv[<span class="number">0</span>] = re.sub(<span class="string">r&#x27;(-script\.pyw|\.exe)?$&#x27;</span>, <span class="string">&#x27;&#x27;</span>, sys.argv[<span class="number">0</span>])</span><br><span class="line">    sys.exit(run())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>如果你安装了谷歌浏览器（是不是默认浏览器无所谓），运行后配置界面是一个新的没有地址栏等的窗口，否则是在浏览器新建一个标签页。<br>
 <img src="/files/post-image-auto-py-to-exe.png" alt="auto-py-to-exe.png"><br>
 切记不要再auto-py-to-exe运行过程中关闭cmd终端窗口，否则都将关闭。</p>

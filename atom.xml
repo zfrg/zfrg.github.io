@@ -63,7 +63,7 @@
     <link href="http://zfrg.github.io/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/"/>
     <id>http://zfrg.github.io/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/</id>
     <published>2023-08-05T09:30:22.000Z</published>
-    <updated>2023-08-14T12:56:25.780Z</updated>
+    <updated>2023-08-15T01:18:55.209Z</updated>
     
     
     <summary type="html">&lt;p&gt;Python语言简单，易于理解，有很多优点。但是，我们如果想要发布我们的程序就会有个问题，Python程序的代码往往存在&lt;code&gt;.py&lt;/code&gt;文件或&lt;code&gt;.pyw&lt;/code&gt;文件中，这种文件必须在安装了Python环境后才能运行。这时，我们就需要将Python程序打包为exe。&lt;/p&gt;</summary>
@@ -93,9 +93,9 @@
     <category term="Python" scheme="http://zfrg.github.io/categories/Python/"/>
     
     
-    <category term="网易云音乐" scheme="http://zfrg.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
-    
     <category term="Python" scheme="http://zfrg.github.io/tags/Python/"/>
+    
+    <category term="网易云音乐" scheme="http://zfrg.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
