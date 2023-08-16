@@ -15,7 +15,7 @@
   <meta name="description" content="网易云音乐是有个网页版的，地址是：https:&#x2F;&#x2F;music.163.com&#x2F;。电脑如果装了IDM下载器，能听的可以直接用IDM捕获MP3。那如果没有IDM就没法获取了吗？ 不存在的，今天我就来教大家实现，无IDM获取网易云音乐MP3音频文件。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="网易云音乐MP3音频获取">
-<meta property="og:url" content="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/index.html">
+<meta property="og:url" content="http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/index.html">
 <meta property="og:site_name" content="zfrg&#39;s blog">
 <meta property="og:description" content="网易云音乐是有个网页版的，地址是：https:&#x2F;&#x2F;music.163.com&#x2F;。电脑如果装了IDM下载器，能听的可以直接用IDM捕获MP3。那如果没有IDM就没法获取了吗？ 不存在的，今天我就来教大家实现，无IDM获取网易云音乐MP3音频文件。">
 <meta property="og:locale" content="zh_CN">
@@ -32,7 +32,7 @@
 
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="application-name" content="zfrg&#39;s blog">
-  <meta name="msapplication-starturl" content="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
+  <meta name="msapplication-starturl" content="http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
   <meta name="msapplication-navbutton-color" content="#9C27B0">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="zfrg&#39;s blog">
@@ -40,7 +40,7 @@
   <link rel="apple-touch-icon" href="/images/favicon.png">
 
   
-    <link rel="canonical" href="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
+    <link rel="canonical" href="http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
   
 
   
@@ -79,7 +79,7 @@
 </header>
 <div class="mdui-dialog" id="search">
   
-    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://zfrg.github.io"></form>
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://zfrg-blog.onrender.com"></form>
     <div class="search-result"></div>
   
 </div>
@@ -156,6 +156,8 @@
 
   <div class="mdui-list" mdui-collapse="{accordion: true}">
     
+      <a href="/tools" class="mdui-list-item mdui-ripple">小工具</a>
+    
       <a href="/timeline" class="mdui-list-item mdui-ripple">时间轴</a>
     
       <a href="/tagcloud" class="mdui-list-item mdui-ripple">标签云</a>
@@ -190,7 +192,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-5.png" style="max-height: 240px;">
+      <img src="/images/random/material-4.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">网易云音乐MP3音频获取</div>
@@ -206,7 +208,7 @@
             
             <li class="mdui-menu-item" disabled>
               
-                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
+                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">
               
             </li>
           </ul>
@@ -215,25 +217,25 @@
           <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
           <ul class="mdui-menu" id="share_menu">
             <li class="mdui-menu-item">
-              <a href="https://service.weibo.com/share/share.php?appkey=&title=网易云音乐MP3音频获取&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&pic=http://zfrg.github.io/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=网易云音乐MP3音频获取&url=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&pic=http://zfrg-blog.onrender.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://twitter.com/intent/tweet?text=网易云音乐MP3音频获取&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&via=zfrg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+              <a href="https://twitter.com/intent/tweet?text=网易云音乐MP3音频获取&url=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&via=zfrg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://plus.google.com/share?url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+              <a href="https://plus.google.com/share?url=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 Google+</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&title=网易云音乐MP3音频获取" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&title=网易云音乐MP3音频获取" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://connect.qq.com/widget/shareqq/index.html?site=zfrg&#39;s blog&title=网易云音乐MP3音频获取&pics=http://zfrg.github.io/images/favicon.png&url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=zfrg&#39;s blog&title=网易云音乐MP3音频获取&pics=http://zfrg-blog.onrender.com/images/favicon.png&url=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/" target="_blank" class="mdui-ripple">分享到 QQ</a>
             </li>
             <li class="mdui-menu-item">
-              <a href="https://telegram.me/share/url?url=http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&text=网易云音乐MP3音频获取" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+              <a href="https://telegram.me/share/url?url=http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/&text=网易云音乐MP3音频获取" target="_blank" class="mdui-ripple">分享到 Telegram</a>
             </li>
           </ul>
         
@@ -277,7 +279,7 @@
       
       <blockquote>
         
-        <strong>本文链接：</strong><br><a href="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">http://zfrg.github.io/2023/08/05/网易云音乐MP3音频获取/</a>
+        <strong>本文链接：</strong><br><a href="http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/">http://zfrg-blog.onrender.com/2023/08/05/网易云音乐MP3音频获取/</a>
       </blockquote>
     </div>
     <footer class="mdui-card-actions">

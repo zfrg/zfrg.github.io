@@ -3,11 +3,11 @@
   <title>zfrg&#39;s blog</title>
   
   <subtitle>Welcome to my blog!</subtitle>
-  <link href="http://zfrg.github.io/atom.xml" rel="self"/>
+  <link href="http://zfrg-blog.onrender.com/atom.xml" rel="self"/>
   
-  <link href="http://zfrg.github.io/"/>
+  <link href="http://zfrg-blog.onrender.com/"/>
   <updated>2023-08-15T05:43:22.922Z</updated>
-  <id>http://zfrg.github.io/</id>
+  <id>http://zfrg-blog.onrender.com/</id>
   
   <author>
     <name>zfrg</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Python入门指南</title>
-    <link href="http://zfrg.github.io/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
-    <id>http://zfrg.github.io/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
+    <link href="http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
+    <id>http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</id>
     <published>2023-08-10T04:06:29.000Z</published>
     <updated>2023-08-15T05:43:22.922Z</updated>
     
@@ -30,17 +30,17 @@
     
     
     
-    <category term="Python" scheme="http://zfrg.github.io/categories/Python/"/>
+    <category term="Python" scheme="http://zfrg-blog.onrender.com/categories/Python/"/>
     
     
-    <category term="Python" scheme="http://zfrg.github.io/tags/Python/"/>
+    <category term="Python" scheme="http://zfrg-blog.onrender.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>Hexo文章置顶</title>
-    <link href="http://zfrg.github.io/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
-    <id>http://zfrg.github.io/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</id>
+    <link href="http://zfrg-blog.onrender.com/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
+    <id>http://zfrg-blog.onrender.com/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</id>
     <published>2023-08-10T00:16:18.000Z</published>
     <updated>2023-08-14T12:54:36.434Z</updated>
     
@@ -49,19 +49,19 @@
     
     
     
-    <category term="Hexo" scheme="http://zfrg.github.io/categories/Hexo/"/>
+    <category term="Hexo" scheme="http://zfrg-blog.onrender.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="http://zfrg.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="http://zfrg-blog.onrender.com/tags/Hexo/"/>
     
-    <category term="博客" scheme="http://zfrg.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="http://zfrg-blog.onrender.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
   </entry>
   
   <entry>
     <title>Python程序打包为exe</title>
-    <link href="http://zfrg.github.io/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/"/>
-    <id>http://zfrg.github.io/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/</id>
+    <link href="http://zfrg-blog.onrender.com/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/"/>
+    <id>http://zfrg-blog.onrender.com/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/</id>
     <published>2023-08-05T09:30:22.000Z</published>
     <updated>2023-08-15T01:18:55.209Z</updated>
     
@@ -70,17 +70,17 @@
     
     
     
-    <category term="Python" scheme="http://zfrg.github.io/categories/Python/"/>
+    <category term="Python" scheme="http://zfrg-blog.onrender.com/categories/Python/"/>
     
     
-    <category term="Python" scheme="http://zfrg.github.io/tags/Python/"/>
+    <category term="Python" scheme="http://zfrg-blog.onrender.com/tags/Python/"/>
     
   </entry>
   
   <entry>
     <title>网易云音乐MP3音频获取</title>
-    <link href="http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/"/>
-    <id>http://zfrg.github.io/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/</id>
+    <link href="http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/"/>
+    <id>http://zfrg-blog.onrender.com/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/</id>
     <published>2023-08-05T08:07:03.000Z</published>
     <updated>2023-08-14T12:56:34.998Z</updated>
     
@@ -90,19 +90,19 @@
     
     
     
-    <category term="Python" scheme="http://zfrg.github.io/categories/Python/"/>
+    <category term="Python" scheme="http://zfrg-blog.onrender.com/categories/Python/"/>
     
     
-    <category term="Python" scheme="http://zfrg.github.io/tags/Python/"/>
+    <category term="Python" scheme="http://zfrg-blog.onrender.com/tags/Python/"/>
     
-    <category term="网易云音乐" scheme="http://zfrg.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
+    <category term="网易云音乐" scheme="http://zfrg-blog.onrender.com/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/"/>
     
   </entry>
   
   <entry>
     <title>推荐几个浏览器扩展</title>
-    <link href="http://zfrg.github.io/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
-    <id>http://zfrg.github.io/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/</id>
+    <link href="http://zfrg-blog.onrender.com/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
+    <id>http://zfrg-blog.onrender.com/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/</id>
     <published>2023-07-30T07:42:21.000Z</published>
     <updated>2023-08-15T06:00:16.771Z</updated>
     
@@ -112,21 +112,21 @@
     
     
     
-    <category term="浏览器扩展" scheme="http://zfrg.github.io/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
+    <category term="浏览器扩展" scheme="http://zfrg-blog.onrender.com/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
     
     
-    <category term="浏览器" scheme="http://zfrg.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
+    <category term="浏览器" scheme="http://zfrg-blog.onrender.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/"/>
     
-    <category term="浏览器扩展" scheme="http://zfrg.github.io/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
+    <category term="浏览器扩展" scheme="http://zfrg-blog.onrender.com/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
     
-    <category term="应用增强" scheme="http://zfrg.github.io/tags/%E5%BA%94%E7%94%A8%E5%A2%9E%E5%BC%BA/"/>
+    <category term="应用增强" scheme="http://zfrg-blog.onrender.com/tags/%E5%BA%94%E7%94%A8%E5%A2%9E%E5%BC%BA/"/>
     
   </entry>
   
   <entry>
     <title>使用Hexo和Github Pages搭建个人博客</title>
-    <link href="http://zfrg.github.io/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://zfrg.github.io/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
+    <link href="http://zfrg-blog.onrender.com/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
+    <id>http://zfrg-blog.onrender.com/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</id>
     <published>2023-07-30T00:27:39.000Z</published>
     <updated>2023-08-15T05:58:37.898Z</updated>
     
@@ -143,14 +143,14 @@
     
     
     
-    <category term="Hexo" scheme="http://zfrg.github.io/categories/Hexo/"/>
+    <category term="Hexo" scheme="http://zfrg-blog.onrender.com/categories/Hexo/"/>
     
     
-    <category term="Hexo" scheme="http://zfrg.github.io/tags/Hexo/"/>
+    <category term="Hexo" scheme="http://zfrg-blog.onrender.com/tags/Hexo/"/>
     
-    <category term="博客" scheme="http://zfrg.github.io/tags/%E5%8D%9A%E5%AE%A2/"/>
+    <category term="博客" scheme="http://zfrg-blog.onrender.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
-    <category term="Github" scheme="http://zfrg.github.io/tags/Github/"/>
+    <category term="Github" scheme="http://zfrg-blog.onrender.com/tags/Github/"/>
     
   </entry>
   

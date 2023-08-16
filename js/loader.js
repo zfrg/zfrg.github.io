@@ -11,8 +11,8 @@ var fade = (function () {
   var i = 0;
   function change(tar) {
     i++;
-    console.log(i);
-    console.log(loader.style.opacity);
+    // console.log(i);
+    // console.log(loader.style.opacity);
     var num = 1 - i / 100;
 	if (num != 0){
       loader.style.opacity = num;
