@@ -6,7 +6,7 @@
   <link href="http://zfrg-blog.onrender.com/atom.xml" rel="self"/>
   
   <link href="http://zfrg-blog.onrender.com/"/>
-  <updated>2023-08-15T05:43:22.922Z</updated>
+  <updated>2023-08-17T00:59:29.203Z</updated>
   <id>http://zfrg-blog.onrender.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文件生成Data URL</title>
+    <link href="http://zfrg-blog.onrender.com/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/"/>
+    <id>http://zfrg-blog.onrender.com/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/</id>
+    <published>2023-08-17T00:48:07.000Z</published>
+    <updated>2023-08-17T00:59:29.203Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;文件生成Data URL的H5小工具&lt;/p&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
+&lt;head&gt;
+  &lt;meta http-equiv=&quot;Content-Type&quot;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Python入门指南</title>
