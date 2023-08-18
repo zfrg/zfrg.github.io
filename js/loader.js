@@ -6,6 +6,7 @@ function sleep(millisecond) {
   })
 }
 var loader = document.getElementById("loader");
+document.body.style.overflow = 'hidden';
 var fade = (function () {
   var timer;
   var i = 0;
@@ -17,6 +18,7 @@ var fade = (function () {
 	if (num != 0){
       loader.style.opacity = num;
 	}else{
+      document.body.style.overflow = 'visible';
 	  loader.parentNode.removeChild(loader);
 	}
     if (i === tar) {
