@@ -9,6 +9,7 @@ var fade = (function () {
 	if (num != 0){
       loader.style.opacity = num;
 	}else{
+	  document.body.style.overflow = 'visible';
 	  loader.parentNode.removeChild(loader);
 	}
     if (i === tar) {
@@ -22,6 +23,5 @@ var fade = (function () {
   return change;
 })();
 window.onload=function(){
-  document.body.style.overflow = 'visible';
   fade(0);
 }
