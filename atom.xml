@@ -6,7 +6,7 @@
   <link href="http://zfrg-blog.onrender.com/atom.xml" rel="self"/>
   
   <link href="http://zfrg-blog.onrender.com/"/>
-  <updated>2023-08-17T00:59:29.203Z</updated>
+  <updated>2023-08-24T03:30:38.167Z</updated>
   <id>http://zfrg-blog.onrender.com/</id>
   
   <author>
@@ -21,22 +21,23 @@
     <link href="http://zfrg-blog.onrender.com/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/"/>
     <id>http://zfrg-blog.onrender.com/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/</id>
     <published>2023-08-17T00:48:07.000Z</published>
-    <updated>2023-08-17T00:59:29.203Z</updated>
+    <updated>2023-08-24T03:30:38.167Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;文件生成Data URL的H5小工具&lt;/p&gt;
-&lt;!DOCTYPE html&gt;
-&lt;html xmlns=&quot;http://www.w3.org/1999/xhtml&quot;&gt;
-&lt;head&gt;
-  &lt;meta http-equiv=&quot;Content-Type&quot;</summary>
+    <summary type="html">&lt;script&gt;
+    document.write(&quot;&lt;!DOCTYPE html&gt;&quot;);
+    document.write(&quot;&lt;html xmlns=&#92;&quot;http:&#92;/&#92;/www.w3.org&#92;/1999&#92;/xhtml&#92;&quot;&gt;&quot;);
+   </summary>
         
       
     
     
+    
+    <category term="小工具" scheme="http://zfrg-blog.onrender.com/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/"/>
     
     
   </entry>
@@ -88,7 +89,7 @@
     <link href="http://zfrg-blog.onrender.com/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/"/>
     <id>http://zfrg-blog.onrender.com/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/</id>
     <published>2023-08-05T09:30:22.000Z</published>
-    <updated>2023-08-15T01:18:55.209Z</updated>
+    <updated>2023-08-21T02:29:58.533Z</updated>
     
     
     <summary type="html">&lt;p&gt;Python语言简单，易于理解，有很多优点。但是，我们如果想要发布我们的程序就会有个问题，Python程序的代码往往存在&lt;code&gt;.py&lt;/code&gt;文件或&lt;code&gt;.pyw&lt;/code&gt;文件中，这种文件必须在安装了Python环境后才能运行。这时，我们就需要将Python程序打包为exe。&lt;/p&gt;</summary>

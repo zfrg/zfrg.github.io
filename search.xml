@@ -1,182 +1,433 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>文件生成Data URL</title>
-      <link href="/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/"/>
-      <url>/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/</url>
-      
-        <content type="html"><![CDATA[<p>文件生成Data URL的H5小工具</p><!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml"><head>  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />  <title>文件生成Data Url</title>  <meta name="keywords" content="Data Url,HTML5,FileReader" />  <meta name="description" content="生成Data Url" />  <script type="text/javascript">    function buildDataUrl(e) {      var t,        a = e.files[0];      window.FileReader &&        (((t = new FileReader()).onloadend = function (e) {          (document.getElementById("txtBase64").value = e.target.result),            (document.getElementById("imgView").src = e.target.result);        }),        t.readAsDataURL(a));    }  </script></head><body>  <strong>工具名称：文件转 Data URL </strong><hr/>  <div>    <input      type="file"      value=""      onchange="buildDataUrl(this)"      style="border: 1px solid grey; width: 300px"    /><br /><textarea id="txtBase64" style="width: 50%; height: 300px"></textarea>    <img id="imgView" src="" style="height: 300px" alt="没有可预览的图片" />  </div><br/><div><pre>使用方法：在下方选择要生成 Data URL 的文件，如果文件较大，就需要等一会，然后左边的输入框会显示 Data URL ，如果传入的文件是图片，则会在右边显示。<p>注：本工具不会收集您任何内容。<br></pre></div></p></body></html><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
-      
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Python入门指南</title>
-      <link href="/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/"/>
-      <url>/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
-      
-        <content type="html"><![CDATA[<p>Python是一个比较简单、易学的编程语言。<br>使用Python必须先安装环境。<br>本文将会介绍Python的优缺点和如何安装。</p><span id="more"></span><h2 id="%E4%BB%8B%E7%BB%8D" tabindex="-1">介绍<a class="header-anchor" href="#%E4%BB%8B%E7%BB%8D" aria-hidden="true"></a></h2><h3 id="%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" tabindex="-1">基本信息<a class="header-anchor" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" aria-hidden="true"></a></h3><blockquote><p>Python由荷兰数学和计算机科学研究学会的吉多·范罗苏姆于1990年代初设计，作为一门叫作ABC语言的替代品。Python提供了高效的高级数据结构，还能简单有效地面向对象编程。Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言，随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、大型项目的开发。<br>Python在各个编程语言中比较适合新手学习，Python解释器易于扩展，可以使用C语言或C++（或者其他可以通过C调用的语言）扩展新的功能和数据类型。Python也可用于可定制化软件中的扩展程序语言。Python丰富的标准库，提供了适用于各个主要系统平台的源码或机器码。</p></blockquote><p>（摘自<a href="https://baike.baidu.com/item/Python/407313">百度百科</a>）</p><h2 id="%E4%BC%98%E7%BC%BA%E7%82%B9" tabindex="-1">优缺点<a class="header-anchor" href="#%E4%BC%98%E7%BC%BA%E7%82%B9" aria-hidden="true"></a></h2><h3 id="%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90" tabindex="-1">简要分析<a class="header-anchor" href="#%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90" aria-hidden="true"></a></h3><p>Python语言的简单是显而易见的，但是Python属于<a href="https://baike.baidu.com/item/%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/4665504" title="解释性语言">解释性语言</a>，与<a href="https://baike.baidu.com/item/%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80" title="编译型语言">编译型语言</a>相比，它的缺点也很明显，总之，解释性语言啥缺点，它就有啥缺点。</p><h3 id="%E4%BC%98%E7%82%B9" tabindex="-1">优点<a class="header-anchor" href="#%E4%BC%98%E7%82%B9" aria-hidden="true"></a></h3><blockquote><p><strong>简单</strong>：Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样。它使你能够专注于解决问题而不是去搞明白语言本身。<br><strong>易学</strong>：Python极其容易上手，因为Python有极其简单的说明文档。<br><strong>易读、易维护</strong>：风格清晰划一、强制缩进<br><strong>用途广泛</strong><br><strong>速度较快</strong>：Python的底层是用C语言写的，很多标准库和第三方库也都是用C写的，运行速度非常快。<br><strong>免费、开源</strong>：Python是FLOSS（自由/开放源码软件）之一。使用者可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。<br><strong>高层语言</strong>：用Python语言编写程序的时候无需考虑诸如如何管理你的程序使用的内存一类的底层细节。<br><strong>可移植性</strong>：由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不同平台上）。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE、PocketPC、Symbian以及Google基于linux开发的android平台。<br><strong>解释性</strong>：一个用编译性语言比如C或C<ins>写的程序可以从源文件（即C或C</ins>语言）转换到一个你的计算机使用的语言（二进制代码，即0和1）。这个过程通过编译器和不同的标记、选项完成。<br>运行程序的时候，连接/转载器软件把你的程序从硬盘复制到内存中并且运行。而Python语言写的程序不需要编译成二进制代码。你可以直接从源代码运行程序。<br>在计算机内部，Python解释器把源代码转换成称为字节码的中间形式，然后再把它翻译成计算机使用的机器语言并运行。这使得使用Python更加简单。也使得Python程序更加易于移植。<br><strong>面向对象</strong>：Python既支持面向过程的编程也支持面向对象的编程。在“面向过程”的语言中，程序是由过程或仅仅是可重用代码的函数构建起来的。在“面向对象”的语言中，程序是由数据和功能组合而成的对象构建起来的。<br>Python是完全面向对象的语言。函数、模块、数字、字符串都是对象。并且完全支持继承、重载、派生、多继承，有益于增强源代码的复用性。Python支持重载运算符和动态类型。相对于Lisp这种传统的函数式编程语言，Python对函数式设计只提供了有限的支持。有两个标准库（functools，itertools）提供了Haskell和Standard ML中久经考验的函数式程序设计工具。<br><strong>可扩展性、可扩充性</strong>：如果需要一段关键代码运行得更快或者希望某些算法不公开，可以部分程序用C或C<ins>编写，然后在Python程序中使用它们。<br>Python本身被设计为可扩充的。并非所有的特性和功能都集成到语言核心。Python提供了丰富的API和工具，以便程序员能够轻松地使用C语言、C</ins>、Cython来编写扩充模块。Python编译器本身也可以被集成到其它需要脚本语言的程序内。因此，很多人还把Python作为一种“胶水语言”（glue language）使用。使用Python将其他语言编写的程序进行集成和封装。在Google内部的很多项目，例如Google Engine使用C<ins>编写性能要求极高的部分，然后用Python或Java/Go调用相应的模块。《Python技术手册》的作者马特利（Alex Martelli）说：“这很难讲，不过，2004年，Python已在Google内部使用，Google 召募许多 Python 高手，但在这之前就已决定使用Python，他们的目的是 Python where we can，C</ins> where we must，在操控硬件的场合使用C++，在快速开发时候使用Python。”<br><strong>可嵌入性</strong>：可以把Python嵌入C/C++程序，从而向程序用户提供脚本功能。<br><strong>丰富的库</strong>：Python标准库确实很庞大。它可以帮助处理各种工作，包括正则表达式、文档生成、单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV文件、密码系统、GUI（图形用户界面）、Tk和其他与系统有关的操作。这被称作Python的“功能齐全”理念。除了标准库以外，还有许多其他高质量的库，如wxPython、Twisted和Python图像库等等。<br><strong>规范的代码</strong>：Python采用强制缩进的方式使得代码具有较好可读性。而Python语言写的程序不需要编译成二进制代码。Python的作者设计限制性很强的语法，使得不好的编程习惯（例如if语句的下一行不向右缩进）都不能通过编译。其中很重要的一项就是Python的缩进规则。一个和其他大多数语言（如C）的区别就是，一个模块的界限，完全是由每行的首字符在这一行的位置来决定（而C语言是用一对大括号来明确的定出模块的边界，与字符的位置毫无关系）。通过强制程序员们缩进（包括if，for和函数定义等所有需要使用模块的地方），Python确实使得程序更加清晰和美观。<br><strong>高级动态编程</strong>：虽然Python可能被粗略地分类为“脚本语言”（script language），但实际上一些大规模软件开发计划例如Zope、Mnet及BitTorrent，Google也广泛地使用它。Python的支持者较喜欢称它为一种高级动态编程语言，原因是“脚本语言”泛指仅作简单程序设计任务的语言，如shellscript、VBScript等只能处理简单任务的编程语言，并不能与Python相提并论。<br><strong>做科学计算优点多</strong>：说起科学计算，首先会被提到的可能是MATLAB。除了MATLAB的一些专业性很强的工具箱还无法被替代之外，MATLAB的大部分常用功能都可以在Python世界中找到相应的扩展库。和MATLAB相比，用Python做科学计算有如下优点：<br>●首先，MATLAB是一款商用软件，并且价格不菲。而Python完全免费，众多开源的科学计算库都提供了Python的调用接口。用户可以在任何计算机上免费安装Python及其绝大多数扩展库。<br>●其次，与MATLAB相比，Python是一门更易学、更严谨的程序设计语言。它能让用户编写出更易读、易维护的代码。<br>●最后，MATLAB主要专注于工程和科学计算。然而即使在计算领域，也经常会遇到文件管理、界面设计、网络通信等各种需求。而Python有着丰富的扩展库，可以轻易完成各种高级任务，开发者可以用Python实现完整应用程序所需的各种功能。</p></blockquote><h3 id="%E7%BC%BA%E7%82%B9" tabindex="-1">缺点<a class="header-anchor" href="#%E7%BC%BA%E7%82%B9" aria-hidden="true"></a></h3><blockquote><p><strong>单行语句和命令行输出问题</strong>：很多时候不能将程序连写成一行，如<code>import sys；for i in sys.path：print i</code>。而perl和awk就无此限制，可以较为方便的在shell下完成简单程序，不需要如Python一样，必须将程序写入一个.py文件。<br>给初学者带来困惑：独特的语法，这也许不应该被称为局限，但是它用缩进来区分语句关系的方式还是给很多初学者带来了困惑。即便是很有经验的Python程序员，也可能陷入陷阱当中。<br><strong>运行速度慢</strong>：这里是指与C和C<ins>相比。Python开发人员尽量避开不成熟或者不重要的优化。一些针对非重要部位的加快运行速度的补丁通常不会被合并到Python内。所以很多人认为Python很慢。不过，根据二八定律，大多数程序对速度要求不高。在某些对运行速度要求很高的情况，Python设计师倾向于使用JIT技术，或者用使用C/C</ins>语言改写这部分程序。可用的JIT技术是PyPy。</p></blockquote><p>（摘自<a href="https://baike.baidu.com/item/Python/407313#2" title="百度百科">百度百科</a>）</p><h2 id="%E5%AE%89%E8%A3%85" tabindex="-1">安装<a class="header-anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h2><h3 id="%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85" tabindex="-1">下载安装包<a class="header-anchor" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85" aria-hidden="true"></a></h3><p>打开<a href="https://www.python.org/downloads/" title="Python官方下载页面">Python官方下载页面</a><br>如图：<br><img src="/files/post-image-Python%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2.png" alt="Python下载页面.png"><br>选择对应的版本下载安装包，我选择的是<a href="https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe" title="Python 3.8.10-Windows installer (64-bit)">Python 3.8.10-Windows installer (64-bit)</a></p><h3 id="%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85" tabindex="-1">开始安装<a class="header-anchor" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h3><p>打开安装包就会看到如图所示的页面：<br><img src="/files/post-image-Python%E5%AE%89%E8%A3%85%E5%8C%85%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png" alt="Python安装包初始界面.png"><br>这里建议勾上<code>Add Python XXX to Path</code>，它的作用就是把Python加入环境变量，这里说下作用。</p><p>Note: <code>/path/to/XXX</code>意思是指向<code>XXX</code>的路径</p><p>如果把Python加入环境变量，就可以直接使用<code>python test.py</code>和<code>pip install requests</code>等命令，否则需要切到安装目录上即<code>/path/to/python</code></p><p>如果你想安装到非默认文件夹或选择性安装内容就点<em>自定义安装（Custom Installation）</em>，然后更改就行。</p><p>安装完成后在cmd执行<code>python</code>若有如图所示的效果这说明安装成功。<br><img src="/files/post-image-Python%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E6%95%88%E6%9E%9C.png" alt="Python安装成功效果.png"></p><h3 id="%E5%BA%93" tabindex="-1">库<a class="header-anchor" href="#%E5%BA%93" aria-hidden="true"></a></h3><p>安装库需要pip。<br>pip不需要另外安装，除非你没有，在安装Python的时候保证把pip的选项打上勾就行了。<br>安装库只需要执行<code>pip install *</code>即可<br>比如安装<code>PyQt5</code>就执行<code>pip install PyQt5</code></p><p>问题：pip输出<code>Defaulting to user installation because normal site-packages is not writeable</code><br>把python安装到路径不包含<code>Program Files</code>的地方，因为那种文件夹是只读的，自然没法写入库文件。</p><h2 id="%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" tabindex="-1">开始使用<a class="header-anchor" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h2><h3 id=".py%E5%92%8C.pyw%E6%96%87%E4%BB%B6" tabindex="-1">.py和.pyw文件<a class="header-anchor" href="#.py%E5%92%8C.pyw%E6%96%87%E4%BB%B6" aria-hidden="true"></a></h3><p>Python程序的代码保存在扩展名为<code>.py</code>或<code>.pyw</code>的文件中，在用Python运行就可以看到程序效果了。</p><p>这两个扩展名虽然都是Python程序文件，但两者是有区别的。</p><p><code>.py</code>使用<code>python.exe</code>运行，运行时显示终端<br><code>.pyw</code>使用<code>pythonw.exe</code>运行，运行时不显示终端</p><h3 id="hello-world" tabindex="-1">Hello World<a class="header-anchor" href="#hello-world" aria-hidden="true"></a></h3><p>把<code>print('Hello World')</code>保存在py文件中并运行即可看到程序输出<code>Hello World</code>，这里不再展示。</p><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
-      
-      
+<search>
+  <entry>
+    <title>Hexo文章置顶</title>
+    <url>/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</url>
+    <content><![CDATA[<p>Hexo大多数主题的主页是按照日期顺序排列文章的，当我们想置顶一篇文章，就需要自己另外设置，其实并不困难，这篇文章将教你最简单置顶文章的方法。</p>
+<span id="more"></span>
+<h2 id="%E6%AD%A5%E9%AA%A4" tabindex="-1">步骤<a class="header-anchor" href="#%E6%AD%A5%E9%AA%A4" aria-hidden="true"></a></h2>
+<h3 id="%E5%AE%89%E8%A3%85" tabindex="-1">安装<a class="header-anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h3>
+<p>先卸载原有的<code>hexo-generator-index</code><br>
+<code>npm uninstall hexo-generator-index --save</code></p>
+<p>然后再安装<code>hexo-generator-index-pin-top</code><br>
+<code>npm install hexo-generator-index-pin-top --save</code></p>
+<h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3>
+<p>如图，在要置顶的文章头部加入如下代码：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">top:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="/files/post-image-Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6%E5%A4%B4%E9%83%A8%E4%BF%A1%E6%81%AF.png" alt="Hexo文章置顶头部信息"></p>
+<p>不必再做过多的设置，重新执行<code>hexo s</code>就能看到置顶文章被排在了最上方。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+]]></content>
       <categories>
-          
-          <category> Python </category>
-          
+        <category>Hexo</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hexo文章置顶</title>
-      <link href="/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/"/>
-      <url>/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</url>
-      
-        <content type="html"><![CDATA[<p>Hexo大多数主题的主页是按照日期顺序排列文章的，当我们想置顶一篇文章，就需要自己另外设置，其实并不困难，这篇文章将教你最简单置顶文章的方法。</p><span id="more"></span><h2 id="%E6%AD%A5%E9%AA%A4" tabindex="-1">步骤<a class="header-anchor" href="#%E6%AD%A5%E9%AA%A4" aria-hidden="true"></a></h2><h3 id="%E5%AE%89%E8%A3%85" tabindex="-1">安装<a class="header-anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h3><p>先卸载原有的<code>hexo-generator-index</code><br><code>npm uninstall hexo-generator-index --save</code></p><p>然后再安装<code>hexo-generator-index-pin-top</code><br><code>npm install hexo-generator-index-pin-top --save</code></p><h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3><p>如图，在要置顶的文章头部加入如下代码：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">top:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure><p><img src="/files/post-image-Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6%E5%A4%B4%E9%83%A8%E4%BF%A1%E6%81%AF.png" alt="Hexo文章置顶头部信息"></p><p>不必再做过多的设置，重新执行<code>hexo s</code>就能看到置顶文章被排在了最上方。</p><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
-      
-      
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python程序打包为exe</title>
+    <url>/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/</url>
+    <content><![CDATA[<p>Python语言简单，易于理解，有很多优点。但是，我们如果想要发布我们的程序就会有个问题，Python程序的代码往往存在<code>.py</code>文件或<code>.pyw</code>文件中，这种文件必须在安装了Python环境后才能运行。这时，我们就需要将Python程序打包为exe。</p>
+<span id="more"></span>
+<p><strong>本文适合有类似困扰，且掌握Python基础知识的读者阅读</strong></p>
+<h2 id="%E8%BF%87%E7%A8%8B" tabindex="-1">过程<a class="header-anchor" href="#%E8%BF%87%E7%A8%8B" aria-hidden="true"></a></h2>
+<h3 id="%E5%87%86%E5%A4%87" tabindex="-1">准备<a class="header-anchor" href="#%E5%87%86%E5%A4%87" aria-hidden="true"></a></h3>
+<p>文本所述方法需要先安装<code>auto-py-to-exe</code>库。<br>
+在cmd中执行如下命令：<br>
+<code>python.exe -m pip install auto-py-to-exe</code></p>
+<p>安装过程若没有报错，基本上可以说明安装完成。</p>
+<p><strong>推荐将Python加入环境变量</strong></p>
+<h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3>
+<p>在cmd中执行<code>auto-py-to-exe</code>就可以了。</p>
+<p>或者，你也可以将一下代码写入py文件并执行，也有同样的效果：</p>
+<figure class="highlight python"><figcaption><span>auto-py-to-exe.py</span></figcaption><table><tr><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> auto_py_to_exe.__main__ <span class="keyword">import</span> run</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    sys.argv[<span class="number">0</span>] = re.sub(<span class="string">r&#x27;(-script\.pyw|\.exe)?$&#x27;</span>, <span class="string">&#x27;&#x27;</span>, sys.argv[<span class="number">0</span>])</span><br><span class="line">    sys.exit(run())</span><br></pre></td></tr></table></figure>
+<p>如果你安装了谷歌浏览器（是不是默认浏览器无所谓），运行后配置界面是一个新的没有地址栏等的窗口，否则是在浏览器新建一个标签页。<br>
+<img src="/files/post-image-auto-py-to-exe.png" alt="auto-py-to-exe.png"><br>
+切记不要再auto-py-to-exe运行过程中关闭cmd终端窗口，否则都将关闭。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+]]></content>
       <categories>
-          
-          <category> Hexo </category>
-          
+        <category>Python</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 博客 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Python程序打包为exe</title>
-      <link href="/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/"/>
-      <url>/2023/08/05/Python%E7%A8%8B%E5%BA%8F%E6%89%93%E5%8C%85%E4%B8%BAexe/</url>
-      
-        <content type="html"><![CDATA[<p>Python语言简单，易于理解，有很多优点。但是，我们如果想要发布我们的程序就会有个问题，Python程序的代码往往存在<code>.py</code>文件或<code>.pyw</code>文件中，这种文件必须在安装了Python环境后才能运行。这时，我们就需要将Python程序打包为exe。</p><span id="more"></span><p><strong>本文适合有类似困扰，且掌握Python基础知识的读者阅读</strong></p><h2 id="%E8%BF%87%E7%A8%8B" tabindex="-1">过程<a class="header-anchor" href="#%E8%BF%87%E7%A8%8B" aria-hidden="true"></a></h2><h3 id="%E5%87%86%E5%A4%87" tabindex="-1">准备<a class="header-anchor" href="#%E5%87%86%E5%A4%87" aria-hidden="true"></a></h3><p>文本所述方法需要先安装<code>auto-py-to-exe</code>库。<br>在cmd中执行如下命令：<br><code>python.exe -m pip install auto-py-to-exe</code></p><p>安装过程若没有报错，基本上可以说明安装完成。</p><p><strong>推荐将Python加入环境变量</strong></p><h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3><p>在cmd中执行<code>auto-py-to-exe</code>就可以了。</p><p>或者，你也可以将一下代码写入py文件并执行，也有同样的效果：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"><span class="keyword">import</span> sys</span><br><span class="line"><span class="keyword">from</span> auto_py_to_exe.__main__ <span class="keyword">import</span> run</span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&#x27;__main__&#x27;</span>:</span><br><span class="line">    sys.argv[<span class="number">0</span>] = re.sub(<span class="string">r&#x27;(-script\.pyw|\.exe)?$&#x27;</span>, <span class="string">&#x27;&#x27;</span>, sys.argv[<span class="number">0</span>])</span><br><span class="line">    sys.exit(run())</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>如果你安装了谷歌浏览器（是不是默认浏览器无所谓），运行后配置界面是一个新的没有地址栏等的窗口，否则是在浏览器新建一个标签页。<br><img src="/files/post-image-auto-py-to-exe.png" alt="auto-py-to-exe.png"><br>切记不要再auto-py-to-exe运行过程中关闭cmd终端窗口，否则都将关闭。</p><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
-      
-      
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python入门指南</title>
+    <url>/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
+    <content><![CDATA[<p>Python是一个比较简单、易学的编程语言。<br>
+使用Python必须先安装环境。<br>
+本文将会介绍Python的优缺点和如何安装。</p>
+<span id="more"></span>
+<h2 id="%E4%BB%8B%E7%BB%8D" tabindex="-1">介绍<a class="header-anchor" href="#%E4%BB%8B%E7%BB%8D" aria-hidden="true"></a></h2>
+<h3 id="%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" tabindex="-1">基本信息<a class="header-anchor" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" aria-hidden="true"></a></h3>
+<blockquote>
+<p>Python由荷兰数学和计算机科学研究学会的吉多·范罗苏姆于1990年代初设计，作为一门叫作ABC语言的替代品。Python提供了高效的高级数据结构，还能简单有效地面向对象编程。Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言，随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、大型项目的开发。<br>
+Python在各个编程语言中比较适合新手学习，Python解释器易于扩展，可以使用C语言或C++（或者其他可以通过C调用的语言）扩展新的功能和数据类型。Python也可用于可定制化软件中的扩展程序语言。Python丰富的标准库，提供了适用于各个主要系统平台的源码或机器码。</p>
+</blockquote>
+<p>（摘自<a href="https://baike.baidu.com/item/Python/407313">百度百科</a>）</p>
+<h2 id="%E4%BC%98%E7%BC%BA%E7%82%B9" tabindex="-1">优缺点<a class="header-anchor" href="#%E4%BC%98%E7%BC%BA%E7%82%B9" aria-hidden="true"></a></h2>
+<h3 id="%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90" tabindex="-1">简要分析<a class="header-anchor" href="#%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90" aria-hidden="true"></a></h3>
+<p>Python语言的简单是显而易见的，但是Python属于<a href="https://baike.baidu.com/item/%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/4665504" title="解释性语言">解释性语言</a>，与<a href="https://baike.baidu.com/item/%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80" title="编译型语言">编译型语言</a>相比，它的缺点也很明显，总之，解释性语言啥缺点，它就有啥缺点。</p>
+<h3 id="%E4%BC%98%E7%82%B9" tabindex="-1">优点<a class="header-anchor" href="#%E4%BC%98%E7%82%B9" aria-hidden="true"></a></h3>
+<blockquote>
+<p><strong>简单</strong>：Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样。它使你能够专注于解决问题而不是去搞明白语言本身。<br>
+<strong>易学</strong>：Python极其容易上手，因为Python有极其简单的说明文档。<br>
+<strong>易读、易维护</strong>：风格清晰划一、强制缩进<br>
+<strong>用途广泛</strong><br>
+<strong>速度较快</strong>：Python的底层是用C语言写的，很多标准库和第三方库也都是用C写的，运行速度非常快。<br>
+<strong>免费、开源</strong>：Python是FLOSS（自由/开放源码软件）之一。使用者可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。<br>
+<strong>高层语言</strong>：用Python语言编写程序的时候无需考虑诸如如何管理你的程序使用的内存一类的底层细节。<br>
+<strong>可移植性</strong>：由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不同平台上）。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE、PocketPC、Symbian以及Google基于linux开发的android平台。<br>
+<strong>解释性</strong>：一个用编译性语言比如C或C<ins>写的程序可以从源文件（即C或C</ins>语言）转换到一个你的计算机使用的语言（二进制代码，即0和1）。这个过程通过编译器和不同的标记、选项完成。<br>
+运行程序的时候，连接/转载器软件把你的程序从硬盘复制到内存中并且运行。而Python语言写的程序不需要编译成二进制代码。你可以直接从源代码运行程序。<br>
+在计算机内部，Python解释器把源代码转换成称为字节码的中间形式，然后再把它翻译成计算机使用的机器语言并运行。这使得使用Python更加简单。也使得Python程序更加易于移植。<br>
+<strong>面向对象</strong>：Python既支持面向过程的编程也支持面向对象的编程。在“面向过程”的语言中，程序是由过程或仅仅是可重用代码的函数构建起来的。在“面向对象”的语言中，程序是由数据和功能组合而成的对象构建起来的。<br>
+Python是完全面向对象的语言。函数、模块、数字、字符串都是对象。并且完全支持继承、重载、派生、多继承，有益于增强源代码的复用性。Python支持重载运算符和动态类型。相对于Lisp这种传统的函数式编程语言，Python对函数式设计只提供了有限的支持。有两个标准库（functools，itertools）提供了Haskell和Standard ML中久经考验的函数式程序设计工具。<br>
+<strong>可扩展性、可扩充性</strong>：如果需要一段关键代码运行得更快或者希望某些算法不公开，可以部分程序用C或C<ins>编写，然后在Python程序中使用它们。<br>
+Python本身被设计为可扩充的。并非所有的特性和功能都集成到语言核心。Python提供了丰富的API和工具，以便程序员能够轻松地使用C语言、C</ins>、Cython来编写扩充模块。Python编译器本身也可以被集成到其它需要脚本语言的程序内。因此，很多人还把Python作为一种“胶水语言”（glue language）使用。使用Python将其他语言编写的程序进行集成和封装。在Google内部的很多项目，例如Google Engine使用C<ins>编写性能要求极高的部分，然后用Python或Java/Go调用相应的模块。《Python技术手册》的作者马特利（Alex Martelli）说：“这很难讲，不过，2004年，Python已在Google内部使用，Google 召募许多 Python 高手，但在这之前就已决定使用Python，他们的目的是 Python where we can，C</ins> where we must，在操控硬件的场合使用C++，在快速开发时候使用Python。”<br>
+<strong>可嵌入性</strong>：可以把Python嵌入C/C++程序，从而向程序用户提供脚本功能。<br>
+<strong>丰富的库</strong>：Python标准库确实很庞大。它可以帮助处理各种工作，包括正则表达式、文档生成、单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV文件、密码系统、GUI（图形用户界面）、Tk和其他与系统有关的操作。这被称作Python的“功能齐全”理念。除了标准库以外，还有许多其他高质量的库，如wxPython、Twisted和Python图像库等等。<br>
+<strong>规范的代码</strong>：Python采用强制缩进的方式使得代码具有较好可读性。而Python语言写的程序不需要编译成二进制代码。Python的作者设计限制性很强的语法，使得不好的编程习惯（例如if语句的下一行不向右缩进）都不能通过编译。其中很重要的一项就是Python的缩进规则。一个和其他大多数语言（如C）的区别就是，一个模块的界限，完全是由每行的首字符在这一行的位置来决定（而C语言是用一对大括号来明确的定出模块的边界，与字符的位置毫无关系）。通过强制程序员们缩进（包括if，for和函数定义等所有需要使用模块的地方），Python确实使得程序更加清晰和美观。<br>
+<strong>高级动态编程</strong>：虽然Python可能被粗略地分类为“脚本语言”（script language），但实际上一些大规模软件开发计划例如Zope、Mnet及BitTorrent，Google也广泛地使用它。Python的支持者较喜欢称它为一种高级动态编程语言，原因是“脚本语言”泛指仅作简单程序设计任务的语言，如shellscript、VBScript等只能处理简单任务的编程语言，并不能与Python相提并论。<br>
+<strong>做科学计算优点多</strong>：说起科学计算，首先会被提到的可能是MATLAB。除了MATLAB的一些专业性很强的工具箱还无法被替代之外，MATLAB的大部分常用功能都可以在Python世界中找到相应的扩展库。和MATLAB相比，用Python做科学计算有如下优点：<br>
+●首先，MATLAB是一款商用软件，并且价格不菲。而Python完全免费，众多开源的科学计算库都提供了Python的调用接口。用户可以在任何计算机上免费安装Python及其绝大多数扩展库。<br>
+●其次，与MATLAB相比，Python是一门更易学、更严谨的程序设计语言。它能让用户编写出更易读、易维护的代码。<br>
+●最后，MATLAB主要专注于工程和科学计算。然而即使在计算领域，也经常会遇到文件管理、界面设计、网络通信等各种需求。而Python有着丰富的扩展库，可以轻易完成各种高级任务，开发者可以用Python实现完整应用程序所需的各种功能。</p>
+</blockquote>
+<h3 id="%E7%BC%BA%E7%82%B9" tabindex="-1">缺点<a class="header-anchor" href="#%E7%BC%BA%E7%82%B9" aria-hidden="true"></a></h3>
+<blockquote>
+<p><strong>单行语句和命令行输出问题</strong>：很多时候不能将程序连写成一行，如<code>import sys；for i in sys.path：print i</code>。而perl和awk就无此限制，可以较为方便的在shell下完成简单程序，不需要如Python一样，必须将程序写入一个.py文件。<br>
+给初学者带来困惑：独特的语法，这也许不应该被称为局限，但是它用缩进来区分语句关系的方式还是给很多初学者带来了困惑。即便是很有经验的Python程序员，也可能陷入陷阱当中。<br>
+<strong>运行速度慢</strong>：这里是指与C和C<ins>相比。Python开发人员尽量避开不成熟或者不重要的优化。一些针对非重要部位的加快运行速度的补丁通常不会被合并到Python内。所以很多人认为Python很慢。不过，根据二八定律，大多数程序对速度要求不高。在某些对运行速度要求很高的情况，Python设计师倾向于使用JIT技术，或者用使用C/C</ins>语言改写这部分程序。可用的JIT技术是PyPy。</p>
+</blockquote>
+<p>（摘自<a href="https://baike.baidu.com/item/Python/407313#2" title="百度百科">百度百科</a>）</p>
+<h2 id="%E5%AE%89%E8%A3%85" tabindex="-1">安装<a class="header-anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h2>
+<h3 id="%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85" tabindex="-1">下载安装包<a class="header-anchor" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85" aria-hidden="true"></a></h3>
+<p>打开<a href="https://www.python.org/downloads/" title="Python官方下载页面">Python官方下载页面</a><br>
+如图：<br>
+<img src="/files/post-image-Python%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2.png" alt="Python下载页面.png"><br>
+选择对应的版本下载安装包，我选择的是<a href="https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe" title="Python 3.8.10-Windows installer (64-bit)">Python 3.8.10-Windows installer (64-bit)</a></p>
+<h3 id="%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85" tabindex="-1">开始安装<a class="header-anchor" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h3>
+<p>打开安装包就会看到如图所示的页面：<br>
+<img src="/files/post-image-Python%E5%AE%89%E8%A3%85%E5%8C%85%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png" alt="Python安装包初始界面.png"><br>
+这里建议勾上<code>Add Python XXX to Path</code>，它的作用就是把Python加入环境变量，这里说下作用。</p>
+<p>Note: <code>/path/to/XXX</code>意思是指向<code>XXX</code>的路径</p>
+<p>如果把Python加入环境变量，就可以直接使用<code>python test.py</code>和<code>pip install requests</code>等命令，否则需要切到安装目录上即<code>/path/to/python</code></p>
+<p>如果你想安装到非默认文件夹或选择性安装内容就点<em>自定义安装（Custom Installation）</em>，然后更改就行。</p>
+<p>安装完成后在cmd执行<code>python</code>若有如图所示的效果这说明安装成功。<br>
+<img src="/files/post-image-Python%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E6%95%88%E6%9E%9C.png" alt="Python安装成功效果.png"></p>
+<h3 id="%E5%BA%93" tabindex="-1">库<a class="header-anchor" href="#%E5%BA%93" aria-hidden="true"></a></h3>
+<p>安装库需要pip。<br>
+pip不需要另外安装，除非你没有，在安装Python的时候保证把pip的选项打上勾就行了。<br>
+安装库只需要执行<code>pip install *</code>即可<br>
+比如安装<code>PyQt5</code>就执行<code>pip install PyQt5</code></p>
+<p>问题：pip输出<code>Defaulting to user installation because normal site-packages is not writeable</code><br>
+把python安装到路径不包含<code>Program Files</code>的地方，因为那种文件夹是只读的，自然没法写入库文件。</p>
+<h2 id="%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" tabindex="-1">开始使用<a class="header-anchor" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h2>
+<h3 id=".py%E5%92%8C.pyw%E6%96%87%E4%BB%B6" tabindex="-1">.py和.pyw文件<a class="header-anchor" href="#.py%E5%92%8C.pyw%E6%96%87%E4%BB%B6" aria-hidden="true"></a></h3>
+<p>Python程序的代码保存在扩展名为<code>.py</code>或<code>.pyw</code>的文件中，在用Python运行就可以看到程序效果了。</p>
+<p>这两个扩展名虽然都是Python程序文件，但两者是有区别的。</p>
+<p><code>.py</code>使用<code>python.exe</code>运行，运行时显示终端<br>
+<code>.pyw</code>使用<code>pythonw.exe</code>运行，运行时不显示终端</p>
+<h3 id="hello-world" tabindex="-1">Hello World<a class="header-anchor" href="#hello-world" aria-hidden="true"></a></h3>
+<p>把<code>print('Hello World')</code>保存在py文件中并运行即可看到程序输出<code>Hello World</code>，这里不再展示。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+]]></content>
       <categories>
-          
-          <category> Python </category>
-          
+        <category>Python</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>网易云音乐MP3音频获取</title>
-      <link href="/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/"/>
-      <url>/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/</url>
-      
-        <content type="html"><![CDATA[<p>网易云音乐是有个网页版的，地址是：<a href="https://music.163.com/">https://music.163.com/</a>。电脑如果装了IDM下载器，能听的可以直接用IDM捕获MP3。那如果没有IDM就没法获取了吗？</p><p>不存在的，今天我就来教大家实现，无IDM获取网易云音乐MP3音频文件。</p><span id="more"></span><h2 id="%E5%8E%9F%E7%90%86" tabindex="-1">原理<a class="header-anchor" href="#%E5%8E%9F%E7%90%86" aria-hidden="true"></a></h2><h3 id="%E9%9F%B3%E4%B9%90id" tabindex="-1">音乐ID<a class="header-anchor" href="#%E9%9F%B3%E4%B9%90id" aria-hidden="true"></a></h3><p>电脑进入网页版网易云音乐，随便进一首歌，就会发现地址栏出现类似如下链接：</p><blockquote><p><a href="https://music.163.com/#/song?id=1950897620">https://music.163.com/#/song?id=1950897620</a></p></blockquote><p>链接中<code>?id=</code>后面的数字是不固定的，这首歌是<code>1950897620</code>，每首歌都是不一样的。<br>此处，大家一定猜到这串数字是音乐的ID</p><p>为什么我要给大家讲这个ID呢？那肯定是后面要用嘛……</p><h3 id="%E7%9B%B4%E9%93%BE" tabindex="-1">直链<a class="header-anchor" href="#%E7%9B%B4%E9%93%BE" aria-hidden="true"></a></h3><p>随便在百度上搜一下就可以找到。<br>链接格式如下：</p><p><code>https://music.163.com/song/media/outer/url?id=音乐ID.mp3</code></p><p>以上面的那首歌为例，它的音乐ID是<code>1950897620</code>，则它的直链就是<a href="https://music.163.com/song/media/outer/url?id=1950897620.mp3">https://music.163.com/song/media/outer/url?id=1950897620.mp3</a></p><p>不信的可以自己试一下，右键将链接另存为即可。</p><p>可惜，这个方法仅限于能直接听不用会员的音乐，会员音乐会404……</p><h2 id="%E5%BA%94%E7%94%A8" tabindex="-1">应用<a class="header-anchor" href="#%E5%BA%94%E7%94%A8" aria-hidden="true"></a></h2><h3 id="python%E7%A8%8B%E5%BA%8F" tabindex="-1">Python程序<a class="header-anchor" href="#python%E7%A8%8B%E5%BA%8F" aria-hidden="true"></a></h3><p>讲完了获取直链的方法，相信大部分读者都已经学会了。<br>但这就是极限了吗？</p><p>学过Python的基本上都知道怎么下载文件：<br>示例如下：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&#x27;https://music.163.com/song/media/outer/url?id=1950897620.mp3&#x27;</span></span><br><span class="line">r = requests.get(url, allow_redirect=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;/path/to/file.mp3&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure><p>这里不详细说每行代码的作用了。</p><p>利用上述代码，我们就可以稍作改进完成如下代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> requests     <span class="comment"># 导入requests库</span></span><br><span class="line"><span class="built_in">id</span> = <span class="built_in">input</span>(<span class="string">&#x27;请输入音乐ID：&#x27;</span>)     <span class="comment"># 询问音乐id，并保存到变量</span></span><br><span class="line">path = <span class="built_in">input</span>(<span class="string">&#x27;请输入保存路径：&#x27;</span>)     <span class="comment"># 询问保存路径，并保存到变量</span></span><br><span class="line">url = <span class="string">&#x27;https://music.163.com/song/media/outer/url?id=&#x27;</span>+<span class="built_in">id</span>+<span class="string">&#x27;.mp3&#x27;</span>     <span class="comment"># 应用直链</span></span><br><span class="line"><span class="comment"># 获取链接内容并保存到文件</span></span><br><span class="line">r = requests.get(url, allow_redirect=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure><p>我们甚至可以引入<code>tkinter</code>等GUI库。</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter</span><br><span class="line"><span class="keyword">import</span> tkinter.simpledialog</span><br><span class="line"><span class="keyword">import</span> tkinter.filedialog</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> webbrowser</span><br><span class="line"><span class="keyword">import</span> win10toast</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">toaster = win10toast.ToastNotifier()</span><br><span class="line"></span><br><span class="line">dmp3 = []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download</span>(<span class="params"><span class="built_in">id</span>, isid</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">id</span> <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(tkinter.filedialog.asksaveasfilename(defaultextension=<span class="string">&quot;.mp3&quot;</span>, filetypes=[(<span class="string">&quot;音频文件&quot;</span>, <span class="string">&quot;.mp3&quot;</span>)]),</span><br><span class="line">                  <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(requests.get(<span class="string">&quot;http://music.163.com/song/media/outer/url?id=&quot;</span> + <span class="built_in">id</span>).content)</span><br><span class="line">            f.close()</span><br><span class="line">        toaster.show_toast(<span class="string">&quot;网易云音乐 MP3音频下载工具&quot;</span>, <span class="string">&quot;下载完成！&quot;</span>, duration=<span class="number">10</span>, threaded=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">afid</span>():</span><br><span class="line">    <span class="built_in">id</span> = tkinter.simpledialog.askstring(<span class="string">&quot;输入音乐ID（不支持会员歌曲）&quot;</span>, <span class="string">&quot;音乐ID：&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">id</span>:</span><br><span class="line">        dmp3.append(threading.Thread(name=<span class="string">&quot;Download MP3 (ID:&quot;</span> + <span class="built_in">id</span> + <span class="string">&quot;)&quot;</span>, target=download, args=(<span class="built_in">id</span>, <span class="built_in">id</span>), daemon=<span class="literal">True</span>))</span><br><span class="line">        dmp3[<span class="built_in">len</span>(dmp3) - <span class="number">1</span>].start()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gotogw</span>():</span><br><span class="line">    webbrowser.<span class="built_in">open</span>(<span class="string">&quot;https://music.163.com/&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tk = tkinter.Tk()</span><br><span class="line">tkinter.Button(tk, text=<span class="string">&quot;下载MP3文件&quot;</span>, command=afid).pack()</span><br><span class="line">tkinter.Button(tk, text=<span class="string">&quot;打开官方网站&quot;</span>, command=gotogw).pack()</span><br><span class="line">tk.title(<span class="string">&quot;网易云音乐MP3音频下载工具&quot;</span>)</span><br><span class="line">tk.attributes(<span class="string">&quot;-topmost&quot;</span>, <span class="number">1</span>)</span><br><span class="line">tk.resizable(<span class="literal">True</span>, <span class="literal">False</span>)</span><br><span class="line">tk.mainloop()</span><br><span class="line"></span><br></pre></td></tr></table></figure><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
-      
-      
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>使用Hexo和Github Pages搭建个人博客</title>
+    <url>/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<p>如题，这篇文章主要讲如何使用Hexo和Github Pages搭建个人博客。<br>
+各位想尝试的读者可以先看一遍，再实践。</p>
+<h2 id="%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7" tabindex="-1">注册Github账号<a class="header-anchor" href="#%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7" aria-hidden="true"></a></h2>
+<p>先打开官网<br>
+<img src="/files/post-image-Github%E5%AE%98%E7%BD%91.png" alt="Github官网.png"></p>
+<blockquote>
+<p>官网地址：<a href="https://github.com/">https://github.com/</a></p>
+</blockquote>
+<p>然后再点右上角的Sign Up按钮<br>
+或者直接进入注册页面：<a href="https://github.com/signup">https://github.com/signup</a><br>
+有个邮箱就可以注册了。</p>
+<p>这里推荐一个<a href="https://www.tampermonkey.net/">油猴</a>脚本：<a href="https://github.com/maboloshi/github-chinese">Github汉化脚本</a></p>
+<h2 id="%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96" tabindex="-1">安装依赖<a class="header-anchor" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96" aria-hidden="true"></a></h2>
+<p><em><strong>注：尽量将node、npm、git等添加到环境变量</strong></em></p>
+<h3 id="%E5%AE%89%E8%A3%85node.js" tabindex="-1">安装node.js<a class="header-anchor" href="#%E5%AE%89%E8%A3%85node.js" aria-hidden="true"></a></h3>
+<blockquote>
+<p>官网地址：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>
+下载页面：<a href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a></p>
+</blockquote>
+<p>根据需求安装即可<br>
+在cmd<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中执行<code>node -v</code>和<code>npm -v</code>，正常输出版本号就说明安装成功</p>
+<p><img src="/files/post-image-%E6%A3%80%E6%9F%A5node%E5%92%8Cnpm%E7%89%88%E6%9C%AC%E5%8F%B7.png" alt="检查node和npm版本号.png"></p>
+<h3 id="%E5%AE%89%E8%A3%85git" tabindex="-1">安装git<a class="header-anchor" href="#%E5%AE%89%E8%A3%85git" aria-hidden="true"></a></h3>
+<blockquote>
+<p>官网地址：<a href="https://git-scm.com/">https://git-scm.com/</a><br>
+下载页面：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p>
+</blockquote>
+<p>同样，根据需求安装即可<br>
+在cmd中执行<code>git -v</code>，正常输出版本号就说明安装成功</p>
+<p><img src="/files/post-image-%E6%A3%80%E6%9F%A5git%E7%89%88%E6%9C%AC%E5%8F%B7.png" alt="检查git版本号.png"></p>
+<h3 id="%E5%AE%89%E8%A3%85hexo" tabindex="-1">安装hexo<a class="header-anchor" href="#%E5%AE%89%E8%A3%85hexo" aria-hidden="true"></a></h3>
+<blockquote>
+<p>官网地址：<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a><br>
+官方文档：<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p>
+</blockquote>
+<p>这里没有贴上下载地址是因为这个需要用npm安装<br>
+官网已经把命令贴上了：</p>
+<blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+</blockquote>
+<p>这里我来详细讲下每行命令的作用</p>
+<p>第一行<code>npm install hexo-cli -g</code>安装了Hexo的基础环境。<br>
+第二行<code>hexo init blog</code>会在当前工作目录创建一个<em>blog</em>文件夹，并对其初始化。<br>
+第三行<code>cd blog</code>是命令提示符基础命令，将工作目录切换到刚创建的<em>blog</em>文件夹。<br>
+第四行<code>npm install</code>作用是安装。<br>
+第五行<code>hexo server</code>作用是启动服务器</p>
+<p>执行完以上命令，你会看到终端会输出类似的文本：</p>
+<p><img src="/files/post-image-hexo-server%E5%91%BD%E4%BB%A4%E8%BE%93%E5%87%BA%E5%86%85%E5%AE%B9.png" alt="hexo server命令输出内容.png"></p>
+<blockquote>
+<p>INFO  Validating config<br>
+INFO  Start processing<br>
+INFO  Hexo is running at <a href="http://localhost:4000/">http://localhost:4000/</a> . Press Ctrl+C to stop.</p>
+</blockquote>
+<p>此时，在浏览器中访问<a href="https://localhost:4000/">https://localhost:4000/</a>，就会发现基本的博客框架搭建好了</p>
+<h2 id="%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%9A%E5%AE%A2" tabindex="-1">自定义博客<a class="header-anchor" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%9A%E5%AE%A2" aria-hidden="true"></a></h2>
+<h3 id="%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98" tabindex="-1">自定义主题<a class="header-anchor" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98" aria-hidden="true"></a></h3>
+<p>hexo自带的主题或许不美观，这时，就需要自定义主题<br>
+hexo官网上有大量的博客主题可供使用，我的这个博客的主题是<a href="https://github.com/preccrep/hexo-theme-jelly">jelly</a>，如果你想要别的主题也可以，请访问<a href="https://hexo.io/themes">https://hexo.io/themes</a></p>
+<p>每个博客主题都会提供安装教程，跟着你选择的主题的教程走即可，这里以我选的<em>jelly</em>主题为例，读<a href="https://github.com/preccrep/hexo-theme-jelly/blob/main/README.md">https://github.com/preccrep/hexo-theme-jelly/blob/main/README.md</a>就行</p>
+<h3 id="%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2" tabindex="-1">配置博客<a class="header-anchor" href="#%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2" aria-hidden="true"></a></h3>
+<p><a href="https://hexo.io/zh-cn/docs/configuration">官方文档</a>写了，这里不再多说，看官方文档即可</p>
+<h3 id="%E6%8F%92%E4%BB%B6" tabindex="-1">插件<a class="header-anchor" href="#%E6%8F%92%E4%BB%B6" aria-hidden="true"></a></h3>
+<p>官方也列出了非常多的<a href="https://hexo.io/plugins/">插件</a>，还是那句话，根据需求安装即可。</p>
+<h3 id="%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF" tabindex="-1">管理面板<a class="header-anchor" href="#%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF" aria-hidden="true"></a></h3>
+<p>这里我要专门讲一个叫<em>Bridge</em>的插件。</p>
+<p>这里贴一下地址：<a href="https://github.com/DeepSpaceHarbor/hexo-bridge">https://github.com/DeepSpaceHarbor/hexo-bridge</a><br>
+在上面讲到的插件的页面也能找到这个插件。</p>
+<p>在你的博客的根目录执行<code>npm i --save hexo-bridge</code>命令去安装这个插件。<br>
+然后再去执行<code>hexo server</code></p>
+<p>这时打开http://localhost:4000/bridge/ 就可以看到管理面板了，只是都是英文的，英语不好的可以在浏览器启用翻译功能，这对不熟悉和懒得用命令的博主极其友好。<br>
+<img src="/files/post-image-Hexo%E6%8F%92%E4%BB%B6Bridge.png" alt="Hexo插件Bridge.png"></p>
+<p>这里讲了这个插件就不讲那些命令了。</p>
+<h2 id="%E4%BD%BF%E7%94%A8github-pages" tabindex="-1">使用Github Pages<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8github-pages" aria-hidden="true"></a></h2>
+<h3 id="%E5%9F%BA%E7%A1%80" tabindex="-1">基础<a class="header-anchor" href="#%E5%9F%BA%E7%A1%80" aria-hidden="true"></a></h3>
+<p>浏览器中访问https://github.com ，登录你注册的账号（已登录的跳过），创建一个叫<em><a href="http://xn--6qqv7i14ofosyrb.github.io">你的用户名.github.io</a></em>的仓库，必须是这个，其他的都不行。</p>
+<p>然后点*设置（Settings）<em>在打开的页面左边栏找到</em>Github Pages（Pages）*根据需求设置就行。</p>
+<h2 id="%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2" tabindex="-1">发布博客<a class="header-anchor" href="#%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2" aria-hidden="true"></a></h2>
+<h3 id="%E5%8F%91%E5%B8%83%E5%88%B0github-pages" tabindex="-1">发布到Github Pages<a class="header-anchor" href="#%E5%8F%91%E5%B8%83%E5%88%B0github-pages" aria-hidden="true"></a></h3>
+<p>在前面的教程中，已经使你的博客已经可以在本地（<em><a href="http://localhost:4000">http://localhost:4000</a></em>）查看，但这是远远不够的，我们需要让其他人看到，前面讲到的Github Pages就可以让你的网页被互联网上的其他人看到</p>
+<p>我们如果要让我们的博客被别人看到，就可以把博客发布到Github Pages</p>
+<p>怎么做呢？</p>
+<p>先通过在博客根目录执行<code>npm install hexo-deployer-git --save</code>安装部署器<br>
+然后，执行<code>hexo clean</code>清除多余的内容，最后执行<code>hexo g &amp;&amp; hexo d</code>生成静态文件并部署</p>
+<p>过一段时间，在浏览器打开<a href="http://*%E4%BD%A0%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D*.github.io/">http://*你的用户名*.github.io/</a>如果成功地显示的博客内容则说明博客搭建成功</p>
+<p>更新以同样的方式，将新的内容重新部署即可</p>
+<p>详情请见：<a href="https://hexo.io/docs/github-pages">官方文档</a></p>
+<h3 id="%E8%A7%A3%E5%86%B3github%E8%AE%BF%E9%97%AE%E6%85%A2" tabindex="-1">解决Github访问慢<a class="header-anchor" href="#%E8%A7%A3%E5%86%B3github%E8%AE%BF%E9%97%AE%E6%85%A2" aria-hidden="true"></a></h3>
+<p>由于某些原因，Github Pages在国内访问较慢，因此，我们需要另外想办法。<br>
+我们可以尝试托管到其他平台，比如Vercel、Netlify或Render。</p>
+<p>我这边是用了Render。</p>
+<p>先到<a href="https://render.com/">官网</a>连接到你的Github账户，然后到仪表板新建，选择你的仓库就行了。</p>
+<p><strong>我现在就有两个网站：</strong></p>
+<ul>
+<li><a href="https://zfrg-blog.onrender.com/">https://zfrg-blog.onrender.com/</a></li>
+<li><a href="https://zfrg.github.io/">https://zfrg.github.io/</a></li>
+</ul>
+<h2 id="%E5%8F%AF%E8%83%BD%E7%9A%84%E9%97%AE%E9%A2%98" tabindex="-1">可能的问题<a class="header-anchor" href="#%E5%8F%AF%E8%83%BD%E7%9A%84%E9%97%AE%E9%A2%98" aria-hidden="true"></a></h2>
+<ol>
+<li>无法部署。解决方案：可能部署器损坏，重新执行<code>npm install hexo-deployer-git --save</code>安装即可。</li>
+<li>无法继续操作，几乎执行所有hexo命令都报错。解决方案：应该是目录损坏，只能重新来了，这边建议您备份一下。</li>
+<li>其它问题。解决方案：自己查或联系作者，作者的邮箱：<a href="mailto:zfruiguo2010@163.com">zfruiguo2010@163.com</a></li>
+</ol>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://baike.baidu.com/item/%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6/998728">https://baike.baidu.com/item/命令提示符/998728</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
       <categories>
-          
-          <category> Python </category>
-          
+        <category>Hexo</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-            <tag> 网易云音乐 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>推荐几个浏览器扩展</title>
-      <link href="/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/"/>
-      <url>/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/</url>
-      
-        <content type="html"><![CDATA[<p>作为互联网网民，谁还没个浏览器上网冲浪？浏览器已经成为了生活中重要的一部分，而浏览器扩展随之兴起。<br>作者，我，在此分享几个好用的浏览器扩展。（作者使用的是Edge浏览器）</p><span id="more"></span><h2 id="%E5%89%8D%E8%A8%80" tabindex="-1">前言<a class="header-anchor" href="#%E5%89%8D%E8%A8%80" aria-hidden="true"></a></h2><blockquote><p>浏览器扩展开始变得出名可以追溯到2008年左右，当时Google Chrome浏览器刚刚发布并引起了广泛关注。Google Chrome以其快速、稳定和简洁的用户界面迅速赢得了用户的喜爱，而且它的扩展平台也非常开放和易于开发。</p></blockquote><blockquote><p>与此同时，许多开发者开始为Google Chrome开发各种各样的扩展程序，为用户提供更多功能和定制选项。这引起了用户的关注，因为它们可以根据自己的需求选择安装不同的扩展来扩展浏览器功能。随着时间的推移，这些扩展的质量和数量都不断增长，让更多的用户意识到了浏览器扩展的价值。</p></blockquote><blockquote><p>从那时起，浏览器扩展在互联网社区中逐渐流行起来，并成为浏览器的标准功能之一。人们开始分享和推荐各种实用的扩展，使得更多的用户开始关注并使用它们。随着用户基数的增长，浏览器扩展的知名度也随之上升，成为改善浏览器体验的重要工具之一。</p></blockquote><h2 id="%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9" tabindex="-1">主要内容<a class="header-anchor" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9" aria-hidden="true"></a></h2><h3 id="edge%E5%8A%A0%E8%BD%BD%E9%A1%B9%E7%BD%91%E7%AB%99" tabindex="-1">Edge加载项网站<a class="header-anchor" href="#edge%E5%8A%A0%E8%BD%BD%E9%A1%B9%E7%BD%91%E7%AB%99" aria-hidden="true"></a></h3><p><strong>这个网站有着大量的加载项网站，本文图片资源均来自此站。</strong></p><blockquote><p><a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home">Edge加载项网站</a></p></blockquote><h3 id="wetab-%E5%85%8D%E8%B4%B9chatgpt%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5" tabindex="-1">WeTab-免费ChatGPT新标签页<a class="header-anchor" href="#wetab-%E5%85%8D%E8%B4%B9chatgpt%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5" aria-hidden="true"></a></h3><p><img src="/files/post-image-WeTab-%E5%85%8D%E8%B4%B9ChatGPT%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5.jpg" alt="WeTab-免费ChatGPT新标签页.jpg"></p><p>这个扩展界面美观，Edge浏览器默认的新标签页完全满足不了我的双眼，这个扩展极大程度地改善了浏览器新标签页的外观，而且内置丰富小组件。如图，它采用了类似手机桌面的设计。</p><p>地址：</p><blockquote><p><a href="https://www.wetab.link/">官方网站</a><br><a href="https://wetab.link/">预览页面</a><br><a href="https://microsoftedge.microsoft.com/addons/detail/wetab%E5%85%8D%E8%B4%B9chatgpt%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/bpelnogcookhocnaokfpoeinibimbeff">Edge加载项页面</a></p></blockquote><h3 id="supercopy-%E8%B6%85%E7%BA%A7%E5%A4%8D%E5%88%B6" tabindex="-1">SuperCopy 超级复制<a class="header-anchor" href="#supercopy-%E8%B6%85%E7%BA%A7%E5%A4%8D%E5%88%B6" aria-hidden="true"></a></h3><p><img src="/files/post-image-SuperCopy-%E8%B6%85%E7%BA%A7%E5%A4%8D%E5%88%B6.png" alt="SuperCopy 超级复制.png"></p><p>这个扩展可以破解在浏览器中不能选中或复制的文字，无需开启VIP会员等，只要一键破解即可复制。</p><p>由于从Edge加载项安装的版本会有广告，因此，作者在此提供了破解版本的下载，原版的地址就不贴了。</p><p>地址：</p><blockquote><p>本站下载：<a href="/files/SuperCopy 超级复制 0.1.9.crx" download="SuperCopy 超级复制 0.1.9">SuperCopy 超级复制 0.1.9.crx</a><br>国内镜像：<a href="https://livefile.xesimg.com/programme/python_assets/ceedfc1b83b4e2f59efd87572f4e6e55.crx" download="SuperCopy 超级复制 0.1.9">SuperCopy 超级复制 0.1.9.crx（学而思镜像下载）</a></p></blockquote><h3 id="adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8" tabindex="-1">AdGuard 广告拦截器<a class="header-anchor" href="#adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8" aria-hidden="true"></a></h3><p><img src="/files/post-image-AdGuard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8.jpg" alt="AdGuard 广告拦截器.jpg"></p><p>这个扩展是用来拦截广告的，效果看好评率就知道了。</p><p>地址：</p><blockquote><p><a href="https://microsoftedge.microsoft.com/addons/detail/adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8/pdffkfellgipmhklpdmokmckkkfcopbh">Edge加载项页面</a></p></blockquote><h3 id="%E7%AF%A1%E6%94%B9%E7%8C%B4" tabindex="-1">篡改猴<a class="header-anchor" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4" aria-hidden="true"></a></h3><p><img src="/files/post-image-%E7%AF%A1%E6%94%B9%E7%8C%B4.jpg" alt="篡改猴.jpg"></p><p>这个扩展或许有很多读者已经知道了，因为它已经有了大量的用户，其强大的功能只有用了才知道。</p><p>地址：</p><blockquote><p><a href="https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd">Edge加载项页面</a></p></blockquote><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">]]></content>
-      
-      
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
+        <tag>Github</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>推荐几个浏览器扩展</title>
+    <url>/2023/07/30/%E6%8E%A8%E8%8D%90%E5%87%A0%E4%B8%AA%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/</url>
+    <content><![CDATA[<p>作为互联网网民，谁还没个浏览器上网冲浪？浏览器已经成为了生活中重要的一部分，而浏览器扩展随之兴起。<br>
+作者，我，在此分享几个好用的浏览器扩展。（作者使用的是Edge浏览器）</p>
+<span id="more"></span>
+<h2 id="%E5%89%8D%E8%A8%80" tabindex="-1">前言<a class="header-anchor" href="#%E5%89%8D%E8%A8%80" aria-hidden="true"></a></h2>
+<blockquote>
+<p>浏览器扩展开始变得出名可以追溯到2008年左右，当时Google Chrome浏览器刚刚发布并引起了广泛关注。Google Chrome以其快速、稳定和简洁的用户界面迅速赢得了用户的喜爱，而且它的扩展平台也非常开放和易于开发。</p>
+</blockquote>
+<blockquote>
+<p>与此同时，许多开发者开始为Google Chrome开发各种各样的扩展程序，为用户提供更多功能和定制选项。这引起了用户的关注，因为它们可以根据自己的需求选择安装不同的扩展来扩展浏览器功能。随着时间的推移，这些扩展的质量和数量都不断增长，让更多的用户意识到了浏览器扩展的价值。</p>
+</blockquote>
+<blockquote>
+<p>从那时起，浏览器扩展在互联网社区中逐渐流行起来，并成为浏览器的标准功能之一。人们开始分享和推荐各种实用的扩展，使得更多的用户开始关注并使用它们。随着用户基数的增长，浏览器扩展的知名度也随之上升，成为改善浏览器体验的重要工具之一。</p>
+</blockquote>
+<h2 id="%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9" tabindex="-1">主要内容<a class="header-anchor" href="#%E4%B8%BB%E8%A6%81%E5%86%85%E5%AE%B9" aria-hidden="true"></a></h2>
+<h3 id="edge%E5%8A%A0%E8%BD%BD%E9%A1%B9%E7%BD%91%E7%AB%99" tabindex="-1">Edge加载项网站<a class="header-anchor" href="#edge%E5%8A%A0%E8%BD%BD%E9%A1%B9%E7%BD%91%E7%AB%99" aria-hidden="true"></a></h3>
+<p><strong>这个网站有着大量的加载项网站，本文图片资源均来自此站。</strong></p>
+<blockquote>
+<p><a href="https://microsoftedge.microsoft.com/addons/Microsoft-Edge-Extensions-Home">Edge加载项网站</a></p>
+</blockquote>
+<h3 id="wetab-%E5%85%8D%E8%B4%B9chatgpt%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5" tabindex="-1">WeTab-免费ChatGPT新标签页<a class="header-anchor" href="#wetab-%E5%85%8D%E8%B4%B9chatgpt%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5" aria-hidden="true"></a></h3>
+<p><img src="/files/post-image-WeTab-%E5%85%8D%E8%B4%B9ChatGPT%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5.jpg" alt="WeTab-免费ChatGPT新标签页.jpg"></p>
+<p>这个扩展界面美观，Edge浏览器默认的新标签页完全满足不了我的双眼，这个扩展极大程度地改善了浏览器新标签页的外观，而且内置丰富小组件。如图，它采用了类似手机桌面的设计。</p>
+<p>地址：</p>
+<blockquote>
+<p><a href="https://www.wetab.link/">官方网站</a><br>
+<a href="https://wetab.link/">预览页面</a><br>
+<a href="https://microsoftedge.microsoft.com/addons/detail/wetab%E5%85%8D%E8%B4%B9chatgpt%E6%96%B0%E6%A0%87%E7%AD%BE%E9%A1%B5/bpelnogcookhocnaokfpoeinibimbeff">Edge加载项页面</a></p>
+</blockquote>
+<h3 id="supercopy-%E8%B6%85%E7%BA%A7%E5%A4%8D%E5%88%B6" tabindex="-1">SuperCopy 超级复制<a class="header-anchor" href="#supercopy-%E8%B6%85%E7%BA%A7%E5%A4%8D%E5%88%B6" aria-hidden="true"></a></h3>
+<p><img src="/files/post-image-SuperCopy-%E8%B6%85%E7%BA%A7%E5%A4%8D%E5%88%B6.png" alt="SuperCopy 超级复制.png"></p>
+<p>这个扩展可以破解在浏览器中不能选中或复制的文字，无需开启VIP会员等，只要一键破解即可复制。</p>
+<p>由于从Edge加载项安装的版本会有广告，因此，作者在此提供了破解版本的下载，原版的地址就不贴了。</p>
+<p>地址：</p>
+<blockquote>
+<p>本站下载：<a href="/files/SuperCopy 超级复制 0.1.9.crx" download="SuperCopy 超级复制 0.1.9">SuperCopy 超级复制 0.1.9.crx</a><br>
+国内镜像：<a href="https://livefile.xesimg.com/programme/python_assets/ceedfc1b83b4e2f59efd87572f4e6e55.crx" download="SuperCopy 超级复制 0.1.9">SuperCopy 超级复制 0.1.9.crx（学而思镜像下载）</a></p>
+</blockquote>
+<h3 id="adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8" tabindex="-1">AdGuard 广告拦截器<a class="header-anchor" href="#adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8" aria-hidden="true"></a></h3>
+<p><img src="/files/post-image-AdGuard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8.jpg" alt="AdGuard 广告拦截器.jpg"></p>
+<p>这个扩展是用来拦截广告的，效果看好评率就知道了。</p>
+<p>地址：</p>
+<blockquote>
+<p><a href="https://microsoftedge.microsoft.com/addons/detail/adguard-%E5%B9%BF%E5%91%8A%E6%8B%A6%E6%88%AA%E5%99%A8/pdffkfellgipmhklpdmokmckkkfcopbh">Edge加载项页面</a></p>
+</blockquote>
+<h3 id="%E7%AF%A1%E6%94%B9%E7%8C%B4" tabindex="-1">篡改猴<a class="header-anchor" href="#%E7%AF%A1%E6%94%B9%E7%8C%B4" aria-hidden="true"></a></h3>
+<p><img src="/files/post-image-%E7%AF%A1%E6%94%B9%E7%8C%B4.jpg" alt="篡改猴.jpg"></p>
+<p>这个扩展或许有很多读者已经知道了，因为它已经有了大量的用户，其强大的功能只有用了才知道。</p>
+<p>地址：</p>
+<blockquote>
+<p><a href="https://microsoftedge.microsoft.com/addons/detail/%E7%AF%A1%E6%94%B9%E7%8C%B4/iikmkjmpaadaobahmlepeloendndfphd">Edge加载项页面</a></p>
+</blockquote>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+]]></content>
       <categories>
-          
-          <category> 浏览器扩展 </category>
-          
+        <category>浏览器扩展</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> 浏览器 </tag>
-            
-            <tag> 浏览器扩展 </tag>
-            
-            <tag> 应用增强 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>使用Hexo和Github Pages搭建个人博客</title>
-      <link href="/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"/>
-      <url>/2023/07/30/%E4%BD%BF%E7%94%A8Hexo%E5%92%8CGithub-Pages%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-      
-        <content type="html"><![CDATA[<p>如题，这篇文章主要讲如何使用Hexo和Github Pages搭建个人博客。<br>各位想尝试的读者可以先看一遍，再实践。</p><h2 id="%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7" tabindex="-1">注册Github账号<a class="header-anchor" href="#%E6%B3%A8%E5%86%8Cgithub%E8%B4%A6%E5%8F%B7" aria-hidden="true"></a></h2><p>先打开官网<br><img src="/files/post-image-Github%E5%AE%98%E7%BD%91.png" alt="Github官网.png"></p><blockquote><p>官网地址：<a href="https://github.com/">https://github.com/</a></p></blockquote><p>然后再点右上角的Sign Up按钮<br>或者直接进入注册页面：<a href="https://github.com/signup">https://github.com/signup</a><br>有个邮箱就可以注册了。</p><p>这里推荐一个<a href="https://www.tampermonkey.net/">油猴</a>脚本：<a href="https://github.com/maboloshi/github-chinese">Github汉化脚本</a></p><h2 id="%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96" tabindex="-1">安装依赖<a class="header-anchor" href="#%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96" aria-hidden="true"></a></h2><p><em><strong>注：尽量将node、npm、git等添加到环境变量</strong></em></p><h3 id="%E5%AE%89%E8%A3%85node.js" tabindex="-1">安装node.js<a class="header-anchor" href="#%E5%AE%89%E8%A3%85node.js" aria-hidden="true"></a></h3><blockquote><p>官网地址：<a href="https://nodejs.org/zh-cn">https://nodejs.org/zh-cn</a><br>下载页面：<a href="https://nodejs.org/zh-cn/download">https://nodejs.org/zh-cn/download</a></p></blockquote><p>根据需求安装即可<br>在cmd<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>中执行<code>node -v</code>和<code>npm -v</code>，正常输出版本号就说明安装成功</p><p><img src="/files/post-image-%E6%A3%80%E6%9F%A5node%E5%92%8Cnpm%E7%89%88%E6%9C%AC%E5%8F%B7.png" alt="检查node和npm版本号.png"></p><h3 id="%E5%AE%89%E8%A3%85git" tabindex="-1">安装git<a class="header-anchor" href="#%E5%AE%89%E8%A3%85git" aria-hidden="true"></a></h3><blockquote><p>官网地址：<a href="https://git-scm.com/">https://git-scm.com/</a><br>下载页面：<a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></blockquote><p>同样，根据需求安装即可<br>在cmd中执行<code>git -v</code>，正常输出版本号就说明安装成功</p><p><img src="/files/post-image-%E6%A3%80%E6%9F%A5git%E7%89%88%E6%9C%AC%E5%8F%B7.png" alt="检查git版本号.png"></p><h3 id="%E5%AE%89%E8%A3%85hexo" tabindex="-1">安装hexo<a class="header-anchor" href="#%E5%AE%89%E8%A3%85hexo" aria-hidden="true"></a></h3><blockquote><p>官网地址：<a href="https://hexo.io/zh-cn/">https://hexo.io/zh-cn/</a><br>官方文档：<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></p></blockquote><p>这里没有贴上下载地址是因为这个需要用npm安装<br>官网已经把命令贴上了：</p><blockquote><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line"><span class="built_in">cd</span> blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></blockquote><p>这里我来详细讲下每行命令的作用</p><p>第一行<code>npm install hexo-cli -g</code>安装了Hexo的基础环境。<br>第二行<code>hexo init blog</code>会在当前工作目录创建一个<em>blog</em>文件夹，并对其初始化。<br>第三行<code>cd blog</code>是命令提示符基础命令，将工作目录切换到刚创建的<em>blog</em>文件夹。<br>第四行<code>npm install</code>作用是安装。<br>第五行<code>hexo server</code>作用是启动服务器</p><p>执行完以上命令，你会看到终端会输出类似的文本：</p><p><img src="/files/post-image-hexo-server%E5%91%BD%E4%BB%A4%E8%BE%93%E5%87%BA%E5%86%85%E5%AE%B9.png" alt="hexo server命令输出内容.png"></p><blockquote><p>INFO  Validating config<br>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/">http://localhost:4000/</a> . Press Ctrl+C to stop.</p></blockquote><p>此时，在浏览器中访问<a href="https://localhost:4000/">https://localhost:4000/</a>，就会发现基本的博客框架搭建好了</p><h2 id="%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%9A%E5%AE%A2" tabindex="-1">自定义博客<a class="header-anchor" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8D%9A%E5%AE%A2" aria-hidden="true"></a></h2><h3 id="%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98" tabindex="-1">自定义主题<a class="header-anchor" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98" aria-hidden="true"></a></h3><p>hexo自带的主题或许不美观，这时，就需要自定义主题<br>hexo官网上有大量的博客主题可供使用，我的这个博客的主题是<a href="https://github.com/preccrep/hexo-theme-jelly">jelly</a>，如果你想要别的主题也可以，请访问<a href="https://hexo.io/themes">https://hexo.io/themes</a></p><p>每个博客主题都会提供安装教程，跟着你选择的主题的教程走即可，这里以我选的<em>jelly</em>主题为例，读<a href="https://github.com/preccrep/hexo-theme-jelly/blob/main/README.md">https://github.com/preccrep/hexo-theme-jelly/blob/main/README.md</a>就行</p><h3 id="%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2" tabindex="-1">配置博客<a class="header-anchor" href="#%E9%85%8D%E7%BD%AE%E5%8D%9A%E5%AE%A2" aria-hidden="true"></a></h3><p><a href="https://hexo.io/zh-cn/docs/configuration">官方文档</a>写了，这里不再多说，看官方文档即可</p><h3 id="%E6%8F%92%E4%BB%B6" tabindex="-1">插件<a class="header-anchor" href="#%E6%8F%92%E4%BB%B6" aria-hidden="true"></a></h3><p>官方也列出了非常多的<a href="https://hexo.io/plugins/">插件</a>，还是那句话，根据需求安装即可。</p><h3 id="%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF" tabindex="-1">管理面板<a class="header-anchor" href="#%E7%AE%A1%E7%90%86%E9%9D%A2%E6%9D%BF" aria-hidden="true"></a></h3><p>这里我要专门讲一个叫<em>Bridge</em>的插件。</p><p>这里贴一下地址：<a href="https://github.com/DeepSpaceHarbor/hexo-bridge">https://github.com/DeepSpaceHarbor/hexo-bridge</a><br>在上面讲到的插件的页面也能找到这个插件。</p><p>在你的博客的根目录执行<code>npm i --save hexo-bridge</code>命令去安装这个插件。<br>然后再去执行<code>hexo server</code></p><p>这时打开http://localhost:4000/bridge/ 就可以看到管理面板了，只是都是英文的，英语不好的可以在浏览器启用翻译功能，这对不熟悉和懒得用命令的博主极其友好。<br><img src="/files/post-image-Hexo%E6%8F%92%E4%BB%B6Bridge.png" alt="Hexo插件Bridge.png"></p><p>这里讲了这个插件就不讲那些命令了。</p><h2 id="%E4%BD%BF%E7%94%A8github-pages" tabindex="-1">使用Github Pages<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8github-pages" aria-hidden="true"></a></h2><h3 id="%E5%9F%BA%E7%A1%80" tabindex="-1">基础<a class="header-anchor" href="#%E5%9F%BA%E7%A1%80" aria-hidden="true"></a></h3><p>浏览器中访问https://github.com ，登录你注册的账号（已登录的跳过），创建一个叫<em><a href="http://xn--6qqv7i14ofosyrb.github.io">你的用户名.github.io</a></em>的仓库，必须是这个，其他的都不行。</p><p>然后点*设置（Settings）<em>在打开的页面左边栏找到</em>Github Pages（Pages）*根据需求设置就行。</p><h2 id="%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2" tabindex="-1">发布博客<a class="header-anchor" href="#%E5%8F%91%E5%B8%83%E5%8D%9A%E5%AE%A2" aria-hidden="true"></a></h2><h3 id="%E5%8F%91%E5%B8%83%E5%88%B0github-pages" tabindex="-1">发布到Github Pages<a class="header-anchor" href="#%E5%8F%91%E5%B8%83%E5%88%B0github-pages" aria-hidden="true"></a></h3><p>在前面的教程中，已经使你的博客已经可以在本地（<em><a href="http://localhost:4000">http://localhost:4000</a></em>）查看，但这是远远不够的，我们需要让其他人看到，前面讲到的Github Pages就可以让你的网页被互联网上的其他人看到</p><p>我们如果要让我们的博客被别人看到，就可以把博客发布到Github Pages</p><p>怎么做呢？</p><p>先通过在博客根目录执行<code>npm install hexo-deployer-git --save</code>安装部署器<br>然后，执行<code>hexo clean</code>清除多余的内容，最后执行<code>hexo g &amp;&amp; hexo d</code>生成静态文件并部署</p><p>过一段时间，在浏览器打开<a href="http://*%E4%BD%A0%E7%9A%84%E7%94%A8%E6%88%B7%E5%90%8D*.github.io/">http://*你的用户名*.github.io/</a>如果成功地显示的博客内容则说明博客搭建成功</p><p>更新以同样的方式，将新的内容重新部署即可</p><p>详情请见：<a href="https://hexo.io/docs/github-pages">官方文档</a></p><h3 id="%E8%A7%A3%E5%86%B3github%E8%AE%BF%E9%97%AE%E6%85%A2" tabindex="-1">解决Github访问慢<a class="header-anchor" href="#%E8%A7%A3%E5%86%B3github%E8%AE%BF%E9%97%AE%E6%85%A2" aria-hidden="true"></a></h3><p>由于某些原因，Github Pages在国内访问较慢，因此，我们需要另外想办法。<br>我们可以尝试托管到其他平台，比如Vercel、Netlify或Render。</p><p>我这边是用了Render。</p><p>先到<a href="https://render.com/">官网</a>连接到你的Github账户，然后到仪表板新建，选择你的仓库就行了。</p><p><strong>我现在就有两个网站：</strong></p><ul><li><a href="https://zfrg-blog.onrender.com/">https://zfrg-blog.onrender.com/</a></li><li><a href="https://zfrg.github.io/">https://zfrg.github.io/</a></li></ul><h2 id="%E5%8F%AF%E8%83%BD%E7%9A%84%E9%97%AE%E9%A2%98" tabindex="-1">可能的问题<a class="header-anchor" href="#%E5%8F%AF%E8%83%BD%E7%9A%84%E9%97%AE%E9%A2%98" aria-hidden="true"></a></h2><ol><li>无法部署。解决方案：可能部署器损坏，重新执行<code>npm install hexo-deployer-git --save</code>安装即可。</li><li>无法继续操作，几乎执行所有hexo命令都报错。解决方案：应该是目录损坏，只能重新来了，这边建议您备份一下。</li><li>其它问题。解决方案：自己查或联系作者，作者的邮箱：<a href="mailto:zfruiguo2010@163.com">zfruiguo2010@163.com</a></li></ol><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css"><hr class="footnotes-sep"><section class="footnotes"><ol class="footnotes-list"><li id="fn1" class="footnote-item"><p><a href="https://baike.baidu.com/item/%E5%91%BD%E4%BB%A4%E6%8F%90%E7%A4%BA%E7%AC%A6/998728">https://baike.baidu.com/item/命令提示符/998728</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p></li></ol></section>]]></content>
-      
-      
+      <tags>
+        <tag>浏览器</tag>
+        <tag>浏览器扩展</tag>
+        <tag>应用增强</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>文件生成Data URL</title>
+    <url>/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/</url>
+    <content><![CDATA[<script>
+    document.write("<!DOCTYPE html>");
+    document.write("<html xmlns=\"http:\/\/www.w3.org\/1999\/xhtml\">");
+    document.write("<head>");
+    document.write("  <meta http-equiv=\"Content-Type\" content=\"text\/html; charset=utf-8\" \/>");
+    document.write("  <title>文件生成Data Url<\/title>");
+    document.write("  <meta name=\"keywords\" content=\"Data Url,HTML5,FileReader\" \/>");
+    document.write("  <meta name=\"description\" content=\"生成Data Url\" \/>");
+    document.write("  <script type=\"text\/javascript\">");
+    document.write("    function buildDataUrl(e) {");
+    document.write("      var t,");
+    document.write("        a = e.files[0];");
+    document.write("      window.FileReader &&");
+    document.write("        (((t = new FileReader()).onloadend = function (e) {");
+    document.write("          (document.getElementById(\"txtBase64\").value = e.target.result),");
+    document.write("            (document.getElementById(\"imgView\").src = e.target.result);");
+    document.write("        }),");
+    document.write("        t.readAsDataURL(a));");
+    document.write("    }");
+    document.write("  <\/script>");
+    document.write("<\/head>");
+    document.write("<body>");
+    document.write("  <strong>文件转 Data URL <\/strong><hr\/>");
+    document.write("  <div>");
+    document.write("    <input");
+    document.write("      type=\"file\"");
+    document.write("      value=\"\"");
+    document.write("      onchange=\"buildDataUrl(this)\"");
+    document.write("      style=\"border: 1px solid grey; width: 300px\"");
+    document.write("    \/><br \/><textarea id=\"txtBase64\" style=\"width: 50%; height: 300px\"><\/textarea>");
+    document.write("    <img id=\"imgView\" src=\"\" style=\"height: 300px\" alt=\"没有可预览的图片\" \/>");
+    document.write("  <\/div><br\/>");
+    document.write("<\/body>");
+    document.write("<\/html>");
+    document.write("");
+</script>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">使用方法：在上方选择文件，过段时间后data URL就会显示在大输入框中。</span><br><span class="line"></span><br><span class="line">白色图片可能不会显示预览，长按顶部栏换成黑色模式即可。</span><br></pre></td></tr></table></figure>
+<p><strong>注：本工具不会收集您的任何数据</strong></p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+]]></content>
       <categories>
-          
-          <category> Hexo </category>
-          
+        <category>小工具</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-            <tag> 博客 </tag>
-            
-            <tag> Github </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-  
-  
+  </entry>
+  <entry>
+    <title>网易云音乐MP3音频获取</title>
+    <url>/2023/08/05/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90MP3%E9%9F%B3%E9%A2%91%E8%8E%B7%E5%8F%96/</url>
+    <content><![CDATA[<p>网易云音乐是有个网页版的，地址是：<a href="https://music.163.com/">https://music.163.com/</a>。电脑如果装了IDM下载器，能听的可以直接用IDM捕获MP3。那如果没有IDM就没法获取了吗？</p>
+<p>不存在的，今天我就来教大家实现，无IDM获取网易云音乐MP3音频文件。</p>
+<span id="more"></span>
+<h2 id="%E5%8E%9F%E7%90%86" tabindex="-1">原理<a class="header-anchor" href="#%E5%8E%9F%E7%90%86" aria-hidden="true"></a></h2>
+<h3 id="%E9%9F%B3%E4%B9%90id" tabindex="-1">音乐ID<a class="header-anchor" href="#%E9%9F%B3%E4%B9%90id" aria-hidden="true"></a></h3>
+<p>电脑进入网页版网易云音乐，随便进一首歌，就会发现地址栏出现类似如下链接：</p>
+<blockquote>
+<p><a href="https://music.163.com/#/song?id=1950897620">https://music.163.com/#/song?id=1950897620</a></p>
+</blockquote>
+<p>链接中<code>?id=</code>后面的数字是不固定的，这首歌是<code>1950897620</code>，每首歌都是不一样的。<br>
+此处，大家一定猜到这串数字是音乐的ID</p>
+<p>为什么我要给大家讲这个ID呢？那肯定是后面要用嘛……</p>
+<h3 id="%E7%9B%B4%E9%93%BE" tabindex="-1">直链<a class="header-anchor" href="#%E7%9B%B4%E9%93%BE" aria-hidden="true"></a></h3>
+<p>随便在百度上搜一下就可以找到。<br>
+链接格式如下：</p>
+<p><code>https://music.163.com/song/media/outer/url?id=音乐ID.mp3</code></p>
+<p>以上面的那首歌为例，它的音乐ID是<code>1950897620</code>，则它的直链就是<a href="https://music.163.com/song/media/outer/url?id=1950897620.mp3">https://music.163.com/song/media/outer/url?id=1950897620.mp3</a></p>
+<p>不信的可以自己试一下，右键将链接另存为即可。</p>
+<p>可惜，这个方法仅限于能直接听不用会员的音乐，会员音乐会404……</p>
+<h2 id="%E5%BA%94%E7%94%A8" tabindex="-1">应用<a class="header-anchor" href="#%E5%BA%94%E7%94%A8" aria-hidden="true"></a></h2>
+<h3 id="python%E7%A8%8B%E5%BA%8F" tabindex="-1">Python程序<a class="header-anchor" href="#python%E7%A8%8B%E5%BA%8F" aria-hidden="true"></a></h3>
+<p>讲完了获取直链的方法，相信大部分读者都已经学会了。<br>
+但这就是极限了吗？</p>
+<p>学过Python的基本上都知道怎么下载文件：<br>
+示例如下：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests</span><br><span class="line">url = <span class="string">&#x27;https://music.163.com/song/media/outer/url?id=1950897620.mp3&#x27;</span></span><br><span class="line">r = requests.get(url, allow_redirect=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(<span class="string">&#x27;/path/to/file.mp3&#x27;</span>, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<p>这里不详细说每行代码的作用了。</p>
+<p>利用上述代码，我们就可以稍作改进完成如下代码：</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> requests     <span class="comment"># 导入requests库</span></span><br><span class="line"><span class="built_in">id</span> = <span class="built_in">input</span>(<span class="string">&#x27;请输入音乐ID：&#x27;</span>)     <span class="comment"># 询问音乐id，并保存到变量</span></span><br><span class="line">path = <span class="built_in">input</span>(<span class="string">&#x27;请输入保存路径：&#x27;</span>)     <span class="comment"># 询问保存路径，并保存到变量</span></span><br><span class="line">url = <span class="string">&#x27;https://music.163.com/song/media/outer/url?id=&#x27;</span>+<span class="built_in">id</span>+<span class="string">&#x27;.mp3&#x27;</span>     <span class="comment"># 应用直链</span></span><br><span class="line"><span class="comment"># 获取链接内容并保存到文件</span></span><br><span class="line">r = requests.get(url, allow_redirect=<span class="literal">True</span>)</span><br><span class="line"><span class="keyword">with</span> <span class="built_in">open</span>(path, <span class="string">&#x27;wb&#x27;</span>) <span class="keyword">as</span> f:</span><br><span class="line">    f.write(r)</span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<p>我们甚至可以引入<code>tkinter</code>等GUI库。</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> tkinter</span><br><span class="line"><span class="keyword">import</span> tkinter.simpledialog</span><br><span class="line"><span class="keyword">import</span> tkinter.filedialog</span><br><span class="line"><span class="keyword">import</span> requests</span><br><span class="line"><span class="keyword">import</span> webbrowser</span><br><span class="line"><span class="keyword">import</span> win10toast</span><br><span class="line"><span class="keyword">import</span> threading</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line">toaster = win10toast.ToastNotifier()</span><br><span class="line"></span><br><span class="line">dmp3 = []</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">download</span>(<span class="params"><span class="built_in">id</span>, isid</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">id</span> <span class="keyword">is</span> <span class="keyword">not</span> <span class="literal">None</span>:</span><br><span class="line">        <span class="keyword">with</span> <span class="built_in">open</span>(tkinter.filedialog.asksaveasfilename(defaultextension=<span class="string">&quot;.mp3&quot;</span>, filetypes=[(<span class="string">&quot;音频文件&quot;</span>, <span class="string">&quot;.mp3&quot;</span>)]),</span><br><span class="line">                  <span class="string">&quot;wb&quot;</span>) <span class="keyword">as</span> f:</span><br><span class="line">            f.write(requests.get(<span class="string">&quot;http://music.163.com/song/media/outer/url?id=&quot;</span> + <span class="built_in">id</span>).content)</span><br><span class="line">            f.close()</span><br><span class="line">        toaster.show_toast(<span class="string">&quot;网易云音乐 MP3音频下载工具&quot;</span>, <span class="string">&quot;下载完成！&quot;</span>, duration=<span class="number">10</span>, threaded=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">afid</span>():</span><br><span class="line">    <span class="built_in">id</span> = tkinter.simpledialog.askstring(<span class="string">&quot;输入音乐ID（不支持会员歌曲）&quot;</span>, <span class="string">&quot;音乐ID：&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">id</span>:</span><br><span class="line">        dmp3.append(threading.Thread(name=<span class="string">&quot;Download MP3 (ID:&quot;</span> + <span class="built_in">id</span> + <span class="string">&quot;)&quot;</span>, target=download, args=(<span class="built_in">id</span>, <span class="built_in">id</span>), daemon=<span class="literal">True</span>))</span><br><span class="line">        dmp3[<span class="built_in">len</span>(dmp3) - <span class="number">1</span>].start()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">gotogw</span>():</span><br><span class="line">    webbrowser.<span class="built_in">open</span>(<span class="string">&quot;https://music.163.com/&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">tk = tkinter.Tk()</span><br><span class="line">tkinter.Button(tk, text=<span class="string">&quot;下载MP3文件&quot;</span>, command=afid).pack()</span><br><span class="line">tkinter.Button(tk, text=<span class="string">&quot;打开官方网站&quot;</span>, command=gotogw).pack()</span><br><span class="line">tk.title(<span class="string">&quot;网易云音乐MP3音频下载工具&quot;</span>)</span><br><span class="line">tk.attributes(<span class="string">&quot;-topmost&quot;</span>, <span class="number">1</span>)</span><br><span class="line">tk.resizable(<span class="literal">True</span>, <span class="literal">False</span>)</span><br><span class="line">tk.mainloop()</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>网易云音乐</tag>
+      </tags>
+  </entry>
 </search>

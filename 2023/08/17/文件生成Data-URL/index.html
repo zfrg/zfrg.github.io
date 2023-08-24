@@ -12,15 +12,15 @@
 
   <link rel="shortcut icon" href="/images/favicon.png">
   <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
-  <meta name="description" content="文件生成Data URL的H5小工具         文件生成Data Url              function buildDataUrl(e) {       var t,         a &#x3D; e.files[0];       window.FileReader &amp;&amp;         (((t &#x3D; new FileReader()).onloadend &#x3D; function (e">
+  <meta name="description" content="document.write(&quot;&quot;);     document.write(&quot;&quot;);     document.write(&quot;&quot;);     document.write(&quot;  &quot;);     document.write(&quot;  文件生成Data Url&quot;);     document.write(&quot;  &quot;);     document.write(&quot;  &quot;);     documen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="文件生成Data URL">
 <meta property="og:url" content="http://zfrg-blog.onrender.com/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/index.html">
 <meta property="og:site_name" content="zfrg&#39;s blog">
-<meta property="og:description" content="文件生成Data URL的H5小工具         文件生成Data Url              function buildDataUrl(e) {       var t,         a &#x3D; e.files[0];       window.FileReader &amp;&amp;         (((t &#x3D; new FileReader()).onloadend &#x3D; function (e">
+<meta property="og:description" content="document.write(&quot;&quot;);     document.write(&quot;&quot;);     document.write(&quot;&quot;);     document.write(&quot;  &quot;);     document.write(&quot;  文件生成Data Url&quot;);     document.write(&quot;  &quot;);     document.write(&quot;  &quot;);     documen">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-08-17T00:48:07.000Z">
-<meta property="article:modified_time" content="2023-08-17T00:59:29.203Z">
+<meta property="article:modified_time" content="2023-08-24T03:30:38.167Z">
 <meta property="article:author" content="zfrg">
 <meta name="twitter:card" content="summary">
 
@@ -55,8 +55,6 @@
   
 <link rel="stylesheet" href="/custom.css">
 
-
-  
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue" style="overflow: hidden; ">
@@ -127,7 +125,7 @@
       </div>
       <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
         
-        <a class="mdui-ripple sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/Python/">Python<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/Python/">Python<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a>
         
       </div>
     </div>
@@ -188,7 +186,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-12.png" style="max-height: 240px;">
+      <img src="/images/random/material-8.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">文件生成Data URL</div>
@@ -238,45 +236,44 @@
       </div>
     </header>
     <div class="mdui-card-content mdui-typo">
-      <p>文件生成Data URL的H5小工具</p>
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>文件生成Data Url</title>
-  <meta name="keywords" content="Data Url,HTML5,FileReader" />
-  <meta name="description" content="生成Data Url" />
-  <script type="text/javascript">
-    function buildDataUrl(e) {
-      var t,
-        a = e.files[0];
-      window.FileReader &&
-        (((t = new FileReader()).onloadend = function (e) {
-          (document.getElementById("txtBase64").value = e.target.result),
-            (document.getElementById("imgView").src = e.target.result);
-        }),
-        t.readAsDataURL(a));
-    }
-  </script>
-</head>
-<body>
-  <strong>工具名称：文件转 Data URL </strong><hr/>
-  <div>
-    <input
-      type="file"
-      value=""
-      onchange="buildDataUrl(this)"
-      style="border: 1px solid grey; width: 300px"
-    /><br /><textarea id="txtBase64" style="width: 50%; height: 300px"></textarea>
-    <img id="imgView" src="" style="height: 300px" alt="没有可预览的图片" />
-  </div><br/><div>
-	<pre>
-使用方法：
-在下方选择要生成 Data URL 的文件，如果文件较大，就需要等一会，然后左边的输入框会显示 Data URL ，如果传入的文件是图片，则会在右边显示。
-<p>注：本工具不会收集您任何内容。<br>
-</pre></div></p>
-</body>
-</html>
+      <script>
+    document.write("<!DOCTYPE html>");
+    document.write("<html xmlns=\"http:\/\/www.w3.org\/1999\/xhtml\">");
+    document.write("<head>");
+    document.write("  <meta http-equiv=\"Content-Type\" content=\"text\/html; charset=utf-8\" \/>");
+    document.write("  <title>文件生成Data Url<\/title>");
+    document.write("  <meta name=\"keywords\" content=\"Data Url,HTML5,FileReader\" \/>");
+    document.write("  <meta name=\"description\" content=\"生成Data Url\" \/>");
+    document.write("  <script type=\"text\/javascript\">");
+    document.write("    function buildDataUrl(e) {");
+    document.write("      var t,");
+    document.write("        a = e.files[0];");
+    document.write("      window.FileReader &&");
+    document.write("        (((t = new FileReader()).onloadend = function (e) {");
+    document.write("          (document.getElementById(\"txtBase64\").value = e.target.result),");
+    document.write("            (document.getElementById(\"imgView\").src = e.target.result);");
+    document.write("        }),");
+    document.write("        t.readAsDataURL(a));");
+    document.write("    }");
+    document.write("  <\/script>");
+    document.write("<\/head>");
+    document.write("<body>");
+    document.write("  <strong>文件转 Data URL <\/strong><hr\/>");
+    document.write("  <div>");
+    document.write("    <input");
+    document.write("      type=\"file\"");
+    document.write("      value=\"\"");
+    document.write("      onchange=\"buildDataUrl(this)\"");
+    document.write("      style=\"border: 1px solid grey; width: 300px\"");
+    document.write("    \/><br \/><textarea id=\"txtBase64\" style=\"width: 50%; height: 300px\"><\/textarea>");
+    document.write("    <img id=\"imgView\" src=\"\" style=\"height: 300px\" alt=\"没有可预览的图片\" \/>");
+    document.write("  <\/div><br\/>");
+    document.write("<\/body>");
+    document.write("<\/html>");
+    document.write("");
+</script>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">使用方法：在上方选择文件，过段时间后data URL就会显示在大输入框中。</span><br><span class="line"></span><br><span class="line">白色图片可能不会显示预览，长按顶部栏换成黑色模式即可。</span><br></pre></td></tr></table></figure>
+<p><strong>注：本工具不会收集您的任何数据</strong></p>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
 
@@ -287,6 +284,8 @@
       </blockquote>
     </div>
     <footer class="mdui-card-actions">
+      
+        <a class="mdui-ripple article_categories-link" href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具</a>
       
       
     </footer>
@@ -377,6 +376,7 @@
   
 <script src="/custom.js"></script>
 
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
   <script src="/js/loader.js"></script>
   <script src="/js/bg.js"></script>
 </body>
