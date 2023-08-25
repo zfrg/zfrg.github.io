@@ -6,7 +6,7 @@
   <link href="http://zfrg-blog.onrender.com/atom.xml" rel="self"/>
   
   <link href="http://zfrg-blog.onrender.com/"/>
-  <updated>2023-08-24T03:30:38.167Z</updated>
+  <updated>2023-08-25T03:01:33.386Z</updated>
   <id>http://zfrg-blog.onrender.com/</id>
   
   <author>
@@ -21,17 +21,17 @@
     <link href="http://zfrg-blog.onrender.com/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/"/>
     <id>http://zfrg-blog.onrender.com/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/</id>
     <published>2023-08-17T00:48:07.000Z</published>
-    <updated>2023-08-24T03:30:38.167Z</updated>
+    <updated>2023-08-25T03:01:33.386Z</updated>
     
     
       
       
         
         
-    <summary type="html">&lt;script&gt;
-    document.write(&quot;&lt;!DOCTYPE html&gt;&quot;);
-    document.write(&quot;&lt;html xmlns=&#92;&quot;http:&#92;/&#92;/www.w3.org&#92;/1999&#92;/xhtml&#92;&quot;&gt;&quot;);
-   </summary>
+    <summary type="html">&lt;p&gt;&lt;strong&gt;文件生成Data URL&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;div&gt;
+    &lt;input type=&quot;file&quot; value=&quot;&quot; onchange=&quot;buildDataUrl(this)&quot; style=&quot;border: 1px solid</summary>
         
       
     
