@@ -1,33 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo文章置顶</title>
-    <url>/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</url>
-    <content><![CDATA[<p>Hexo大多数主题的主页是按照日期顺序排列文章的，当我们想置顶一篇文章，就需要自己另外设置，其实并不困难，这篇文章将教你最简单置顶文章的方法。</p>
-<span id="more"></span>
-<h2 id="%E6%AD%A5%E9%AA%A4" tabindex="-1">步骤<a class="header-anchor" href="#%E6%AD%A5%E9%AA%A4" aria-hidden="true"></a></h2>
-<h3 id="%E5%AE%89%E8%A3%85" tabindex="-1">安装<a class="header-anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h3>
-<p>先卸载原有的<code>hexo-generator-index</code><br>
-<code>npm uninstall hexo-generator-index --save</code></p>
-<p>然后再安装<code>hexo-generator-index-pin-top</code><br>
-<code>npm install hexo-generator-index-pin-top --save</code></p>
-<h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3>
-<p>如图，在要置顶的文章头部加入如下代码：</p>
-<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">top:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
-<p><img src="/files/post-image-Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6%E5%A4%B4%E9%83%A8%E4%BF%A1%E6%81%AF.png" alt="Hexo文章置顶头部信息"></p>
-<p>不必再做过多的设置，重新执行<code>hexo s</code>就能看到置顶文章被排在了最上方。</p>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
-]]></content>
-      <categories>
-        <category>Hexo</category>
-      </categories>
-      <tags>
-        <tag>Hexo</tag>
-        <tag>博客</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python入门指南</title>
     <url>/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/</url>
     <content><![CDATA[<p>Python是一个比较简单、易学的编程语言。<br>
@@ -115,6 +88,33 @@ pip不需要另外安装，除非你没有，在安装Python的时候保证把pi
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo文章置顶</title>
+    <url>/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/</url>
+    <content><![CDATA[<p>Hexo大多数主题的主页是按照日期顺序排列文章的，当我们想置顶一篇文章，就需要自己另外设置，其实并不困难，这篇文章将教你最简单置顶文章的方法。</p>
+<span id="more"></span>
+<h2 id="%E6%AD%A5%E9%AA%A4" tabindex="-1">步骤<a class="header-anchor" href="#%E6%AD%A5%E9%AA%A4" aria-hidden="true"></a></h2>
+<h3 id="%E5%AE%89%E8%A3%85" tabindex="-1">安装<a class="header-anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h3>
+<p>先卸载原有的<code>hexo-generator-index</code><br>
+<code>npm uninstall hexo-generator-index --save</code></p>
+<p>然后再安装<code>hexo-generator-index-pin-top</code><br>
+<code>npm install hexo-generator-index-pin-top --save</code></p>
+<h3 id="%E4%BD%BF%E7%94%A8" tabindex="-1">使用<a class="header-anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h3>
+<p>如图，在要置顶的文章头部加入如下代码：</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">top:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+<p><img src="/files/post-image-Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6%E5%A4%B4%E9%83%A8%E4%BF%A1%E6%81%AF.png" alt="Hexo文章置顶头部信息"></p>
+<p>不必再做过多的设置，重新执行<code>hexo s</code>就能看到置顶文章被排在了最上方。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>Hexo</tag>
+        <tag>博客</tag>
       </tags>
   </entry>
   <entry>

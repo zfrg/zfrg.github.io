@@ -62,6 +62,10 @@
 
 <body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue" style="/* overflow: hidden; */">
   
+  <div id="loader" style="z-index: 10000000000;">
+	<iframe src="data:text/html;base64,PHN0eWxlPg0KLmxvYWRlci1jb250YWluZXIgew0KICBiYWNrZ3JvdW5kLWNvbG9yOiAjZDRkY2Q2ICFpbXBvcnRhbnQ7DQogIHBvc2l0aW9uOiBmaXhlZCAhaW1wb3J0YW50Ow0KICB0b3A6IDAgIWltcG9ydGFudDsNCiAgbGVmdDogMCAhaW1wb3J0YW50Ow0KICB3aWR0aDogMTAwdncgIWltcG9ydGFudDsNCiAgaGVpZ2h0OiAxMDB2aCAhaW1wb3J0YW50Ow0KfQ0KLmxvYWRlciB7DQogIHRyYW5zZm9ybTogdHJhbnNsYXRlKC01MCUsLTUwJSkgIWltcG9ydGFudDsNCiAgcG9zaXRpb246IGFic29sdXRlICFpbXBvcnRhbnQ7DQogIHRvcDogNTAlICFpbXBvcnRhbnQ7DQogIGxlZnQ6IDUwJSAhaW1wb3J0YW50Ow0KfQ0KPC9zdHlsZT4NCjxkaXYgY2xhc3M9J2xvYWRlci1jb250YWluZXInPg0KCTxkaXYgY2xhc3M9J2xvYWRlcic+DQoJCTxzdmcgdmVyc2lvbj0iMS4xIiBpZD0ibG9hZGVyLTEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNzVweCIgaGVpZ2h0PSI3NXB4IiB2aWV3Qm94PSIwIDAgNTAgNTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUwIDUwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQoJCQk8cGF0aCBmaWxsPSIjM0Y1MUI1IiBkPSJNNDMuOTM1LDI1LjE0NWMwLTEwLjMxOC04LjM2NC0xOC42ODMtMTguNjgzLTE4LjY4M2MtMTAuMzE4LDAtMTguNjgzLDguMzY1LTE4LjY4MywxOC42ODNoNC4wNjhjMC04LjA3MSw2LjU0My0xNC42MTUsMTQuNjE1LTE0LjYxNWM4LjA3MiwwLDE0LjYxNSw2LjU0MywxNC42MTUsMTQuNjE1SDQzLjkzNXoiPg0KCQkJCTxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZVR5cGU9InhtbCIgYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgMjUgMjUiIHRvPSIzNjAgMjUgMjUiIGR1cj0iMC42cyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT4NCgkJCTwvcGF0aD4NCgkJPC9zdmc+DQoJPC9kaXY+DQo8L2Rpdj4=" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; " frameborder=0></iframe>
+  </div>
+  
   <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
   <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
   <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
@@ -187,7 +191,7 @@
   <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
   <article class="mdui-card mdui-m-b-5">
     <header class="mdui-card-media">
-      <img src="/images/random/material-5.png" style="max-height: 240px;">
+      <img src="/images/random/material-3.png" style="max-height: 240px;">
       <div class="mdui-card-media-covered">
         <div class="mdui-card-primary">
           <div class="mdui-card-primary-title">Python程序打包为exe</div>
@@ -371,7 +375,7 @@
 <script src="/custom.js"></script>
 
   <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
-  
+  <script src="/js/loader.js"></script>
   <script src="/js/bg.js"></script>
 </body>
 </html>
