@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>设置文件资源管理器鼠标右键菜单在光标左/右侧 | zfrg&#39;s blog</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
+  <meta name="description" content="文件资源管理器鼠标右键菜单在光标左右侧，这是一个细节，但总有强迫症患者对此不满意。 任何问题都有解决，对于这个问题的疗法来啦！  首先 +R 调出运行框。 输入shell:::&#123;80F3F1D5-FECA-45F3-BC32-752C152E456E&#125;然后回车。 在选项卡里选其它。 选择惯用左手&#x2F;右手。（你适应的）  完成了上面的步骤，就可以关闭窗口体验了。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设置文件资源管理器鼠标右键菜单在光标左&#x2F;右侧">
+<meta property="og:url" content="http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/index.html">
+<meta property="og:site_name" content="zfrg&#39;s blog">
+<meta property="og:description" content="文件资源管理器鼠标右键菜单在光标左右侧，这是一个细节，但总有强迫症患者对此不满意。 任何问题都有解决，对于这个问题的疗法来啦！  首先 +R 调出运行框。 输入shell:::&#123;80F3F1D5-FECA-45F3-BC32-752C152E456E&#125;然后回车。 在选项卡里选其它。 选择惯用左手&#x2F;右手。（你适应的）  完成了上面的步骤，就可以关闭窗口体验了。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zfrg-blog.onrender.com/files/winkey.png">
+<meta property="article:published_time" content="2023-12-02T06:49:44.000Z">
+<meta property="article:modified_time" content="2023-12-02T07:10:31.946Z">
+<meta property="article:author" content="zfrg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://zfrg-blog.onrender.com/files/winkey.png">
+
+  <meta name="keywords" content="">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="zfrg&#39;s blog">
+  <meta name="msapplication-starturl" content="http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="zfrg&#39;s blog">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  
+  <link rel="manifest" href="/manifest.json">
+
+  
+    <link rel="canonical" href="http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+  <style type="text/css">.material-icons {visibility: hidden; }</style>
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue" style="/* overflow: hidden; */">
+  
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">zfrg&#39;s blog</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}" target="_blank"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://zfrg-blog.onrender.com"></form>
+    <div class="search-result"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">zfrg</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>Welcome to my blog!</div>
+      </div>
+      
+        <div class="mdui-grid-tile-buttons">
+          <a href="mailto:zfruiguo2010@163.com" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'zfruiguo2010@163.com'}"><i class="mdui-icon material-icons">email</i></a>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/09/">九月 2023<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="mdui-ripple sidebar_archives-count">5</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/Python/">Python<span class="mdui-ripple sidebar_archives-count">4</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/Github/" rel="tag">Github<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hexo/" rel="tag">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Python/" rel="tag">Python<span class="mdui-ripple sidebar_archives-count">4</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%BA%94%E7%94%A8%E5%A2%9E%E5%BC%BA/" rel="tag">应用增强<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/" rel="tag">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/timeline" class="mdui-list-item mdui-ripple">时间轴</a>
+    
+      <a href="/tagcloud" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">相册</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+          <a href="//code.xueersi.com/space/6534921/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">学而思编程</a>
+        
+          <a href="//github.com/zfrg/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">Github</a>
+        
+          <a href="//www.yzx-blog.tk/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">Yzx&#39;s blog</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-13.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">设置文件资源管理器鼠标右键菜单在光标左/右侧</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2023-12-02 / <i class="iconfont">&#xe601;</i> zfrg &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+			  <!--
+                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/">
+              -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAW4AAAFuCAAAAACEya1TAAAGt0lEQVR42u3awYrkRhAE0P3/nx6D8cHg6d6ISPVimNenRaOVql7pEGTmr1/x7+vv36vr//7r14tf/pxX9+SrutyZ7GJ75i/cuHHjxo0b9+HRr5i2e/IDe/+0V3/N78zX/x43efI3u8aNGzdu3LhxB9zvw1PC3Qa75K/59tqDyXNaEi7zXeDGjRs3bty4n+K+h7M89uXo7V7a97b/xo0bN27cuHH/+SC4ESRForaR1n4KbbjM34gbN27cuHHjfoo7h7jPsVzC5fsoeWHdQu0He5W4cePGjRv3j+TOyfy7bcWNP6y4cePGjftHcn8dfnmR6xNjQHkI29p17Uqit+PGjRs3bty4g7c/W37KG0t59LyUwNpmW948axtpuHHjxo0bN+73K9+aVUlTbWvItYd0Gf3J4+Al8r7M3bhx48aNGzfuIOdcRnCSBSXXPze+kx9nG/XGESjcuHHjxo0bdxmk7u2otkHVtq8u5acNPY+wddsMN27cuHHj/sHcl21s4zttIemScFuOnKz9THHjxo0bN27ciWQ+BJO3iLZxnHsZa1tJW4Zro/A3vUrcuHHjxo0bd1D5acd32qi0Hdv2nOSoLoWnS/MPN27cuHHjxt3mtMu2t6ZUe+fWVMuHjfKjqhtmuHHjxo0bN+634a9tSm1nmA/xtEWidgyoPaqLQNQ8w40bN27cuHGXDbOnSlGXlHoZFcqLStsuojtx48aNGzdu3OmdRSS6t6zycthlTKe9noTRy/Nx48aNGzdu3Mn1eylqW/TlUPNhnS04tvG3KIrhxo0bN27cuAPurYm1vf5SzLoMG92bapdRady4cePGjRv3VOf5tY3UtK2srZ223bk94YFq36UuiBs3bty4cf9I7nwMJQmIl+CYb+wTzbn2I8j3XtfAcOPGjRs37h/PnYe/vG3WLvES+LbiWh6C2/fWnUbcuHHjxo37x3NvxZd8e1v4y6/cG2Nt6NyKdP/8FTdu3Lhx48Ydc1+iXjuI05aZEvSt5fbUGFAUZHHjxo0bN27cAXc72nJvO7UNvPaY7+/aHH6zKty4cePGjRt3wN0ifiIsthB5sy0fV2rfkkdY3Lhx48aNG3fOnUeoS2zKN7OFyHtj7Fmrb+7HjRs3bty4cZf3b6PGLeX7peSFqvZdl71cWne4cePGjRs37q1E9WdCWxsf28JW/rSt1DUWxXDjxo0bN27cAXcbvNpyVXtsebzbPoX8/s3npRhu3Lhx48aNO+a+NNKSVybhbxsgbkts7a5bn5f348aNGzdu3Ljj+7/K36WscxlrvpSKLuu50OPGjRs3bty4E+6kMJSEp2fDVv6l3J+cH08eTH+Tu3Hjxo0bN27cb3d9GejJodvWV1tmakNtTpx/BNFoEW7cuHHjxo07KFS1DaTPFZLajbVPa6/nrb6i4YcbN27cuHHjLh/RFq3aENkeT97QStb8VCmtLX7hxo0bN27cuF85tMFrQ7m0r9oyVo7SFrzaVX1zHTdu3Lhx48YdcN9D1RaMkoLOpczUDiG1hbn2Y8KNGzdu3Lhxb9xbkeheusoLW8nBbwW1Ot7Fa8CNGzdu3LhxJ4mrLS1dRna20Zm2GdYO6+TP2Y6qTt+4cePGjRs37qBk84mpom2YZjuYvHSVC0QzUxsZbty4cePGjbscZGmPp13us82zp0Jh25zDjRs3bty4cW/ceaklf8G9LLWN5lzI8hha348bN27cuHHjDrifakdtxaZtAOj/8GsHmHDjxo0bN27cCXfbQmtR6mUdAuvnSlTbe3Hjxo0bN27c7bxKXsRpF9QGzWRjG2K+nqdKdbhx48aNGzfufHf3EZY2BiULTYjbzedDS22oLaInbty4cePGjTtITflQS1vAare6DcpscXC7cr8fN27cuHHjxp3XTLbGUvucS6MriYM5U/sZtZ/X+F3gxo0bN27cP5J7I3gPUSTQuHWX3Jk3/LYhpPywcePGjRs3btxPceeB77L0y9OeKj9tjb3tk8WNGzdu3Lhxt92cPDxd/tcWttqi0nac+RvHshRu3Lhx48aN+6HffWhm48vHgPIi19Y8a4PjpRWHGzdu3Lhx/2TuLcZdKmF5Ey4ZIcoD39ZU2w4smqXCjRs3bty4cU8jNW3baQt2nyj6JE97YDQnfyNu3Lhx48aN+1Hu7cV52Lof/yVEtsWppOGHGzdu3Lhx4/4Ed37lEhafAkoi6bN7j9qNuHHjxo0bN+6Aux0ybp/z1PhO25y7NAVH0C0d48aNGzdu3LjLI9mKStsm86JP8vY2+LYtsfbTxI0bN27cuHH/5/6/AFgYIBxk1Y2cAAAAAElFTkSuQmCC">
+			  
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=设置文件资源管理器鼠标右键菜单在光标左/右侧&url=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/&pic=http://zfrg-blog.onrender.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=设置文件资源管理器鼠标右键菜单在光标左/右侧&url=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/&via=zfrg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/&title=设置文件资源管理器鼠标右键菜单在光标左/右侧" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=zfrg&#39;s blog&title=设置文件资源管理器鼠标右键菜单在光标左/右侧&pics=http://zfrg-blog.onrender.com/images/favicon.png&url=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/&text=设置文件资源管理器鼠标右键菜单在光标左/右侧" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <p>文件资源管理器鼠标右键菜单在光标左右侧，这是一个细节，但总有<strong>强迫症患者</strong>对此不满意。</p>
+<p>任何问题都有解决，对于这个问题的疗法来啦！</p>
+<ol>
+<li>首先 <img src="/files/winkey.png" alt="winkey.png" width="14px" height="14px">+R 调出运行框。</li>
+<li>输入<code>shell:::&#123;80F3F1D5-FECA-45F3-BC32-752C152E456E&#125;</code>然后回车。</li>
+<li>在选项卡里选<code>其它</code>。</li>
+<li>选择惯用左手/右手。（你适应的）</li>
+</ol>
+<p>完成了上面的步骤，就可以关闭窗口体验了。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+
+      
+      <blockquote>
+        
+        <strong>本文链接：</strong><br><a href="http://zfrg-blog.onrender.com/2023/12/02/%E8%AE%BE%E7%BD%AE%E6%96%87%E4%BB%B6%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86%E5%99%A8%E9%BC%A0%E6%A0%87%E5%8F%B3%E9%94%AE%E8%8F%9C%E5%8D%95%E5%9C%A8%E5%85%89%E6%A0%87%E5%B7%A6-%E5%8F%B3%E4%BE%A7/">http://zfrg-blog.onrender.com/2023/12/02/设置文件资源管理器鼠标右键菜单在光标左-右侧/</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+      
+    </footer>
+    
+  </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2023/09/29/%E8%A7%A3%E5%86%B3vscode-dev%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%97%A0%E5%9B%BE%E6%A0%87/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '解决vscode.dev左上角无图标'}">下一篇</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <comments>
+  <div align="center">
+      <div class="giscus-container">
+		  <script src="https://giscus.app/client.js"
+			data-repo="zfrg/zfrg.github.io"
+			data-repo-id="R_kgDOJ_cU7w"
+			data-category="Ideas"
+			data-category-id="DIC_kwDOJ_cU784CYgqM"
+			data-mapping="title"
+			data-strict="1"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="preferred_color_scheme"
+			data-lang="zh-CN"
+			crossorigin="Anonymous"
+			async>
+		  </script>
+	  </div>
+  </div>
+</comments>
+  </div>
+
+
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+      <a href="https://github.com/zfrg" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe7ab;</i></a>
+    
+    
+    
+    
+    
+      <a href="tencent://message/?uin=2308792628&Menu=yes" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe651;</i></a>
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2023 - 2023 zfrg<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="iconfont">&#xe601;</i> <span id="busuanzi_value_site_uv"></span></span>
+    
+  </div>
+</footer>
+
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  
+  <script src="/js/bg.js"></script>
+</body>
+</html>

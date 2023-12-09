@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>Python入门指南 | zfrg&#39;s blog</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
+  <meta name="description" content="Python是一个比较简单、易学的编程语言。 使用Python必须先安装环境。 本文将会介绍Python的优缺点和如何安装。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python入门指南">
+<meta property="og:url" content="http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/index.html">
+<meta property="og:site_name" content="zfrg&#39;s blog">
+<meta property="og:description" content="Python是一个比较简单、易学的编程语言。 使用Python必须先安装环境。 本文将会介绍Python的优缺点和如何安装。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zfrg-blog.onrender.com/files/post-image/Python%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2.png">
+<meta property="og:image" content="http://zfrg-blog.onrender.com/files/post-image/Python%E5%AE%89%E8%A3%85%E5%8C%85%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png">
+<meta property="og:image" content="http://zfrg-blog.onrender.com/files/post-image/Python%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E6%95%88%E6%9E%9C.png">
+<meta property="article:published_time" content="2023-08-10T04:06:29.000Z">
+<meta property="article:modified_time" content="2023-09-09T08:14:43.008Z">
+<meta property="article:author" content="zfrg">
+<meta property="article:tag" content="Python">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://zfrg-blog.onrender.com/files/post-image/Python%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2.png">
+
+  <meta name="keywords" content=",Python">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="zfrg&#39;s blog">
+  <meta name="msapplication-starturl" content="http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="zfrg&#39;s blog">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  
+  <link rel="manifest" href="/manifest.json">
+
+  
+    <link rel="canonical" href="http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+  <style type="text/css">.material-icons {visibility: hidden; }</style>
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue" style="/* overflow: hidden; */">
+  
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">zfrg&#39;s blog</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}" target="_blank"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://zfrg-blog.onrender.com"></form>
+    <div class="search-result"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">zfrg</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>Welcome to my blog!</div>
+      </div>
+      
+        <div class="mdui-grid-tile-buttons">
+          <a href="mailto:zfruiguo2010@163.com" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'zfruiguo2010@163.com'}"><i class="mdui-icon material-icons">email</i></a>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/09/">九月 2023<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="mdui-ripple sidebar_archives-count">5</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/Python/">Python<span class="mdui-ripple sidebar_archives-count">4</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/Github/" rel="tag">Github<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hexo/" rel="tag">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Python/" rel="tag">Python<span class="mdui-ripple sidebar_archives-count">4</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%BA%94%E7%94%A8%E5%A2%9E%E5%BC%BA/" rel="tag">应用增强<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/" rel="tag">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/timeline" class="mdui-list-item mdui-ripple">时间轴</a>
+    
+      <a href="/tagcloud" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">相册</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+          <a href="//code.xueersi.com/space/6534921/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">学而思编程</a>
+        
+          <a href="//github.com/zfrg/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">Github</a>
+        
+          <a href="//www.yzx-blog.tk/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">Yzx&#39;s blog</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-7.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">Python入门指南</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2023-08-10 / <i class="iconfont">&#xe601;</i> zfrg &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+			  <!--
+                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">
+              -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPYAAAD2CAAAAADAeSUUAAADIklEQVR42u3awY7iQAwE0Pn/n2avK62AKjusSM/LCTHQyWsONbb75ye+Hn9dz97/9zPJt2b3bdcZXtjY2Ng3YT9eXs8+8+zGz5DJ6wSZP8+bNbGxsbGPYye3+Z+PuNm+18+DjY2Njd0WCXlxcm0oYmNjY2O3N85bP683JWlX5RuEjY2N/XvYSVPp2jIjD6E83j7SS8PGxsb+enY+Ff3+1x+Zb2NjY2N/MftRXm3BsCknZqVOpMDGxsY+iJ0HwKbRn2/BLD5nz4+NjY19EnvWKmpLhdcblDePrj3Kg42NjX13dh4nswhpy5vZqLgNXWxsbOyT2JsSIo+WdnOTKM2TKJpyY2NjY9+WnSyaFyqzuWrS+tkHFTY2Nvap7M3DvS5X8iZU26jKS6bor9jY2Ng3Z7e8tvWzwde1VP4M2NjY2Aexk9ZPElc5bH8YKFkt+hY2Njb2Eez2H/38wE2+QjtayFtgT9/BxsbGPo69adPMoiVfc7P10UgAGxsb++bsdlBaN27Kdk+7xbPWFTY2NvZ57Ly5k49pZ4dvNuE0+zGwsbGxz2C3EZIUGO1G5IVKfpc3K2NjY2Mfx84bRrOoS2IsYbTFz7BrhY2NjX0rdv5AeQGQx89Vwbk63ImNjY19W3YeXbPb52E2C6rhyAEbGxv7OHY+6N0fzcnv+IkxMzY2NvZ57GSw2raQ8jIjGRK3JcoFHTVsbGzsG7LzEiI/HLkJsLakabcVGxsb+yR2O+KdFSqzMmNzcPPNZmFjY2Mfzd4cgpkF0mZEMfthsLGxsU9it+PSzQGdWSMpD8I65LCxsbGPY3+i/JgxZptVt5+wsbGxD2XPGj1tIOUN/auaXNjY2Ni/gZ0stHndFjb587S1BjY2NvZJ7Ed5bQqGdjvan6QYD2NjY2MfxG4PvuSxcVXgtePndtiMjY2NfQY7D5J942k/imhHGk9/KmxsbOzj2G1bZxZ77QAg2YK8qYSNjY2NnYdKy9iMjdvhBDY2Njb2HrZvWrWxio2Njf0b2PnANYmNdi6xn2zUQ2JsbGzsg9h5AMwOzXzik/kKF8y3sbGxsb+X/QdXIeNfr0iIPgAAAABJRU5ErkJggg==">
+			  
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=Python入门指南&url=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/&pic=http://zfrg-blog.onrender.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=Python入门指南&url=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/&via=zfrg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/&title=Python入门指南" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=zfrg&#39;s blog&title=Python入门指南&pics=http://zfrg-blog.onrender.com/images/favicon.png&url=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/&text=Python入门指南" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <p>Python是一个比较简单、易学的编程语言。<br>
+使用Python必须先安装环境。<br>
+本文将会介绍Python的优缺点和如何安装。</p>
+<span id="more"></span>
+<h2 id="%E4%BB%8B%E7%BB%8D" tabindex="-1">介绍<a class="header-anchor" href="#%E4%BB%8B%E7%BB%8D" aria-hidden="true"></a></h2>
+<h3 id="%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" tabindex="-1">基本信息<a class="header-anchor" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF" aria-hidden="true"></a></h3>
+<blockquote>
+<p>Python由荷兰数学和计算机科学研究学会的吉多·范罗苏姆于1990年代初设计，作为一门叫作ABC语言的替代品。Python提供了高效的高级数据结构，还能简单有效地面向对象编程。Python语法和动态类型，以及解释型语言的本质，使它成为多数平台上写脚本和快速开发应用的编程语言，随着版本的不断更新和语言新功能的添加，逐渐被用于独立的、大型项目的开发。<br>
+Python在各个编程语言中比较适合新手学习，Python解释器易于扩展，可以使用C语言或C++（或者其他可以通过C调用的语言）扩展新的功能和数据类型。Python也可用于可定制化软件中的扩展程序语言。Python丰富的标准库，提供了适用于各个主要系统平台的源码或机器码。</p>
+</blockquote>
+<p>（摘自<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Python/407313">百度百科</a>）</p>
+<h2 id="%E4%BC%98%E7%BC%BA%E7%82%B9" tabindex="-1">优缺点<a class="header-anchor" href="#%E4%BC%98%E7%BC%BA%E7%82%B9" aria-hidden="true"></a></h2>
+<h3 id="%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90" tabindex="-1">简要分析<a class="header-anchor" href="#%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90" aria-hidden="true"></a></h3>
+<p>Python语言的简单是显而易见的，但是Python属于<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%A7%A3%E9%87%8A%E6%80%A7%E8%AF%AD%E8%A8%80/4665504" title="解释性语言">解释性语言</a>，与<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E7%BC%96%E8%AF%91%E5%9E%8B%E8%AF%AD%E8%A8%80" title="编译型语言">编译型语言</a>相比，它的缺点也很明显，总之，解释性语言啥缺点，它就有啥缺点。</p>
+<h3 id="%E4%BC%98%E7%82%B9" tabindex="-1">优点<a class="header-anchor" href="#%E4%BC%98%E7%82%B9" aria-hidden="true"></a></h3>
+<blockquote>
+<p><strong>简单</strong>：Python是一种代表简单主义思想的语言。阅读一个良好的Python程序就感觉像是在读英语一样。它使你能够专注于解决问题而不是去搞明白语言本身。<br>
+<strong>易学</strong>：Python极其容易上手，因为Python有极其简单的说明文档。<br>
+<strong>易读、易维护</strong>：风格清晰划一、强制缩进<br>
+<strong>用途广泛</strong><br>
+<strong>速度较快</strong>：Python的底层是用C语言写的，很多标准库和第三方库也都是用C写的，运行速度非常快。<br>
+<strong>免费、开源</strong>：Python是FLOSS（自由/开放源码软件）之一。使用者可以自由地发布这个软件的拷贝、阅读它的源代码、对它做改动、把它的一部分用于新的自由软件中。FLOSS是基于一个团体分享知识的概念。<br>
+<strong>高层语言</strong>：用Python语言编写程序的时候无需考虑诸如如何管理你的程序使用的内存一类的底层细节。<br>
+<strong>可移植性</strong>：由于它的开源本质，Python已经被移植在许多平台上（经过改动使它能够工作在不同平台上）。这些平台包括Linux、Windows、FreeBSD、Macintosh、Solaris、OS/2、Amiga、AROS、AS/400、BeOS、OS/390、z/OS、Palm OS、QNX、VMS、Psion、Acom RISC OS、VxWorks、PlayStation、Sharp Zaurus、Windows CE、PocketPC、Symbian以及Google基于linux开发的android平台。<br>
+<strong>解释性</strong>：一个用编译性语言比如C或C<ins>写的程序可以从源文件（即C或C</ins>语言）转换到一个你的计算机使用的语言（二进制代码，即0和1）。这个过程通过编译器和不同的标记、选项完成。<br>
+运行程序的时候，连接/转载器软件把你的程序从硬盘复制到内存中并且运行。而Python语言写的程序不需要编译成二进制代码。你可以直接从源代码运行程序。<br>
+在计算机内部，Python解释器把源代码转换成称为字节码的中间形式，然后再把它翻译成计算机使用的机器语言并运行。这使得使用Python更加简单。也使得Python程序更加易于移植。<br>
+<strong>面向对象</strong>：Python既支持面向过程的编程也支持面向对象的编程。在“面向过程”的语言中，程序是由过程或仅仅是可重用代码的函数构建起来的。在“面向对象”的语言中，程序是由数据和功能组合而成的对象构建起来的。<br>
+Python是完全面向对象的语言。函数、模块、数字、字符串都是对象。并且完全支持继承、重载、派生、多继承，有益于增强源代码的复用性。Python支持重载运算符和动态类型。相对于Lisp这种传统的函数式编程语言，Python对函数式设计只提供了有限的支持。有两个标准库（functools，itertools）提供了Haskell和Standard ML中久经考验的函数式程序设计工具。<br>
+<strong>可扩展性、可扩充性</strong>：如果需要一段关键代码运行得更快或者希望某些算法不公开，可以部分程序用C或C<ins>编写，然后在Python程序中使用它们。<br>
+Python本身被设计为可扩充的。并非所有的特性和功能都集成到语言核心。Python提供了丰富的API和工具，以便程序员能够轻松地使用C语言、C</ins>、Cython来编写扩充模块。Python编译器本身也可以被集成到其它需要脚本语言的程序内。因此，很多人还把Python作为一种“胶水语言”（glue language）使用。使用Python将其他语言编写的程序进行集成和封装。在Google内部的很多项目，例如Google Engine使用C<ins>编写性能要求极高的部分，然后用Python或Java/Go调用相应的模块。《Python技术手册》的作者马特利（Alex Martelli）说：“这很难讲，不过，2004年，Python已在Google内部使用，Google 召募许多 Python 高手，但在这之前就已决定使用Python，他们的目的是 Python where we can，C</ins> where we must，在操控硬件的场合使用C++，在快速开发时候使用Python。”<br>
+<strong>可嵌入性</strong>：可以把Python嵌入C/C++程序，从而向程序用户提供脚本功能。<br>
+<strong>丰富的库</strong>：Python标准库确实很庞大。它可以帮助处理各种工作，包括正则表达式、文档生成、单元测试、线程、数据库、网页浏览器、CGI、FTP、电子邮件、XML、XML-RPC、HTML、WAV文件、密码系统、GUI（图形用户界面）、Tk和其他与系统有关的操作。这被称作Python的“功能齐全”理念。除了标准库以外，还有许多其他高质量的库，如wxPython、Twisted和Python图像库等等。<br>
+<strong>规范的代码</strong>：Python采用强制缩进的方式使得代码具有较好可读性。而Python语言写的程序不需要编译成二进制代码。Python的作者设计限制性很强的语法，使得不好的编程习惯（例如if语句的下一行不向右缩进）都不能通过编译。其中很重要的一项就是Python的缩进规则。一个和其他大多数语言（如C）的区别就是，一个模块的界限，完全是由每行的首字符在这一行的位置来决定（而C语言是用一对大括号来明确的定出模块的边界，与字符的位置毫无关系）。通过强制程序员们缩进（包括if，for和函数定义等所有需要使用模块的地方），Python确实使得程序更加清晰和美观。<br>
+<strong>高级动态编程</strong>：虽然Python可能被粗略地分类为“脚本语言”（script language），但实际上一些大规模软件开发计划例如Zope、Mnet及BitTorrent，Google也广泛地使用它。Python的支持者较喜欢称它为一种高级动态编程语言，原因是“脚本语言”泛指仅作简单程序设计任务的语言，如shellscript、VBScript等只能处理简单任务的编程语言，并不能与Python相提并论。<br>
+<strong>做科学计算优点多</strong>：说起科学计算，首先会被提到的可能是MATLAB。除了MATLAB的一些专业性很强的工具箱还无法被替代之外，MATLAB的大部分常用功能都可以在Python世界中找到相应的扩展库。和MATLAB相比，用Python做科学计算有如下优点：<br>
+●首先，MATLAB是一款商用软件，并且价格不菲。而Python完全免费，众多开源的科学计算库都提供了Python的调用接口。用户可以在任何计算机上免费安装Python及其绝大多数扩展库。<br>
+●其次，与MATLAB相比，Python是一门更易学、更严谨的程序设计语言。它能让用户编写出更易读、易维护的代码。<br>
+●最后，MATLAB主要专注于工程和科学计算。然而即使在计算领域，也经常会遇到文件管理、界面设计、网络通信等各种需求。而Python有着丰富的扩展库，可以轻易完成各种高级任务，开发者可以用Python实现完整应用程序所需的各种功能。</p>
+</blockquote>
+<h3 id="%E7%BC%BA%E7%82%B9" tabindex="-1">缺点<a class="header-anchor" href="#%E7%BC%BA%E7%82%B9" aria-hidden="true"></a></h3>
+<blockquote>
+<p><strong>单行语句和命令行输出问题</strong>：很多时候不能将程序连写成一行，如<code>import sys；for i in sys.path：print i</code>。而perl和awk就无此限制，可以较为方便的在shell下完成简单程序，不需要如Python一样，必须将程序写入一个.py文件。<br>
+给初学者带来困惑：独特的语法，这也许不应该被称为局限，但是它用缩进来区分语句关系的方式还是给很多初学者带来了困惑。即便是很有经验的Python程序员，也可能陷入陷阱当中。<br>
+<strong>运行速度慢</strong>：这里是指与C和C<ins>相比。Python开发人员尽量避开不成熟或者不重要的优化。一些针对非重要部位的加快运行速度的补丁通常不会被合并到Python内。所以很多人认为Python很慢。不过，根据二八定律，大多数程序对速度要求不高。在某些对运行速度要求很高的情况，Python设计师倾向于使用JIT技术，或者用使用C/C</ins>语言改写这部分程序。可用的JIT技术是PyPy。</p>
+</blockquote>
+<p>（摘自<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/Python/407313#2" title="百度百科">百度百科</a>）</p>
+<h2 id="%E5%AE%89%E8%A3%85" tabindex="-1">安装<a class="header-anchor" href="#%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h2>
+<h3 id="%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85" tabindex="-1">下载安装包<a class="header-anchor" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85" aria-hidden="true"></a></h3>
+<p>打开<a target="_blank" rel="noopener" href="https://www.python.org/downloads/" title="Python官方下载页面">Python官方下载页面</a><br>
+如图：<br>
+<img src="/files/post-image/Python%E4%B8%8B%E8%BD%BD%E9%A1%B5%E9%9D%A2.png" alt="Python下载页面.png"><br>
+选择对应的版本下载安装包，我选择的是<a target="_blank" rel="noopener" href="https://www.python.org/ftp/python/3.8.10/python-3.8.10-amd64.exe" title="Python 3.8.10-Windows installer (64-bit)">Python 3.8.10-Windows installer (64-bit)</a></p>
+<h3 id="%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85" tabindex="-1">开始安装<a class="header-anchor" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85" aria-hidden="true"></a></h3>
+<p>打开安装包就会看到如图所示的页面：<br>
+<img src="/files/post-image/Python%E5%AE%89%E8%A3%85%E5%8C%85%E5%88%9D%E5%A7%8B%E7%95%8C%E9%9D%A2.png" alt="Python安装包初始界面.png"><br>
+这里建议勾上<code>Add Python XXX to Path</code>，它的作用就是把Python加入环境变量，这里说下作用。</p>
+<div class="admonition note"><p class="admonition-title">Note</p><p><code>/path/to/XXX</code>意思是指向<code>XXX</code>的路径</p>
+</div>
+<p>如果把Python加入环境变量，就可以直接使用<code>python test.py</code>和<code>pip install requests</code>等命令，否则需要切到安装目录上即<code>/path/to/python</code></p>
+<p>如果你想安装到非默认文件夹或选择性安装内容就点<em>自定义安装（Custom Installation）</em>，然后更改就行。</p>
+<p>安装完成后在cmd执行<code>python</code>若有如图所示的效果这说明安装成功。<br>
+<img src="/files/post-image/Python%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F%E6%95%88%E6%9E%9C.png" alt="Python安装成功效果.png"></p>
+<h3 id="%E5%BA%93" tabindex="-1">库<a class="header-anchor" href="#%E5%BA%93" aria-hidden="true"></a></h3>
+<p>安装库需要pip。<br>
+pip不需要另外安装，除非你没有，在安装Python的时候保证把pip的选项打上勾就行了。<br>
+安装库只需要执行<code>pip install *</code>即可<br>
+比如安装<code>PyQt5</code>就执行<code>pip install PyQt5</code></p>
+<p>问题：pip输出<code>Defaulting to user installation because normal site-packages is not writeable</code><br>
+把python安装到路径不包含<code>Program Files</code>的地方，因为那种文件夹是只读的，自然没法写入库文件。</p>
+<h2 id="%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" tabindex="-1">开始使用<a class="header-anchor" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8" aria-hidden="true"></a></h2>
+<h3 id=".py%E5%92%8C.pyw%E6%96%87%E4%BB%B6" tabindex="-1">.py和.pyw文件<a class="header-anchor" href="#.py%E5%92%8C.pyw%E6%96%87%E4%BB%B6" aria-hidden="true"></a></h3>
+<p>Python程序的代码保存在扩展名为<code>.py</code>或<code>.pyw</code>的文件中，在用Python运行就可以看到程序效果了。</p>
+<p>这两个扩展名虽然都是Python程序文件，但两者是有区别的。</p>
+<p><code>.py</code>使用<code>python.exe</code>运行，运行时显示终端<br>
+<code>.pyw</code>使用<code>pythonw.exe</code>运行，运行时不显示终端</p>
+<h3 id="hello-world" tabindex="-1">Hello World<a class="header-anchor" href="#hello-world" aria-hidden="true"></a></h3>
+<p>把<code>print('Hello World')</code>保存在py文件中并运行即可看到程序输出<code>Hello World</code>，这里不再展示。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+
+      
+      <blockquote>
+        
+        <strong>本文链接：</strong><br><a href="http://zfrg-blog.onrender.com/2023/08/10/Python%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/">http://zfrg-blog.onrender.com/2023/08/10/Python使用指南/</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+        <a class="mdui-ripple article_categories-link" href="/categories/Python/">Python</a>
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/Python/" rel="tag">Python</a>
+      
+    </footer>
+    
+  </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2023/08/17/%E6%96%87%E4%BB%B6%E7%94%9F%E6%88%90Data-URL/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '文件生成Data URL'}">上一篇</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2023/08/10/Hexo%E6%96%87%E7%AB%A0%E7%BD%AE%E9%A1%B6/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: 'Hexo文章置顶'}">下一篇</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <comments>
+  <div align="center">
+      <div class="giscus-container">
+		  <script src="https://giscus.app/client.js"
+			data-repo="zfrg/zfrg.github.io"
+			data-repo-id="R_kgDOJ_cU7w"
+			data-category="Ideas"
+			data-category-id="DIC_kwDOJ_cU784CYgqM"
+			data-mapping="title"
+			data-strict="1"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="preferred_color_scheme"
+			data-lang="zh-CN"
+			crossorigin="Anonymous"
+			async>
+		  </script>
+	  </div>
+  </div>
+</comments>
+  </div>
+
+
+
+  <div style="position: fixed !important; right: 16px; top: 30%;">
+    <button class="mdui-fab mdui-fab-mini mdui-ripple" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">toc</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item" disabled><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-text">介绍</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E4%BF%A1%E6%81%AF"><span class="toc-text">基本信息</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BC%98%E7%BC%BA%E7%82%B9"><span class="toc-text">优缺点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%A6%81%E5%88%86%E6%9E%90"><span class="toc-text">简要分析</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-text">优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%BC%BA%E7%82%B9"><span class="toc-text">缺点</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-text">安装</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="toc-text">下载安装包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E5%AE%89%E8%A3%85"><span class="toc-text">开始安装</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BA%93"><span class="toc-text">库</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E5%A7%8B%E4%BD%BF%E7%94%A8"><span class="toc-text">开始使用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#.py%E5%92%8C.pyw%E6%96%87%E4%BB%B6"><span class="toc-text">.py和.pyw文件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hello-world"><span class="toc-text">Hello World</span></a></li></ol></li></ol></li>
+    </ul>
+  </div>
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+      <a href="https://github.com/zfrg" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe7ab;</i></a>
+    
+    
+    
+    
+    
+      <a href="tencent://message/?uin=2308792628&Menu=yes" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe651;</i></a>
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2023 - 2023 zfrg<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="iconfont">&#xe601;</i> <span id="busuanzi_value_site_uv"></span></span>
+    
+  </div>
+</footer>
+
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  
+  <script src="/js/bg.js"></script>
+</body>
+</html>

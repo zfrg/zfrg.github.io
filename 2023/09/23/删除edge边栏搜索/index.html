@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="renderer" content="webkit">
+
+  
+  <title>删除edge边栏搜索 | zfrg&#39;s blog</title>
+
+  <link rel="shortcut icon" href="/images/favicon.png">
+  <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
+  <meta name="description" content="相信很多读者在用Edge浏览器，但是它有一点非常烦人——那就是它的边栏搜索。这篇文章将教你删除这个东西。 问题描述 如图，就是这个标志：  这个东西其实就是微软用来推荐自家的必应搜索引擎的。 解决方案 把下面的代码复制下来保存到*.reg文件（对，就是注册表）。 *.reg12345Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="删除edge边栏搜索">
+<meta property="og:url" content="http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/index.html">
+<meta property="og:site_name" content="zfrg&#39;s blog">
+<meta property="og:description" content="相信很多读者在用Edge浏览器，但是它有一点非常烦人——那就是它的边栏搜索。这篇文章将教你删除这个东西。 问题描述 如图，就是这个标志：  这个东西其实就是微软用来推荐自家的必应搜索引擎的。 解决方案 把下面的代码复制下来保存到*.reg文件（对，就是注册表）。 *.reg12345Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SO">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://zfrg-blog.onrender.com/files/post-image/Edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2%E6%A0%87%E5%BF%97.png">
+<meta property="article:published_time" content="2023-09-23T06:30:24.000Z">
+<meta property="article:modified_time" content="2023-11-01T04:49:14.546Z">
+<meta property="article:author" content="zfrg">
+<meta property="article:tag" content="浏览器">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://zfrg-blog.onrender.com/files/post-image/Edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2%E6%A0%87%E5%BF%97.png">
+
+  <meta name="keywords" content=",浏览器">
+  <meta name="format-detection" content="telephone=no,email=no">
+  <meta name="theme-color">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="zfrg&#39;s blog">
+  <meta name="msapplication-starturl" content="http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/">
+  <meta name="msapplication-navbutton-color" content="#9C27B0">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="zfrg&#39;s blog">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon" href="/images/favicon.png">
+  
+  <link rel="manifest" href="/manifest.json">
+
+  
+    <link rel="canonical" href="http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/">
+  
+
+  
+  
+
+  
+  
+  
+
+  
+<link rel="stylesheet" href="/css/mdui.css">
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/custom.css">
+
+  <style type="text/css">.material-icons {visibility: hidden; }</style>
+<meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="mdui-appbar-with-toolbar mdui-theme-primary-indigo mdui-theme-accent-blue" style="/* overflow: hidden; */">
+  
+  <script>var a=localStorage.getItem("mdui-theme-layout-dark");if(a){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>if(window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)").matches){document.getElementsByTagName("body")[0].className+=" mdui-theme-layout-dark"};</script>
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(!a){document.getElementsByTagName("body")[0].className+=" mdui-drawer-body-left"};</script>
+  <header id="header" class="mdui-appbar mdui-appbar-fixed mdui-appbar-scroll-hide mdui-appbar-inset">
+  <div class="mdui-toolbar mdui-color-theme">
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-drawer="{target: '#sidebar', swipe: true}"><i class="mdui-icon material-icons">menu</i></a>
+    <a href="/" class="mdui-typo-headline">zfrg&#39;s blog</a>
+    <div class="mdui-toolbar-spacer"></div>
+    <a href="javascript:;" class="mdui-btn mdui-btn-icon" mdui-dialog="{target: '#search'}" mdui-tooltip="{content: '搜索'}"><i class="mdui-icon material-icons">search</i></a>
+    <a href="/atom.xml" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'RSS'}" target="_blank"><i class="mdui-icon material-icons">rss_feed</i></a>
+  </div>
+</header>
+<div class="mdui-dialog" id="search">
+  
+    <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="请输入关键字"><input type="hidden" name="sitesearch" value="http://zfrg-blog.onrender.com"></form>
+    <div class="search-result"></div>
+  
+</div>
+
+  <aside id="sidebar" class="mdui-drawer mdui-drawer-full-height">
+  <script>var a=localStorage.getItem("mdui-drawer-close");if(a){document.getElementById("sidebar").className+=" mdui-drawer-close"};</script>
+  <div class="mdui-grid-tile">
+    <img src="/images/banner.png" style="height: 160px;">
+    <img src="/images/avatar.png" class="avatar-animation" style="position: absolute; top: 10%; left: 24px; width: 64px; height: 64px; border: 2px solid #fff; border-radius: 50%;">
+    <div class="mdui-grid-tile-actions">
+      <div class="mdui-grid-tile-text">
+        <div class="mdui-grid-tile-title">zfrg</div>
+        <div class="mdui-grid-tile-subtitle"><i class="mdui-icon material-icons">art_track</i>Welcome to my blog!</div>
+      </div>
+      
+        <div class="mdui-grid-tile-buttons">
+          <a href="mailto:zfruiguo2010@163.com" class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'zfruiguo2010@163.com'}"><i class="mdui-icon material-icons">email</i></a>
+        </div>
+      
+    </div>
+  </div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    <a href="/" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-blue">home</i>
+      <div class="mdui-list-item-content">主页</div>
+    </a>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-0");if(a){document.getElementsByClassName("mdui-collapse-item")[0].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-deep-orange">archive</i>
+        <div class="mdui-list-item-content">归档</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/archives/2023/12/">十二月 2023<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/09/">九月 2023<span class="mdui-ripple sidebar_archives-count">3</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/08/">八月 2023<span class="mdui-ripple sidebar_archives-count">5</span></a><a class="mdui-ripple sidebar_archives-link" href="/archives/2023/07/">七月 2023<span class="mdui-ripple sidebar_archives-count">2</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-1");if(a){document.getElementsByClassName("mdui-collapse-item")[1].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-green">class</i>
+        <div class="mdui-list-item-content">分类</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/categories/Hexo/">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/Python/">Python<span class="mdui-ripple sidebar_archives-count">4</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E5%B0%8F%E5%B7%A5%E5%85%B7/">小工具<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/categories/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-2");if(a){document.getElementsByClassName("mdui-collapse-item")[2].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-brown">bookmark</i>
+        <div class="mdui-list-item-content">标签</div>
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+        <a class="mdui-ripple sidebar_archives-link" href="/tags/Github/" rel="tag">Github<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Hexo/" rel="tag">Hexo<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/Python/" rel="tag">Python<span class="mdui-ripple sidebar_archives-count">4</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E5%BA%94%E7%94%A8%E5%A2%9E%E5%BC%BA/" rel="tag">应用增强<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器<span class="mdui-ripple sidebar_archives-count">2</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/" rel="tag">浏览器扩展<span class="mdui-ripple sidebar_archives-count">1</span></a><a class="mdui-ripple sidebar_archives-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐<span class="mdui-ripple sidebar_archives-count">1</span></a>
+        
+      </div>
+    </div>
+    <a href="/about" class="mdui-list-item mdui-ripple">
+      <i class="mdui-list-item-icon mdui-icon material-icons mdui-text-color-purple">person</i>
+      <div class="mdui-list-item-content">关于</div>
+    </a>
+  </div>
+
+  <div class="mdui-divider"></div>
+
+  <div class="mdui-list" mdui-collapse="{accordion: true}">
+    
+      <a href="/timeline" class="mdui-list-item mdui-ripple">时间轴</a>
+    
+      <a href="/tagcloud" class="mdui-list-item mdui-ripple">标签云</a>
+    
+      <a href="/gallery" class="mdui-list-item mdui-ripple">相册</a>
+    
+    <div class="mdui-collapse-item">
+      <script>var a=localStorage.getItem("mdui-collapse-item-3");if(a){document.getElementsByClassName("mdui-collapse-item")[3].className+=" mdui-collapse-item-open"};</script>
+      <div class="mdui-collapse-item-header mdui-list-item mdui-ripple">
+        <div class="mdui-list-item-content">友情链接</div>
+        <i class="mdui-list-item-icon mdui-icon material-icons">link</i>
+      </div>
+      <div class="mdui-collapse-item-body mdui-list mdui-list-dense">
+        
+          <a href="//code.xueersi.com/space/6534921/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">学而思编程</a>
+        
+          <a href="//github.com/zfrg/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">Github</a>
+        
+          <a href="//www.yzx-blog.tk/" target="_blank" class="mdui-list-item mdui-p-l-2 mdui-text-color-theme-accent mdui-ripple" style="justify-content: center;">Yzx&#39;s blog</a>
+        
+        
+      </div>
+    </div>
+  </div>
+</aside>
+
+  <main id="main" class="mdui-m-t-5 fadeIn animated">
+  
+<link rel="stylesheet" href="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  <style>#main article .mdui-card-content .center-block{display:block!important;margin-right:auto!important;margin-left:auto!important}</style>
+  <style>#main article .mdui-card-content .text-center{text-align:center!important}</style>
+  <article class="mdui-card mdui-m-b-5">
+    <header class="mdui-card-media">
+      <img src="/images/random/material-17.png" style="max-height: 240px;">
+      <div class="mdui-card-media-covered">
+        <div class="mdui-card-primary">
+          <div class="mdui-card-primary-title">删除edge边栏搜索</div>
+          <div class="mdui-card-primary-subtitle"><i class="iconfont">&#xe697;</i> 2023-09-23 / <i class="iconfont">&#xe601;</i> zfrg &nbsp;&nbsp; <span id="busuanzi_container_page_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_page_pv"></span></span></div>
+        </div>
+      </div>
+      <div class="mdui-card-menu">
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#qrcode', align: 'right'}"><i class="mdui-icon material-icons">devices</i></button>
+          <ul class="mdui-menu" id="qrcode">
+            
+              <li class="mdui-menu-item"><a class="mdui-text-center mdui-ripple">发送到手机</a></li>
+            
+            <li class="mdui-menu-item" disabled>
+              
+			  <!--
+                <img src="//qr.liantu.com/api.php?w=246&m=10&text=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/">
+              -->
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQ4AAAEOCAAAAABd2qZ5AAAD7ElEQVR42u3aS27bQBAFQN3/0snWgULqdb9hHAOllUHTw5migVZ/Xq/48yv4fL3z6q/e77l/SrKf+yuvJz44cODAgaM46tXD3le4Xy357XS1KU2yGg4cOHDgOMWRHPL+nvvr98H4/ni79Zf7x4EDBw4c/5xjFyZz4unLyHeCAwcOHDj+T46k8Jenf33h7/AXBRw4cODAcYjjiWbStGC3S/maoiQOHDhw4HiCIw9+P/fnR+Y7cODAgQNHHJx2Ywd52MuTwGaEYnw6HDhw4MBRc+QBaXe8XdhLCotNq+nDOjhw4MCB42GOZCvN4EL+3CfIqgfjwIEDB44kzATHm7aU8qRrWuzL07zkBePAgQMHjp5j2mTKF03GDvL1p8XK6UvCgQMHDhynOHahccrXBPLpuF7SiIrKgjhw4MCBo+ZoBgXy4NoMSUxLhOPwjAMHDhw4ao680NaEt90gQj+i11zHgQMHDhy769NglmxiVyLM08J+fOFDcMWBAwcOHIc4To2mTUcK8sRvF2iTEH7ZdsKBAwcOHEOO3UDDtNi3S8l2ray+JYYDBw4cOBqOvKWUlO2azzRJS8YU8n3+8b0DBw4cOHAc4tiFtGkkn6ZP0wQsf7XLzeHAgQMHjpgjD5z5FnfBOC/57TLUy7/CgQMHDhyHOKZjCnmDJx9N2DWfDiecOHDgwIHjaO2uaQjlRcbpmnnpMH/Z0Wo4cODAgaPgyINZHgKb9O9s2TEJ5MvYjgMHDhw43tas2v91oG16QP1QxV/Wx4EDBw4cNccuPZsGuX670/LlLjnEgQMHDhw9R5727K7koTEPzNN0Md85Dhw4cOA4y9F8pmME07JdXnBsWlA4cODAgaPnmD5+GgJ3Ifzp1SJEHDhw4MCx4sg3MS3D7ULmoKI5HI8Y/0fgwIEDB46CI0/MpiW5aXMrP3DeiMrvx4EDBw4cPUc/KNCUEU8x7b5GXF7HgQMHDhw1x7S1k5TqplvJk8PpK1ky4cCBAweOgiMfTTiVnuU0zXN3SSAOHDhw4Gg4+lJa3iKapot5CJ8G78s948CBAweOQxxNA2na8sk3lw8rHHsWDhw4cOA486zq2NPUKwmTu4JjHoY/jGjgwIEDB46CYzeOsAuBu+A3XT//7eAN4MCBAweOWcR5NWHvieZQjpIXIqeNMRw4cODA0XDsHrwLmU0gTILxgUCLAwcOHDgOcfSBajA6UBw7aYw1p8aBAwcOHN/F0eSIO7hpsM+Lmzhw4MCB43s5dgNq03bR9DXke47mO3DgwIEDR80xHT7Ik7omFWwaYNOhChw4cODAcYpjWkqbluqa9Ox+uzuIXckSBw4cOHAEd/4GdsymGDgdoX0AAAAASUVORK5CYII=">
+			  
+            </li>
+          </ul>
+        
+        
+          <button class="mdui-btn mdui-btn-icon mdui-text-color-white" mdui-menu="{target: '#share_menu', align: 'right'}"><i class="mdui-icon material-icons">share</i></button>
+          <ul class="mdui-menu" id="share_menu">
+            <li class="mdui-menu-item">
+              <a href="https://service.weibo.com/share/share.php?appkey=&title=删除edge边栏搜索&url=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/&pic=http://zfrg-blog.onrender.com/images/favicon.png&searchPic=false&style=simple" target="_blank" class="mdui-ripple">分享到 Weibo</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://twitter.com/intent/tweet?text=删除edge边栏搜索&url=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/&via=zfrg" target="_blank" class="mdui-ripple">分享到 Twitter</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.facebook.com/sharer/sharer.php?u=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/" target="_blank" class="mdui-ripple">分享到 Facebook</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://plus.google.com/share?url=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/" target="_blank" class="mdui-ripple">分享到 Google+</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/&title=删除edge边栏搜索" target="_blank" class="mdui-ripple">分享到 LinkedIn</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://connect.qq.com/widget/shareqq/index.html?site=zfrg&#39;s blog&title=删除edge边栏搜索&pics=http://zfrg-blog.onrender.com/images/favicon.png&url=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/" target="_blank" class="mdui-ripple">分享到 QQ</a>
+            </li>
+            <li class="mdui-menu-item">
+              <a href="https://telegram.me/share/url?url=http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/&text=删除edge边栏搜索" target="_blank" class="mdui-ripple">分享到 Telegram</a>
+            </li>
+          </ul>
+        
+      </div>
+    </header>
+    <div class="mdui-card-content mdui-typo">
+      <p>相信很多读者在用Edge浏览器，但是它有一点非常烦人——那就是它的边栏搜索。这篇文章将教你删除这个东西。</p>
+<h2 id="%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0" tabindex="-1">问题描述<a class="header-anchor" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0" aria-hidden="true"></a></h2>
+<p>如图，就是这个标志：<br>
+<img src="/files/post-image/Edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2%E6%A0%87%E5%BF%97.png" alt="Edge边栏搜索标志.png"><br>
+这个东西其实就是微软用来推荐自家的必应搜索引擎的。</p>
+<h2 id="%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" tabindex="-1">解决方案<a class="header-anchor" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88" aria-hidden="true"></a></h2>
+<p>把下面的代码复制下来保存到<code>*.reg</code>文件（对，就是注册表）。</p>
+<figure class="highlight plaintext"><figcaption><span>*.reg</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version 5.00</span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]</span><br><span class="line">&quot;DefaultSearchProviderContextMenuAccessAllowed&quot;=dword:00000000</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>你也可以在这里<a href="/files/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2.reg" title="下载“删除edge边栏搜索.reg”文件" download="删除edge边栏搜索.reg">下载</a>，然后合并注册表就完成了，重启Edge浏览器后生效，你就几乎见不到这个标志了。</p>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex/dist/katex.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/markdown-it-texmath/css/texmath.min.css">
+
+      
+      <blockquote>
+        
+        <strong>本文链接：</strong><br><a href="http://zfrg-blog.onrender.com/2023/09/23/%E5%88%A0%E9%99%A4edge%E8%BE%B9%E6%A0%8F%E6%90%9C%E7%B4%A2/">http://zfrg-blog.onrender.com/2023/09/23/删除edge边栏搜索/</a>
+      </blockquote>
+    </div>
+    <footer class="mdui-card-actions">
+      
+      
+        <a class="mdui-ripple article_tags-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a>
+      
+    </footer>
+    
+  </article>
+  
+<script src="//cdn.bootcdn.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//cdn.bootcdn.net/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+  <script>$("#main article .mdui-card-content img.fancybox").on("click",function(e){$.fancybox.open({src:$(this).attr("src")});});</script>
+
+
+  <nav id="paginator">
+    
+      <a rel="prev" class="extend prev" href="/2023/09/29/%E8%A7%A3%E5%86%B3vscode-dev%E5%B7%A6%E4%B8%8A%E8%A7%92%E6%97%A0%E5%9B%BE%E6%A0%87/">
+        <button aria-label="prev" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_back</i></button>
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '解决vscode.dev左上角无图标'}">上一篇</span>
+      </a>
+    
+    <div class="spacer"></div>
+    
+      <a rel="next" class="extend next" href="/2023/09/16/%E8%8A%B1%E6%BC%BE%E5%AD%97%E7%94%9F%E6%88%90%E5%99%A8/">
+        <span class="mdui-p-x-3" mdui-tooltip="{content: '花漾字生成器'}">下一篇</span>
+        <button aria-label="next" class="mdui-btn mdui-btn-raised mdui-btn-icon mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_forward</i></button>
+      </a>
+    
+  </nav>
+
+
+  <div id="comment" class="mdui-m-t-5">
+    <comments>
+  <div align="center">
+      <div class="giscus-container">
+		  <script src="https://giscus.app/client.js"
+			data-repo="zfrg/zfrg.github.io"
+			data-repo-id="R_kgDOJ_cU7w"
+			data-category="Ideas"
+			data-category-id="DIC_kwDOJ_cU784CYgqM"
+			data-mapping="title"
+			data-strict="1"
+			data-reactions-enabled="1"
+			data-emit-metadata="0"
+			data-input-position="top"
+			data-theme="preferred_color_scheme"
+			data-lang="zh-CN"
+			crossorigin="Anonymous"
+			async>
+		  </script>
+	  </div>
+  </div>
+</comments>
+  </div>
+
+
+
+  <div style="position: fixed !important; right: 16px; top: 30%;">
+    <button class="mdui-fab mdui-fab-mini mdui-ripple" mdui-menu="{target: '#toc'}"><i class="mdui-icon material-icons">toc</i></button>
+    <ul class="mdui-menu" id="toc">
+      <li class="mdui-menu-item" disabled><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8F%8F%E8%BF%B0"><span class="toc-text">问题描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="toc-text">解决方案</span></a></li></ol></li>
+    </ul>
+  </div>
+
+
+</main>
+  <footer id="footer" class="mdui-m-t-5 mdui-p-y-3 mdui-color-theme">
+  <div class="mdui-p-y-0 mdui-text-center">
+    
+    
+    
+    
+    
+    
+    
+      <a href="https://github.com/zfrg" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe7ab;</i></a>
+    
+    
+    
+    
+    
+      <a href="tencent://message/?uin=2308792628&Menu=yes" target="_blank" class="mdui-btn mdui-btn-icon mdui-text-color-theme-a100"><i class="mdui-icon iconfont">&#xe651;</i></a>
+    
+    
+  </div>
+  <div class="mdui-p-y-1 mdui-text-center">
+    Copyright &copy; 2023 - 2023 zfrg<br>
+    Powered by <a href="https://hexo.io/" target="_blank" class="mdui-text-color-theme-accent">Hexo</a>
+    <br>
+      <span id="busuanzi_container_site_pv" style="display: none;"><i class="iconfont">&#xe7fd;</i> <span id="busuanzi_value_site_pv"></span></span> &nbsp;&nbsp;
+      <span id="busuanzi_container_site_uv" style="display: none;"><i class="iconfont">&#xe601;</i> <span id="busuanzi_value_site_uv"></span></span>
+    
+  </div>
+</footer>
+
+  <button id="gotop" class="mdui-fab mdui-fab-fixed mdui-fab-hide mdui-color-theme-accent mdui-ripple"><i class="mdui-icon material-icons">arrow_upward</i></button>
+  <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+<script src="/js/mdui.js"></script>
+<script src="/js/script.js"></script>
+
+  
+<script src="/custom.js"></script>
+
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  
+  <script src="/js/bg.js"></script>
+</body>
+</html>
