@@ -3,7 +3,6 @@ var dark=localStorage.getItem("mdui-theme-layout-dark");
 if (window.navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i))
 {
   themeColorTag.setAttribute("content", "#448AFF");
-}
 } else {
   if (dark) {
 	themeColorTag.setAttribute("content", "#000000");
