@@ -373,8 +373,8 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2025年10月26日</a>
-			<a><i class="kirafont icon-edit-fill"></i>407 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
+			<a><i class="kirafont icon-edit-fill"></i>682 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
 		</div>
 		<html><head></head><body><h2><span id="%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D-%F0%9F%98%80">自我介绍 😀</span></h2><p><img data-fancybox="gallery" data-sizes="auto" data-src="https://readme-typing-svg.demolab.com/?font=Fira+Code&amp;size=32&amp;pause=1000%C2%A2er=true&amp;vCenter=true&amp;repeat=false&amp;width=265&amp;lines=Hi%F0%9F%91%8B%F0%9F%8F%BB!I%27m+zfrg." alt="打个招呼👋" class="lazyload"></p>
 <ol>
@@ -411,9 +411,82 @@
 <ul>
 <li>Giscus：用于评论功能 💬</li>
 <li>Render：网站服务器托管 🎨</li>
-<li>其他：其他一些嵌入的网页，如 Bilibili（视频播放）等</li>
+<li>其他：部分嵌入的第三方网页 🔗</li>
 </ul>
 <p>注：目前本站还不会主动利用 Cookies 存放您的信息🍪（第三方服务之外）</p>
+<h2><span id="%E5%B0%8F%E5%B7%A5%E5%85%B7-%F0%9F%94%A8">小工具 🔨</span></h2><p>本站使用了 <strong>Service Worker</strong> 技术以实现更快的访问速度并优化离线访问🚀，但是可能无法接收到更新的文章，点击下方按钮可以清除已产生的缓存或更新 Service Worker 。</p>
+
+
+<!-- Service Worker 控制按钮 -->
+
+<div class="sw-controls">
+  <button id="sw-unregister">清除Service Worker缓存</button>
+  <button id="sw-update">更新Service Worker</button>
+  <button id="sw-refresh">刷新网页</button>
+</div>
+
+<script>
+// 清除Service Worker缓存
+document.getElementById('sw-unregister').addEventListener('click', async () => {
+  if (!('serviceWorker' in navigator)) {
+    alert('浏览器不支持Service Worker');
+    return;
+  }
+
+  try {
+    const registrations = await navigator.serviceWorker.getRegistrations();
+    if (registrations.length === 0) {
+      alert('没有已注册的Service Worker');
+      return;
+    }
+
+    registrations.forEach(reg => reg.unregister());
+    alert(`已清除 ${registrations.length} 个Service Worker`);
+  } catch (err) {
+    alert('清除失败: ' + err.message);
+  }
+});
+
+// 更新Service Worker
+document.getElementById('sw-update').addEventListener('click', async () => {
+  if (!('serviceWorker' in navigator)) {
+    alert('浏览器不支持Service Worker');
+    return;
+  }
+
+  try {
+    // 获取当前注册的Service Worker脚本URL
+    const controller = navigator.serviceWorker.controller;
+    if (!controller) {
+      alert('没有活跃的Service Worker');
+      return;
+    }
+
+    // 重新注册以触发更新检查
+    const registration = await navigator.serviceWorker.register(controller.scriptURL);
+  
+    if (registration.waiting) {
+      registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+      alert('Service Worker已更新，即将刷新页面');
+      navigator.serviceWorker.addEventListener('controllerchange', () => {
+        window.location.reload();
+      });
+    } else {
+      alert('Service Worker已是最新版本');
+    }
+  } catch (err) {
+    alert('更新失败: ' + err.message);
+  }
+});
+
+// 刷新网页
+document.getElementById('sw-refresh').addEventListener('click', () => {
+  window.location.reload(true);
+});
+</script>
+
+
+
 <h2><span id="%E4%B8%80%E8%B5%B7%E5%90%AC%E9%9F%B3%E4%B9%90%F0%9F%8E%B6">一起听音乐🎶！</span></h2><meting-js server="netease" type="playlist" id="4930339442" mode="circulation" autoplay="false" mutex="false" listmaxheight="340px" preload="none" theme="#ad7a86">
 </meting-js>
 </body></html>
