@@ -370,11 +370,23 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2023年08月05日</a>
-			<a><i class="kirafont icon-edit-fill"></i>989 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 4 分钟</a>
+			<a><i class="kirafont icon-edit-fill"></i>909 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
 		</div>
-		<html><head></head><body><p>当你想离线听音乐，或者拷贝到MP3设备，你就需要寻找网站下载音频文件。你可能会用网易云音乐客户端下载音乐，但是很遗憾，文件格式并不是MP3、WAV之类的格式，绝大多数播放器无法识别。其实借助网易云官方的api也可以简单地获取到大多数音频播放器可读取的音频文件。</p>
-<span id="more"></span>
+		<!-- toc --><html><head></head><body><ul>
+<li><a href="#api%E6%96%B9%E6%A1%88">Api方案</a><ul>
+<li><a href="#%E9%9F%B3%E4%B9%90id">音乐ID</a></li>
+<li><a href="#%E7%9B%B4%E9%93%BE">直链</a></li>
+</ul>
+</li>
+<li><a href="#%E8%B5%84%E6%BA%90%E5%97%85%E6%8E%A2">资源嗅探</a><ul>
+<li><a href="#%E5%8E%9F%E7%90%86%E9%9D%9E%E5%BF%85%E8%AF%BB%E5%90%8E%E9%9D%A2%E8%AE%B2%E6%96%B9%E6%B3%95">原理（非必读，后面讲方法）</a></li>
+<li><a href="#%E6%96%B9%E6%B3%951%E6%8F%92%E4%BB%B6">方法1：插件</a></li>
+<li><a href="#%E6%96%B9%E6%B3%952%E7%AC%AC%E4%B8%89%E6%96%B9">方法2：第三方</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
 
 <h2><span id="api%E6%96%B9%E6%A1%88">Api方案</span></h2><h3><span id="%E9%9F%B3%E4%B9%90id">音乐ID</span></h3><p><strong>注：由于官方限制游客浏览，未登录状态下官网访问有限制，无法搜索音乐。不想用网易云账号的请移步下文“资源嗅探”的“方法2：第三方”一节。</strong></p>
 <p>电脑进入<a target="_blank" rel="noopener" href="https://music.163.com/">网页版网易云音乐</a>，随便进一首歌，就会发现地址栏出现类似如下链接：</p>
