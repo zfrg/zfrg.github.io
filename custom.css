@@ -1,84 +1,86 @@
 article > table {
-    scrollbar-width: auto; 
+  scrollbar-width: auto; 
+  -webkit-overflow-scrolling: touch; 
 }
 article > table::-webkit-scrollbar {
-    display: block; 
+  display: block; 
 }
 /* 为article .highlight元素创建内嵌横向滚动条 */
 article .highlight::-webkit-scrollbar {
-  display: block !important;
-  height: 8px;
-  background: transparent;
-  border-radius: 0 0 13px 13px;
+  display: block !important; 
+  height: 8px; 
+  background: transparent; 
+  border-radius: 0 0 13px 13px; 
 }
 
 article .highlight::-webkit-scrollbar-track {
-  background: transparent;
-  margin: 0 13px;
-  border-radius: 0 0 13px 13px;
+  background: transparent; 
+  margin: 0 13px; 
+  border-radius: 0 0 13px 13px; 
 }
 
 article .highlight::-webkit-scrollbar-thumb {
-  background: rgba(128, 128, 128, 0.6);
-  border-radius: 4px;
-  border: 2px solid transparent;
-  background-clip: content-box;
-  min-width: 40px;
+  background: rgba(128, 128, 128, 0.6); 
+  border-radius: 4px; 
+  border: 2px solid transparent; 
+  background-clip: content-box; 
+  min-width: 40px; 
 }
 
 article .highlight::-webkit-scrollbar-thumb:hover {
-  background: rgba(128, 128, 128, 0.8);
-  border-radius: 4px;
-  border: 0px solid transparent;
-  background-clip: content-box;
+  background: rgba(128, 128, 128, 0.8); 
+  border-radius: 4px; 
+  border: 0px solid transparent; 
+  background-clip: content-box; 
 }
 
 article .highlight::-webkit-scrollbar-thumb:active {
-  background: rgba(128, 128, 128, 1);
+  background: rgba(128, 128, 128, 1); 
 }
 
 /* 确保滚动条不会超出圆角边界 */
 article .highlight {
-  position: relative;
-  overflow: auto;
+  position: relative; 
+  overflow: auto; 
 }
 
 article .highlight::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 8px;
-  background: #282c34;
-  border-radius: 0 0 13px 13px;
-  pointer-events: none;
-  z-index: 1;
+  content: ''; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  right: 0; 
+  height: 8px; 
+  background: #282c34; 
+  border-radius: 0 0 13px 13px; 
+  pointer-events: none; 
+  z-index: 1; 
 }
 
 /* 覆盖全局的滚动条隐藏样式 */
 * {
-  scrollbar-width: none;
-  outline: none;
+  scrollbar-width: none; 
+  outline: none; 
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display: none; 
 }
 
 /* 确保article .highlight的滚动条可见 */
 article .highlight {
-  scrollbar-width: auto !important;
+  scrollbar-width: auto !important; 
+  -webkit-overflow-scrolling: touch; 
 }
 
 article .highlight::-webkit-scrollbar {
-  display: block !important;
+  display: block !important; 
 }
 /* 当article .highlight内容溢出显示滚动条时，设置pre code.hljs的底部内边距 */
 .highlight:has(::-webkit-scrollbar-thumb:horizontal) pre code.hljs,
 .highlight:has(::-webkit-scrollbar-thumb:horizontal:hover) pre code.hljs,
 .highlight:has(::-webkit-scrollbar-thumb:horizontal:active) pre code.hljs {
-  padding-bottom: calc(1em - 8px) !important;
+  padding-bottom: calc(1em - 8px) !important; 
 }
 
 /* 备用方案：使用JavaScript检测滚动条存在时的样式 */
@@ -90,10 +92,10 @@ article .highlight::-webkit-scrollbar {
 
 /* 兼容性处理 */
 article .highlight {
-  position: relative;
+  position: relative; 
 }
 
 /* 确保在横向滚动条显示时调整代码块的底部间距 */
 article .highlight::-webkit-scrollbar-thumb:horizontal ~ pre code.hljs {
-  padding-bottom: calc(1em - 8px);
+  padding-bottom: calc(1em - 8px); 
 }
