@@ -90,7 +90,7 @@
 		</a>
 	</div>
 	<div class="kira-count">
-		<div><span>文章</span>5</div>
+		<div><span>文章</span>6</div>
 		<div><span>标签</span>3</div>
 		<div><span>分类</span>2</div>
 	</div>
@@ -274,7 +274,7 @@
 			文章归档
 		</h3>
 		<div class="kira-widget">
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li></ul>
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li></ul>
 		</div>
 	</div>
 
@@ -383,14 +383,14 @@
 <p>后来有一节上课时候没忍住，去仔细研究了一下这个 LanStar8 。那次的研究结果就是发现了主程序就是<code>LanClt.exe</code>，由于任务管理器被禁用了，所以当时还是费了些力气的。</p>
 <p>我当时思考了一下，感觉可以直接<code>taskkill</code>起手，就像当年初中的时候对付极域一样（那会还有再见极域用捏）。</p>
 <p>由于时间有限，我就没有在当时借机深入研究。</p>
-<h3><span id="%E7%A0%B4%E8%A7%A3">破解</span></h3><p>后来，我就去搜索引擎去搜索相关文章。然后就找到了<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">这篇文章</a>。（于 2013-06-07 13:12:57 发布……真是篇有年代感的文章啊……）</p>
+<h3><span id="%E7%A0%B4%E8%A7%A3">破解</span></h3><p>后来，我就去搜索引擎去搜索相关文章。然后就找到了<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">这篇文章</a>。（于 2013-06-07 13:12:57 发布，还是 LanStar7……真是篇有年代感的文章啊……）</p>
 <blockquote>
 <p>好消息：有用，好用。（完整流程，过程详细，HingC大佬还是很强的👍）</p>
 <p>坏消息：不适用。（略复杂，学校机房这么搞动作太大了，不适合我这边使用）</p>
 </blockquote>
 <p>嗯……情况就是这么个情况。文章前面有比较容易处理的脚本，大概就是用<code>taskkill</code>结束几个进程（<code>taskkill</code>还是太好用辣），我测试下来比较重要的就两个，分别是<code>CtrlProcess.exe</code>和老熟人<code>LanClt.exe</code>。前者很显然就是控制进程的，大概也许可以理解为“守护进程”（？）。</p>
 <p>于是乎，下面的批处理脚本诞生了：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs bash">@<span class="hljs-built_in">echo</span> off &amp;&amp; cls<br>taskkill /t /f /im CtrlProcess.exe<br>taskkill /t /f /im LanClt.exe<br><span class="hljs-built_in">echo</span> SUCCESS &amp;&amp; <span class="hljs-built_in">exit</span> /b<br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs batch">@echo off &amp;&amp; cls<br>taskkill /t /f /im CtrlProcess.exe<br>taskkill /t /f /im LanClt.exe<br>echo SUCCESS &amp;&amp; exit /b<br></code></pre></td></tr></tbody></table></figure>
 
 <p>经测试，此脚本可用（只需要中间两行就行）。运行一下就成功脱离了控制。但是只能在控制前执行，或者中途注销、拔插网线在短暂的时间差里执行。</p>
 <p>可是这么做还是太吃操作了，有没有什么优化的办法呢？答案是，有的。</p>
@@ -399,7 +399,7 @@
 <p>我就想：如果把这个窗口的程序镜像劫持为脱控脚本，那是不是按5次<kbd>Shift</kbd>就能随时随地脱离控制了？（这辈子没想过粘滞键会在这里派上用场），然后我就把脚本移到<code>%WinDir%</code>，找这个对话框的程序（轻松使用对话主机），程序名为<code>EaseOfAccessDialog.exe</code>，在注册表编辑器找到<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</code>，新建“项”，命名为<code>EaseOfAccessDialog.exe</code>，新建“字符串值”指向批处理脚本。</p>
 <p>结果就是成功了，而且整个过程十分迅速。</p>
 <h3><span id="%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81">一行代码</span></h3><p>然而时间紧张，在机房实际上可能并没有充足的时间完成上述操作。但是，整个课程过程中，机器是允许联网的，这时候我就想到了把整个过程结合成一段 CMD 指令，然后发到互联网上。使用的时候访问网站复制下来就行了。最后得到的成品如下：</p>
-<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">CMD.exe /C reg add <span class="hljs-string">"HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EaseOfAccessDialog.exe"</span> /v Debugger /t REG_SZ /d <span class="hljs-string">"k.bat"</span> /f &amp; <span class="hljs-built_in">echo</span> @<span class="hljs-built_in">echo</span> off ^&amp;^&amp; cls &gt; C:\Windows\k.bat &amp; <span class="hljs-built_in">echo</span> taskkill /t /f /im CtrlProcess.exe &gt;&gt; C:\Windows\k.bat &amp; <span class="hljs-built_in">echo</span> taskkill /t /f /im LanClt.exe &gt;&gt; C:\Windows\k.bat &amp; <span class="hljs-built_in">echo</span> <span class="hljs-built_in">echo</span> success ^&amp;^&amp; <span class="hljs-built_in">exit</span> /b &gt;&gt; C:\Windows\k.bat<br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs batch">CMD.exe /C reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EaseOfAccessDialog.exe" /v Debugger /t REG_SZ /d "k.bat" /f &amp; echo @echo off ^&amp;^&amp; cls &gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im CtrlProcess.exe &gt;&gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im LanClt.exe &gt;&gt; C:\Windows\k.bat &amp; echo echo success ^&amp;^&amp; exit /b &gt;&gt; C:\Windows\k.bat<br></code></pre></td></tr></tbody></table></figure>
 
 <p>使用方法也很简单，用 <kbd>Win</kbd>+<kbd>R</kbd> 呼出运行框，按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> 以管理员身份运行<code>CMD</code>，把复制下来的代码在终端执行，就能完成所有配置，和手动配置的效果完全相同。</p>
 <h3><span id="%E5%B9%B6%E6%9C%AA%E7%BB%93%E6%9D%9F">并未结束</span></h3><p>信息技术老师也是十分厉害。两块屏幕，一个放PPT，另一个就看我们有没有谁下线了。并且，这个 LanStar8 在重新连接上后就会放阴乐（）。阴乐还好，静音就行了。但是被发现下线了可就不好了。所以下一步，我的计划是利用<code>pywin32</code>结合那篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">文章</a>，用 Python 实现部分功能（若成功，我可能会发到一篇新文章）。</p>
