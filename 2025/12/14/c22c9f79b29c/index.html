@@ -373,17 +373,24 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2025年12月14日</a>
-			<a><i class="kirafont icon-edit-fill"></i>69 字</a>
+			<a><i class="kirafont icon-edit-fill"></i>94 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
-		<html><head><script language="JavaScript">
+		<html><head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelement-and-player.min.js"></script>
+
+
+
+
+
+<script language="JavaScript">
 function password() {
 var testV = 1;
 var pass1 = prompt('请输入密码:', '');
 while (testV < 3) {
 if (!pass1) history.go(-1);
 if (pass1 == "303") {
-alert('密码正确!');
+// alert('密码正确!');
 // document.title = '###-###';
 break;
 }
@@ -399,6 +406,22 @@ document.write(password());
 
 
 </head><body><p><audio src="https://static0.xesimg.com/programme/python_assets/a2071a93675a63752a14cff47a997525.wav" controls="">您的浏览器不支持 Audio 控件</audio></p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.16/mediaelementplayer.min.css">
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+   const player = new MediaElementPlayer('audio-player', {
+       features: ['playpause', 'progress', 'volume'], // Customize controls
+       success: function (media) {
+           console.log('MediaElement.js initialized successfully!');
+       }
+   });
+});
+</script>
+
+
 </body></html>
 	</article>
 
