@@ -373,15 +373,10 @@
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
 			<a><i class="kirafont icon-calendar-fill"></i>2025年12月14日</a>
-			<a><i class="kirafont icon-edit-fill"></i>94 字</a>
+			<a><i class="kirafont icon-edit-fill"></i>95 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
-		<html><head><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@latest/build/mediaelementplayer.min.css">
-<script src="https://cdn.jsdelivr.net/npm/mediaelement@latest/build/mediaelement-and-player.min.js"></script>
-
-
-
-
+		<html><head></head><body><h2><span id="%E7%8F%8D%E8%B4%B5%E5%BD%95%E9%9F%B3">珍贵录音</span></h2>
 
 <script language="JavaScript">
 function password() {
@@ -391,7 +386,6 @@ while (testV < 3) {
 if (!pass1) history.go(-1);
 if (pass1 == "303") {
 // alert('密码正确!');
-// document.title = '###-###';
 break;
 }
 testV += -1;
@@ -403,20 +397,20 @@ return " ";
 document.write(password());
 </script>
 
+<!-- Import Mediaelement CSS -->
 
+<link href="https://cdn.jsdelivr.net/npm/mediaelement@latest/build/mediaelementplayer.min.css" rel="stylesheet">
+<!-- Import Mediaelement JS -->
+<script src="https://cdn.jsdelivr.net/npm/mediaelement@latest/build/mediaelement-and-player.min.js"></script>
 
-</head><body><p><audio src="https://static0.xesimg.com/programme/python_assets/a2071a93675a63752a14cff47a997525.wav" controls="">您的浏览器不支持 Audio 控件</audio></p>
-
+<div class="player">
+    <audio src="https://static0.xesimg.com/programme/python_assets/a2071a93675a63752a14cff47a997525.wav" controls="">您的浏览器不支持 Audio 控件</audio>
+</div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-   const player = new MediaElementPlayer('audio-player', {
-       features: ['playpause', 'progress', 'volume'], // Customize controls
-       success: function (media) {
-           console.log('MediaElement.js initialized successfully!');
-       }
-   });
-});
+    // You can use either a string for the player ID (i.e., `player`), 
+    // or `document.querySelector()` for any selector
+    const playerCaptions = new MediaElementPlayer('player', {});
 </script>
 
 
