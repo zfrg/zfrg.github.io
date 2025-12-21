@@ -8,3 +8,6 @@ article > table::-webkit-scrollbar {
 .mejs__container a::before {
   display: none;
 }
+.mejs__container {
+  max-width: 100%;
+}
