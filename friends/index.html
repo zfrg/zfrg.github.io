@@ -91,8 +91,8 @@
 	</div>
 	<div class="kira-count">
 		<div><span>文章</span>6</div>
-		<div><span>标签</span>3</div>
-		<div><span>分类</span>2</div>
+		<div><span>标签</span>4</div>
+		<div><span>分类</span>3</div>
 	</div>
 	<div class="kira-list">
 		
@@ -114,7 +114,7 @@
 		
 		<a
 			class="kira-list-item mdui-ripple false"
-			href="/archive.html"
+			href="/archive/"
 			title="文章归档"
 		>
 			<i
@@ -130,7 +130,7 @@
 		
 		<a
 			class="kira-list-item mdui-ripple false"
-			href="/about.html"
+			href="/about/"
 			title="关于本人"
 		>
 			<i
@@ -145,8 +145,8 @@
 		</a>
 		
 		<a
-			class="kira-list-item mdui-ripple false"
-			href="/friends.html"
+			class="kira-list-item mdui-ripple true"
+			href="/friends/"
 			title="我的朋友"
 		>
 			<i
@@ -240,10 +240,17 @@
 
         
           <li class="category-list-item">
-            <a class="category-list-link" href="/categories/实用/">
-              实用
+            <a class="category-list-link" href="/categories/实用技巧/">
+              实用技巧
             </a>
-            <span class="category-list-count">2</span>
+            <span class="category-list-count">3</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/开源项目/">
+              开源项目
+            </a>
+            <span class="category-list-count">1</span>
           </li>
         
           <li class="category-list-item">
@@ -261,8 +268,25 @@
 			
 	<div class="kira-widget-wrap">
 		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
-			<a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">网易云音乐</a>
+			<a href="/tags/LanStar8/" style="font-size: 10px;">LanStar8</a> <a href="/tags/Windows/" style="font-size: 10px;">Windows</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 10px;">浏览器</a> <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">网易云音乐</a>
 		</div>
+		
+			<script>
+				const maxTagCounts = parseInt(4);
+				const tagsLength = parseInt(4);
+				let tagsArr = [];
+				for(let i = 0; i < tagsLength; i++){
+					tagsArr.push(i);
+				}
+				tagsArr.sort(function (l, r) {
+					return Math.random() > 0.5 ? -1 : 1;
+				});
+				tagsArr = tagsArr.slice(0, maxTagCounts < tagsLength ? tagsLength - maxTagCounts : 0);
+				const tagCloudContainer = document.querySelector('#randomtagcloud');
+				for(let tagIdx = 0; tagIdx < tagsArr.length; tagIdx++){
+					tagCloudContainer.children[tagsArr[tagIdx]].style.display = 'none';
+				}
+			</script>
 		
 	</div>
 
@@ -306,6 +330,50 @@
 	<article class="kira-friend">
 		<html><head></head><body><h2><span id="%E6%88%91%E7%9A%84%E6%9C%8B%E5%8F%8B">我的朋友</span></h2></body></html>
         
+
+<link rel="stylesheet" href="/css/kira-friends.css">
+
+<div style="display: flex; flex-wrap: wrap; width: 100%; position: relative;">
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://space.bilibili.com/660409619" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://livefile.xesimg.com/programme/python_assets/f00af6218d19de52cde682f374433ebc.webp" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">松川居士</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://tianhw.top/" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://image.tianhw.top/avatar.webp" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">THW</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://kira.host/blog/" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://kira.host/assets/Pictures/Others/20220922230447.jpg" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">德布罗煜</div>
+      </a>
+    </div>
+  
+    <div class="kira-friends-friendWrapper">
+      <a href="https://acofork.com/" target="_blank" class="mdui-ripple">
+        <div class="kira-friends-avatarWrapper" style="height: 65px; min-width: 65px; width: 65px;">
+          <img src="https://q2.qlogo.cn/headimg_dl?dst_uin=2726730791&amp;spec=0" class="disabled-kira-image" />
+        </div>
+        <div class="kira-friends-blogName" style="width: 100%;">二叉树树</div>
+      </a>
+    </div>
+  
+</div>
+<hr />
+
 
 	</article>
 	
