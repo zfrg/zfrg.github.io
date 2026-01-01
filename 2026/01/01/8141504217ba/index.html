@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> szy神人叫声珍贵录音 -  zfrg&#39;s blog</title>
+		<title> TimeDisplay：全屏显示当前时间 -  zfrg&#39;s blog</title>
 		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
 		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
 		
@@ -377,59 +377,70 @@
 		
 		<div class="kira-post-cover">
 			<img
-				data-src="https://livefile.xesimg.com/programme/python_assets/c61e86d45f1fc7587dca8b248bc9129c.webp"
+				data-src="https://livefile.xesimg.com/programme/python_assets/607b033467afcc05682aa46e678451e9.webp"
 				data-sizes="auto"
-				alt="szy神人叫声珍贵录音"
+				alt="TimeDisplay：全屏显示当前时间"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>szy神人叫声珍贵录音</h1>
+			<h1>TimeDisplay：全屏显示当前时间</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2025年12月14日</a>
-			<a><i class="kirafont icon-edit-fill"></i>77 字</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2026年01月01日</a>
+			<a><i class="kirafont icon-edit-fill"></i>356 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
-		<html><head></head><body><h2><span id="%E7%8F%8D%E8%B4%B5%E5%BD%95%E9%9F%B3">珍贵录音</span></h2>
+		<html><head></head><body><h2><span id="%E6%97%B6%E9%97%B4%E6%98%BE%E7%A4%BA%E6%A1%8C%E9%9D%A2%E5%BA%94%E7%94%A8">时间显示桌面应用</span></h2><h3><span id="%E5%8A%9F%E8%83%BD%E7%AE%80%E4%BB%8B">功能简介</span></h3><p>这是一个基于 Python 的桌面应用程序，使用 <code>pywebview</code> 库构建。主要功能是在全屏窗口中实时显示当前时间，并提供一个简单的退出按钮界面。使用建议：大屏幕设备展示（如希沃白板）。</p>
+<p><strong>核心特点</strong></p>
+<ul>
+<li>全屏时间显示：应用程序启动后以全屏模式展示，便于查看</li>
+<li>实时更新：时间每秒自动更新，确保显示准确</li>
+<li>简洁界面：包含一个专门设计的退出按钮，使用 SVG 图标增强视觉效果</li>
+</ul>
+<p><strong>使用方式</strong></p>
+<ol>
+<li>克隆仓库</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/zfrg/TimeDisplay.git<br><span class="hljs-built_in">cd</span> TimeDisplay<br></code></pre></td></tr></tbody></table></figure>
 
-<script>
-function password() {
-    var testV = 1;
-    var pass1 = prompt('请输入密码:', '');
-    while (testV < 3) {
-        if (!pass1) history.go(-1);
-        if (pass1 == "303") {
-            // alert('密码正确!');
-            break;
-        }
-        testV += -1;
-        var pass1 = prompt('密码错误!请重新输入:');
-    }
-    if (pass1 != "password" & testV == 3) history.go(-1);
-    return " ";
-}
-document.write(password());
-</script>
+<ol start="2">
+<li>环境准备<br>首先确保已安装必要的 Python 库：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pywebview<br></code></pre></td></tr></tbody></table></figure>
 
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelement-and-player.js"></script>
+<ol start="3">
+<li>运行应用<br>运行<code>main.pyw</code>：</li>
+</ol>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python main.pyw<br></code></pre></td></tr></tbody></table></figure>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.9/mediaelementplayer.css">
-<audio id="audioPlayer"></audio>
-<script>
-    var player = new MediaElementPlayer('audioPlayer');
-    player.setSrc('https://static0.xesimg.com/programme/python_assets/a2071a93675a63752a14cff47a997525.wav');
-    player.play();
-</script>
-
-
-
+<ol start="4">
+<li>操作方法</li>
+</ol>
+<ul>
+<li>应用启动后会自动进入全屏模式</li>
+<li>屏幕中央显示当前系统时间</li>
+<li>点击左下角的方形按钮即可退出应用</li>
+</ul>
+<p><strong>技术说明</strong></p>
+<ul>
+<li>界面使用 HTML/CSS/JavaScript 构建，通过 <code>pywebview</code> 在桌面环境中渲染</li>
+<li>退出功能通过 Python 与 JavaScript 的交互实现</li>
+<li>时间更新由 JavaScript 的 <code>setInterval</code> 函数驱动，确保显示流畅</li>
+</ul>
+<p><strong>注意事项</strong></p>
+<ul>
+<li>确保系统支持 Python 3.6 及以上版本</li>
+<li>应用依赖 <code>pywebview</code> 库，需要提前安装</li>
+<li>退出功能通过自定义的 <code>Api</code> 类实现，确保窗口正确关闭</li>
+</ul>
+<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://livefile.xesimg.com/programme/python_assets/607b033467afcc05682aa46e678451e9.webp" alt="效果图" class="lazyload"></p>
 </body></html>
 	</article>
 
 	 
     <div class="kira-post-copyright">
         <strong>本文作者：</strong>zfrg<br>
-        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2025/12/14/ee688c6f08c5/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2025&#x2F;12&#x2F;14&#x2F;ee688c6f08c5&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2025&#x2F;12&#x2F;14&#x2F;ee688c6f08c5&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2026/01/01/8141504217ba/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;01&#x2F;8141504217ba&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;01&#x2F;8141504217ba&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
