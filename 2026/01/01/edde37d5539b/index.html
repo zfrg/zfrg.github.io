@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> 设置文件资源管理器上下文菜单弹出位置 -  zfrg&#39;s blog</title>
+		<title> 给Photopea标题栏左上角加上个图标 -  zfrg&#39;s blog</title>
 		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
 		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
 		
@@ -377,39 +377,55 @@
 		
 		<div class="kira-post-cover">
 			<img
-				data-src="https://livefile.xesimg.com/programme/python_assets/7a6b995642a4cc43539b984aef60383b.webp"
+				data-src="https://livefile.xesimg.com/programme/python_assets/f1d62dab9026ab572adc46451f9f5777.webp"
 				data-sizes="auto"
-				alt="设置文件资源管理器上下文菜单弹出位置"
+				alt="给Photopea标题栏左上角加上个图标"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>设置文件资源管理器上下文菜单弹出位置</h1>
+			<h1>给Photopea标题栏左上角加上个图标</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2023年12月02日</a>
-			<a><i class="kirafont icon-edit-fill"></i>165 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2026年01月01日</a>
+			<a><i class="kirafont icon-edit-fill"></i>779 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 3 分钟</a>
 		</div>
-		<html><head></head><body><p>Windows10系统默认文件资源管理器鼠标右键菜单在光标左侧，在其他版本中却为右侧。多年以来，许多用户已习惯出现在光标右侧的右键菜单，他们安装完系统后发现这一变化但不知道如何修改。本文将提供一种修改方法。</p>
-<span id="more"></span>
-
-<p>以下为设置方法：</p>
-<ol>
-<li>调出<code>运行</code>或使用<code>资源管理器的地址栏</code></li>
-<li>输入 <code>shell:::{80F3F1D5-FECA-45F3-BC32-752C152E456E}</code>并执行。</li>
-<li>在选项卡里选 <code>其它</code>。</li>
-<li>选择<code>惯用左手</code>或<code>惯用右手</code>。</li>
-<li>点击<code>应用</code>按钮。</li>
+		<html><head></head><body><h2><span id="%E8%83%8C%E6%99%AF%E4%BB%8B%E7%BB%8D">背景介绍</span></h2><p>Photopea 是一款功能强大的在线图像编辑工具，支持以 PWA（渐进式网页应用）形式安装到本地设备使用。然而，在实际使用过程中，部分用户可能会遇到界面显示不完整、标题栏高度不适配等问题，影响操作体验。</p>
+<p>为了解决这一问题，我编写了一个轻量级的 Tampermonkey 用户脚本。该脚本旨在提升Photopea在PWA模式下的视觉一致性和交互体验。</p>
+<h2><span id="%E8%84%9A%E6%9C%AC%E5%86%85%E5%AE%B9">脚本内容</span></h2><h3><span id="%E8%84%9A%E6%9C%AC%E5%8A%9F%E8%83%BD%E4%BA%AE%E7%82%B9">脚本功能亮点</span></h3><ul>
+<li>添加官方图标至标题栏：自动在Photopea顶部栏插入官方缩略图标，提升视觉识别度和界面美观性。</li>
+<li>修复标题栏高度异常：检测并修正某些情况下标题栏高度从31px变为32px的问题，确保UI稳定显示。</li>
+<li>禁用右键菜单干扰：屏蔽页面默认右键菜单行为，防止误触或干扰用户自定义快捷操作。</li>
+<li>自动适配加载时机：通过监听DOM变化，确保脚本在页面结构加载完成之后正确执行。</li>
+</ul>
+<h3><span id="%E6%8A%80%E6%9C%AF%E5%AE%9E%E7%8E%B0%E7%AE%80%E8%BF%B0">技术实现简述</span></h3><p>脚本基于原生 JavaScript 编写，利用了以下关键技术点：</p>
+<ul>
+<li>使用 <code>MutationObserver</code> 监听DOM节点变化，动态注入图标元素；</li>
+<li>通过 <code>setInterval</code> 定时检查并修正特定元素的高度样式；</li>
+<li>禁止全局右键菜单行为，提升用户体验一致性；</li>
+<li>图标资源引用自Photopea官网，保持视觉统一。</li>
+</ul>
+<h3><span id="%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">使用说明</span></h3><ol>
+<li>安装 <a target="_blank" rel="noopener" href="https://www.tampermonkey.net/">Tampermonkey</a> 浏览器扩展；</li>
+<li>新建一个用户脚本，并粘贴本脚本内容；</li>
+<li>访问 <a target="_blank" rel="noopener" href="https://www.photopea.com/">Photopea官网</a> 并以PWA模式运行；</li>
+<li>观察标题栏是否成功显示图标，同时无高度跳动问题。</li>
 </ol>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://livefile.xesimg.com/programme/python_assets/e73fc15a899d2ed2bb6df2fab755be1a.webp" alt="e73fc15a899d2ed2bb6df2fab755be1a.webp (504×503)" class="lazyload"></p>
-<p>完成了上面的步骤，关闭窗口后选项生效。</p>
+<blockquote>
+<p>注意：此脚本仅适用于 Photopea 官方网站，且需在桌面端浏览器中配合Tampermonkey使用效果最佳。</p>
+</blockquote>
+<p>效果图：</p>
+<p><img src="https://livefile.xesimg.com/programme/python_assets/79ac1584d47764af590d574a0839916c.webp"></p>
+<h3><span id="%E8%84%9A%E6%9C%AC%E4%BB%A3%E7%A0%81">脚本代码</span></h3><figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// ==UserScript==</span><br><span class="hljs-comment">// @name         Photopea窗口图标&amp;标题栏宽度优化</span><br><span class="hljs-comment">// @namespace    http://zfrg-blog.de5.net/</span><br><span class="hljs-comment">// @version      2025-12-27</span><br><span class="hljs-comment">// @description  优化PhotopeaPWA使用体验</span><br><span class="hljs-comment">// @author       zfrg</span><br><span class="hljs-comment">// @match        https://www.photopea.com/*</span><br><span class="hljs-comment">// @icon         https://www.photopea.com/promo/thumb256.png</span><br><span class="hljs-comment">// @grant        none</span><br><span class="hljs-comment">// ==/UserScript==</span><br><br>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {<br>    <span class="hljs-string">'use strict'</span>;<br><br>    <span class="hljs-comment">// Your code here...</span><br>    <span class="hljs-variable language_">document</span>.<span class="hljs-property">body</span>.<span class="hljs-property">oncontextmenu</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {<span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;};<br>    <span class="hljs-comment">// GM_addStyle(".app &gt; div &gt; div:nth-child(3) {height: 32px !important ; }");</span><br><br>    <span class="hljs-built_in">setInterval</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {<br>        <span class="hljs-keyword">var</span> targetElement = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">'.app &gt; div &gt; div:nth-child(3)'</span>);<br><br>        <span class="hljs-keyword">if</span> (targetElement &amp;&amp; targetElement.<span class="hljs-property">style</span>.<span class="hljs-property">height</span> === <span class="hljs-string">'31px'</span>) {<br>            targetElement.<span class="hljs-property">style</span>.<span class="hljs-property">height</span> = <span class="hljs-string">'32px'</span>;<br>        }<br>    }, <span class="hljs-number">0</span>);<br><br>    <span class="hljs-keyword">var</span> observer = <span class="hljs-keyword">new</span> <span class="hljs-title class_">MutationObserver</span>(<span class="hljs-keyword">function</span>(<span class="hljs-params">mutationsList</span>) {<br>        <span class="hljs-keyword">var</span> count = <span class="hljs-number">0</span>;<br><br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> mutation <span class="hljs-keyword">of</span> mutationsList) {<br>            <span class="hljs-keyword">if</span> (mutation.<span class="hljs-property">type</span> === <span class="hljs-string">'childList'</span> &amp;&amp; mutation.<span class="hljs-property">addedNodes</span>.<span class="hljs-property">length</span> &gt; <span class="hljs-number">0</span>) {<br>                <span class="hljs-keyword">var</span> topbar = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">querySelector</span>(<span class="hljs-string">'.topbar'</span>);<br>                <span class="hljs-keyword">if</span> (topbar) {<br>                    count++;<br><br>                    <span class="hljs-keyword">if</span> (count === <span class="hljs-number">1</span>) {<br>                        <span class="hljs-keyword">var</span> c = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">'span'</span>);<br>                        <span class="hljs-keyword">var</span> icon = <span class="hljs-variable language_">document</span>.<span class="hljs-title function_">createElement</span>(<span class="hljs-string">'img'</span>);<br>                        icon.<span class="hljs-property">src</span> = <span class="hljs-string">"https://www.photopea.com/promo/thumb256.png"</span>;<br>                        icon.<span class="hljs-property">style</span> = <span class="hljs-string">"width: 18px;height: 18px;position: relative;left: 5px;top: 4px;bottom: 4px;padding-right: 10px;user-select: none;-webkit-user-select: none;-webkit-user-drag: none;app-region: no-drag;"</span>;<br>                        icon.<span class="hljs-property">oncontextmenu</span> = <span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) {<br>                            <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;<br>                        };<br>                        c.<span class="hljs-title function_">appendChild</span>(icon);<br>                        topbar.<span class="hljs-title function_">insertBefore</span>(c, topbar.<span class="hljs-property">firstChild</span>);<br>                        observer.<span class="hljs-title function_">disconnect</span>();<br>                    }<br>                }<br>            }<br>        }<br>    });<br><br>    observer.<span class="hljs-title function_">observe</span>(<span class="hljs-variable language_">document</span>.<span class="hljs-property">documentElement</span>, { <span class="hljs-attr">childList</span>: <span class="hljs-literal">true</span>, <span class="hljs-attr">subtree</span>: <span class="hljs-literal">true</span> });<br><br>})();<br></code></pre></td></tr></tbody></table></figure>
+
+<h3><span id="%E6%80%BB%E7%BB%93">总结</span></h3><p>该脚本虽小，但在改善Photopea PWA使用体验方面起到了重要作用。它不仅提升了UI的一致性，还通过细节调整增强了整体可用性。未来可考虑进一步扩展为功能插件包，提供更多个性化配置选项。</p>
 </body></html>
 	</article>
 
 	 
     <div class="kira-post-copyright">
         <strong>本文作者：</strong>zfrg<br>
-        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2023/12/02/02add7bbe2f8/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2023&#x2F;12&#x2F;02&#x2F;02add7bbe2f8&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2023&#x2F;12&#x2F;02&#x2F;02add7bbe2f8&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2026/01/01/edde37d5539b/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;01&#x2F;edde37d5539b&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;01&#x2F;edde37d5539b&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -418,32 +434,12 @@
   
 	<div class="kira-post-nav">
 		<nav class="post-nav">
-			      
-			<!-- 先找到与当前文字相同的目录 -->
-			      
-			<!-- 在找到当前文章所在的 index -->
 			    
-			<!-- 上一篇文章 -->
-			<div class="old">
-				<span>上一章</span>
-				<a href="/2023/08/05/125d760f5ff9/"> 利用网易云音乐获取音频文件</a>
-			</div>
-			       
-			<!-- 下一篇文章 -->
-			<div class="new">
-				<span>下一章</span>
-				<a href="/2025/11/22/8d0a2d3e5f46/"> 破解 LanStar8 极简方案</a>
-			</div>
-			                        
 		</nav>
 	</div>
 	
 	<div class="kira-post-meta kira-rainbow">
 		
-			<a class="kirafont icon-container-fill -link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
-		
-		
-			<a class="kirafont icon-tag-fill -none-link" href="/tags/Windows/" rel="tag">Windows</a>
 		
 	</div>
 	
