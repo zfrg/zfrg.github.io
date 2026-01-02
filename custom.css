@@ -7,11 +7,11 @@
     display: none;
 }
 
-.kira-post .kira-post-nav .post-nav div.old a ::after {
+.kira-post .kira-post-nav .post-nav div.old a:after {
     content: '&#xe7eb;';
 }
 
-.kira-post .kira-post-nav .post-nav div.new a ::after {
+.kira-post .kira-post-nav .post-nav div.new a:after {
     content: '&#xe7ec;';
 }
 
