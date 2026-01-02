@@ -9,12 +9,12 @@
 
 .kira-post .kira-post-nav .post-nav div.old::after {
     font-family: 'kirafont';
-    content: '&#xe7ec;';
+    content: '\e7ec';
 }
 
 .kira-post .kira-post-nav .post-nav div.new::before {
     font-family: 'kirafont';
-    content: '&#xe7eb;';
+    content: '\e7eb';
 }
 
 article>table {
