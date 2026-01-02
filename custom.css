@@ -13,12 +13,12 @@
     content: '\e7eb';
 }
 
-article>table {
+article table {
     scrollbar-width: auto;
     -webkit-overflow-scrolling: touch;
 }
 
-article>table::-webkit-scrollbar {
+article table::-webkit-scrollbar {
     display: block;
 }
 
