@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> 文章归档：2023/8 -  zfrg&#39;s blog</title>
+		<title> 在最新的Win10系统中复活 Internet Explorer -  zfrg&#39;s blog</title>
 		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
 		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
 		
@@ -319,49 +319,153 @@
 			<div class="kira-content">
 				<div id="kira-top-header"></div>
 				<div class="kira-main-content">
-					<div class="kira-posts">
-    
-        <div class="kira-post">
-            <a href="/2023/08/05/125d760f5ff9/">
-                
-                <div
-                    class="kira-post-cover mdui-ripple"
-                    style="padding-bottom: '56.25%'"
-                >
-                    <img
-                        data-src="https://livefile.xesimg.com/programme/python_assets/1caf7729197f5048ea3e8f13599dfca4.webp"
-                        data-sizes="auto"
-                        alt="利用网易云音乐获取音频文件"
-                        class="lazyload kira-post-cover-image"
-                    />
-                    <h1>利用网易云音乐获取音频文件</h1>
-                </div>
-                
-            </a>
+					
+<link rel="stylesheet" href="/css/kira-image.css">
 
-            <div class="kira-post-meta kira-rainbow">
-                <a>
-                    <i class="kirafont icon-calendar-fill"></i>
-                    2023年08月05日
-                </a>
-                <a>
-                    <i class="kirafont icon-edit-fill"></i>
-                    909 字
-                </a>
-                <a>
-                    <i class="kirafont icon-time-circle-fill"></i>大概
-                    3 分钟
-                </a>
+
+<script src="/js/kira-image.js"></script>
+
+<div class="kira-image">
+    <div class="kira-image-modal">
+        <div class="kira-image-header">
+            <div class="kira-image-counter"></div>
+            <div class="kira-image-title"></div>
+            <div class="kira-image-operation">
+                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
+                    <i class="kirafont icon-zoom-in"></i>
+                </div>
+                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
+                    <i class="kirafont icon-close"></i>
+                </div>
             </div>
-    
-            
-                <article>
-                    <p>当你想离线听音乐，或者拷贝到MP3设备，你就需要寻找网站下载音频文件。你可能会用网易云音乐客户端下载音乐，但是很遗憾，文件格式并不是MP3、WAV之类的格式，绝大多数播放器无法识别。其实借助网易云官方的api也可以简单地获取到大多数音频播放器可读取的音频文件。</p>
-                </article>
-            
         </div>
-        <div class="kira-hr"></div>
-    
+        <div class="kira-image-container">
+            <div class="kira-image-prev-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-left"></i>
+                </div>
+            </div>
+            <div class="kira-image-list">
+                <div class="kira-image-prev">
+                    <img />
+                </div>
+                <div class="kira-image-now">
+                    <img />
+                </div>
+                <div class="kira-image-next">
+                    <img />
+                </div>
+            </div>
+            <div class="kira-image-next-button-panel">
+                <div class="kira-image-exchange-button">
+                    <i class="kirafont icon-right"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+	
+<link rel="stylesheet" href="/css/kira-code-copy.css">
+
+	
+<script src="/js/kira-code-copy.js"></script>
+
+
+<div class="kira-post">
+	<article>
+		
+		<div class="kira-post-cover">
+			<img
+				data-src="https://livefile.xesimg.com/programme/python_assets/0cd5bf79084aa9041a2cd3ee63c8d2af.webp"
+				data-sizes="auto"
+				alt="在最新的Win10系统中复活 Internet Explorer"
+				class="lazyload kira-post-cover-image disabled-kira-image"
+			/>
+			<h1>在最新的Win10系统中复活 Internet Explorer</h1>
+		</div>
+		
+		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
+			<a><i class="kirafont icon-calendar-fill"></i>2026年01月02日</a>
+			<a><i class="kirafont icon-edit-fill"></i>332 字</a>
+			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
+		</div>
+		<html><head></head><body><h2><span id="%E6%83%85%E6%99%AF%E5%BC%95%E5%85%A5">情景引入</span></h2><p>Internet Explorer（简称IE），作为无数国人的同年回忆，现在已经被微软“砍掉”了。在 Windows 10 22H2 中，你仍能从开始菜单里找到 IE 的快捷方式。但很遗憾，你无法从中正确启动 IE，而是打开了 Microsoft Edge 的新窗口。</p>
+<p>打开这个快捷方式目标的所在路径<code>C:\Program Files (x86)\Internet Explorer</code>，是完整的 Internet Explorer。这说明，微软（大概）为了强大的兼容性，在系统中保留了 IE 的内核。</p>
+<p>如果我们想要使用 IE 访问一些比较老的网站时，应该如何重新启用呢？</p>
+<h2><span id="%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D">方法介绍</span></h2><h3><span id="%E5%8E%9F%E7%90%86">原理</span></h3><p>既然常规方法不行，那就只能使些“歪门邪道”了。</p>
+<p>众所周知，<code>mshta</code>调用的内核正是 IE 的。那我们有没有可能借助<code>mshta</code>打开一个 IE 内核的浏览器窗口，然后再新建一个正常的完整的 IE 浏览器窗口，最后关闭<code>mshta</code>的窗口实现复活 IE 呢？</p>
+<h3><span id="%E5%AE%9E%E7%8E%B0">实现</span></h3><p>实践出真知。要完成打开新窗口关闭自身窗口等操作可以借助<code>JavaScript</code>完成。</p>
+<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">open</span>();<br><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">close</span>();<br></code></pre></td></tr></tbody></table></figure>
+
+<p>最后让<code>mshta</code>执行这段js脚本就行了</p>
+<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs batch">mshta.exe javascript:window.open();window.close();<br></code></pre></td></tr></tbody></table></figure>
+
+<p>创建快捷方式执行这段命令，IE 浏览器窗口如期显示。</p>
+</body></html>
+	</article>
+
+	 
+    <div class="kira-post-copyright">
+        <strong>本文作者：</strong>zfrg<br>
+        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2026/01/02/f4a855b56a4a/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;02&#x2F;f4a855b56a4a&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;02&#x2F;f4a855b56a4a&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+        
+    </div>
+
+  
+	<div class="kira-post-nav">
+		<nav class="post-nav">
+			      
+			<!-- 先找到与当前文字相同的目录 -->
+			                     
+			<!-- 在找到当前文章所在的 index -->
+			                        
+			<!-- 上一篇文章 -->
+			<div class="old">
+				<span>上一章</span>
+				<a href="/2026/01/01/edde37d5539b/"> 给Photopea标题栏左上角加上个图标</a>
+			</div>
+			          
+		</nav>
+	</div>
+	
+	<div class="kira-post-meta kira-rainbow">
+		
+			<a class="kirafont icon-container-fill -link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+		
+		
+			<a class="kirafont icon-tag-fill -none-link" href="/tags/Windows/" rel="tag">Windows</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a>
+		
+	</div>
+	
+	<div class="kira-post-footer">
+		
+
+		
+	<div class="giscus"></div>
+  
+    <script src="https://giscus.app/client.js"
+      data-repo="zfrg/zfrg.github.io"
+      data-repo-id="R_kgDOJ_cU7w"
+      data-category="Ideas"
+      data-category-id="DIC_kwDOJ_cU784CYgqM"
+      data-mapping="pathname"
+      data-strict="0"
+      data-reactions-enabled="1"
+      data-emit-metadata="0"
+      data-input-position="top"
+      data-theme="light"
+      data-lang="zh-CN"
+      data-loading="lazy"
+      crossorigin="anonymous"
+      async  
+    ></script>
+  
+
+	</div>
+	
 </div>
 
 				</div>
