@@ -7,14 +7,14 @@
     display: none;
 }
 
-.kira-post .kira-post-nav .post-nav div.old a:after {
-    font-family: 'kirafont';
-    content: '&#xe7eb;';
-}
-
-.kira-post .kira-post-nav .post-nav div.new a:after {
+.kira-post .kira-post-nav .post-nav div.old::after {
     font-family: 'kirafont';
     content: '&#xe7ec;';
+}
+
+.kira-post .kira-post-nav .post-nav div.new::before {
+    font-family: 'kirafont';
+    content: '&#xe7eb;';
 }
 
 article>table {
