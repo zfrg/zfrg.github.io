@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/css/layout.css">
 
 		
-		<title> 在最新的Win10系统中复活 Internet Explorer -  zfrg&#39;s blog</title>
+		<title> 【爬虫】笔趣阁文章下载脚本 -  zfrg&#39;s blog</title>
 		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
 		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
 		
@@ -375,40 +375,32 @@
 <div class="kira-post">
 	<article>
 		
-		<div class="kira-post-cover">
+		<div
+			class="kira-post-cover"
+			style="padding-bottom: '56.25%'"
+		>
 			<img
-				data-src="https://livefile.xesimg.com/programme/python_assets/0cd5bf79084aa9041a2cd3ee63c8d2af.webp"
+				data-src="https://livefile.xesimg.com/programme/python_assets/48844896287b3e1973b1e539184b069a.webp"
 				data-sizes="auto"
-				alt="在最新的Win10系统中复活 Internet Explorer"
+				alt="【爬虫】笔趣阁文章下载脚本"
 				class="lazyload kira-post-cover-image disabled-kira-image"
 			/>
-			<h1>在最新的Win10系统中复活 Internet Explorer</h1>
+			<h1>【爬虫】笔趣阁文章下载脚本</h1>
 		</div>
 		
 		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2026年01月02日</a>
-			<a><i class="kirafont icon-edit-fill"></i>332 字</a>
+			<a><i class="kirafont icon-calendar-fill"></i>2026年01月05日</a>
+			<a><i class="kirafont icon-edit-fill"></i>279 字</a>
 			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
 		</div>
-		<html><head></head><body><h2><span id="%E6%83%85%E6%99%AF%E5%BC%95%E5%85%A5">情景引入</span></h2><p>Internet Explorer（简称IE），作为无数国人的同年回忆，现在已经被微软“砍掉”了。在 Windows 10 22H2 中，你仍能从开始菜单里找到 IE 的快捷方式。但很遗憾，你无法从中正确启动 IE，而是打开了 Microsoft Edge 的新窗口。</p>
-<p>打开这个快捷方式目标的所在路径<code>C:\Program Files (x86)\Internet Explorer</code>，是完整的 Internet Explorer。这说明，微软（大概）为了强大的兼容性，在系统中保留了 IE 的内核。</p>
-<p>如果我们想要使用 IE 访问一些比较老的网站时，应该如何重新启用呢？</p>
-<h2><span id="%E6%96%B9%E6%B3%95%E4%BB%8B%E7%BB%8D">方法介绍</span></h2><h3><span id="%E5%8E%9F%E7%90%86">原理</span></h3><p>既然常规方法不行，那就只能使些“歪门邪道”了。</p>
-<p>众所周知，<code>mshta</code>调用的内核正是 IE 的。那我们有没有可能借助<code>mshta</code>打开一个 IE 内核的浏览器窗口，然后再新建一个正常的完整的 IE 浏览器窗口，最后关闭<code>mshta</code>的窗口实现复活 IE 呢？</p>
-<h3><span id="%E5%AE%9E%E7%8E%B0">实现</span></h3><p>实践出真知。要完成打开新窗口关闭自身窗口等操作可以借助<code>JavaScript</code>完成。</p>
-<figure class="highlight js"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">open</span>();<br><span class="hljs-variable language_">window</span>.<span class="hljs-title function_">close</span>();<br></code></pre></td></tr></tbody></table></figure>
-
-<p>最后让<code>mshta</code>执行这段js脚本就行了</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs batch">mshta.exe javascript:window.open();window.close();<br></code></pre></td></tr></tbody></table></figure>
-
-<p>创建快捷方式执行这段命令，IE 浏览器窗口如期显示。</p>
+		<html><head></head><body><figure class="highlight python"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><code class="hljs python"><span class="hljs-keyword">import</span> requests<br><span class="hljs-keyword">import</span> time<br><span class="hljs-keyword">import</span> os<br><span class="hljs-keyword">from</span> bs4 <span class="hljs-keyword">import</span> BeautifulSoup<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">remove_br_tags</span>(<span class="hljs-params">input_string</span>):<br>    <span class="hljs-keyword">return</span> input_string.replace(<span class="hljs-string">"&lt;br/&gt;"</span>, <span class="hljs-string">"\n"</span>).replace(<span class="hljs-string">"&lt;p class=\"readinline\"&gt;&lt;/p&gt;"</span>, <span class="hljs-string">""</span>).replace(<span class="hljs-string">"&lt;article class=\"article\"&gt;"</span>, <span class="hljs-string">""</span>).replace(<span class="hljs-string">"&lt;/article&gt;"</span>, <span class="hljs-string">""</span>)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">extract_article_html</span>(<span class="hljs-params">html_content</span>):<br>    soup = BeautifulSoup(html_content, <span class="hljs-string">'html.parser'</span>)<br>    article_tags = soup.find_all(<span class="hljs-string">'article'</span>, class_=<span class="hljs-string">'article'</span>)<br>    article_htmls = [<span class="hljs-built_in">str</span>(article) <span class="hljs-keyword">for</span> article <span class="hljs-keyword">in</span> article_tags]<br>    <span class="hljs-keyword">return</span> <span class="hljs-string">'\n'</span>.join(article_htmls)<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">load_progress</span>(<span class="hljs-params">progress_file=<span class="hljs-string">"downloader_progress.txt"</span></span>):<br>    <span class="hljs-keyword">if</span> os.path.exists(progress_file):<br>        <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(progress_file, <span class="hljs-string">'r'</span>) <span class="hljs-keyword">as</span> f:<br>            last_index = <span class="hljs-built_in">int</span>(f.read().strip())<br>            <span class="hljs-keyword">return</span> last_index<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>  <span class="hljs-comment"># 修改为从第1章开始</span><br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">save_progress</span>(<span class="hljs-params">index, progress_file=<span class="hljs-string">"downloader_progress.txt"</span></span>):<br>    <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(progress_file, <span class="hljs-string">'w'</span>) <span class="hljs-keyword">as</span> f:<br>        f.write(<span class="hljs-built_in">str</span>(index))<br><br><span class="hljs-keyword">def</span> <span class="hljs-title function_">download_with_resume</span>():<br>    output_file = <span class="hljs-string">"全知读者视角.txt"</span><br>    progress_file = <span class="hljs-string">"downloader_progress.txt"</span><br>  <br>    start_index = load_progress(progress_file)<br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">f"从第<span class="hljs-subst">{start_index}</span>章开始下载..."</span>)<br>  <br>    <span class="hljs-keyword">for</span> i <span class="hljs-keyword">in</span> <span class="hljs-built_in">range</span>(start_index, <span class="hljs-number">862</span>):<br>        <span class="hljs-keyword">try</span>:<br>            url = <span class="hljs-string">f'https://www.biquge123.uk/52304/<span class="hljs-subst">{i}</span>'</span><br>            html = requests.get(url, timeout=<span class="hljs-number">30</span>)<br>            html.encoding = <span class="hljs-string">'utf-8'</span><br>          <br>            target = remove_br_tags(extract_article_html(html.text))<br>          <br>            <span class="hljs-keyword">with</span> <span class="hljs-built_in">open</span>(output_file, <span class="hljs-string">"a+"</span>, encoding=<span class="hljs-string">'utf-8'</span>) <span class="hljs-keyword">as</span> f:<br>                f.write(target + <span class="hljs-string">'\n\n'</span>)<br>          <br>            save_progress(i + <span class="hljs-number">1</span>)<br>          <br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"成功下载第<span class="hljs-subst">{i}</span>章（总进度：<span class="hljs-subst">{i-<span class="hljs-number">1</span>}</span>/861，<span class="hljs-subst">{((i-<span class="hljs-number">1</span>)/<span class="hljs-number">861</span>)*<span class="hljs-number">100</span>:<span class="hljs-number">.2</span>f}</span>%）"</span>)<br>          <br>        <span class="hljs-keyword">except</span> requests.exceptions.RequestException <span class="hljs-keyword">as</span> e:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"下载第<span class="hljs-subst">{i}</span>章时出错：<span class="hljs-subst">{e}</span>"</span>)<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"程序将在下次运行时从第<span class="hljs-subst">{i}</span>章继续下载"</span>)<br>            save_progress(i)<br>            <span class="hljs-keyword">break</span><br>      <br>        <span class="hljs-keyword">except</span> Exception <span class="hljs-keyword">as</span> e:<br>            <span class="hljs-built_in">print</span>(<span class="hljs-string">f"处理第<span class="hljs-subst">{i}</span>章时出现意外错误：<span class="hljs-subst">{e}</span>"</span>)<br>            save_progress(i)<br>            <span class="hljs-keyword">break</span><br>      <br>        time.sleep(<span class="hljs-number">1</span>)<br>  <br>    <span class="hljs-built_in">print</span>(<span class="hljs-string">"下载完成或已中断"</span>)<br><br><span class="hljs-keyword">if</span> __name__ == <span class="hljs-string">"__main__"</span>:<br>    download_with_resume()<br><br></code></pre></td></tr></tbody></table></figure>
 </body></html>
 	</article>
 
 	 
     <div class="kira-post-copyright">
         <strong>本文作者：</strong>zfrg<br>
-        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2026/01/02/f4a855b56a4a/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;02&#x2F;f4a855b56a4a&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;02&#x2F;f4a855b56a4a&#x2F;</a><br>
+        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2026/01/05/ecab7c9cc336/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;05&#x2F;ecab7c9cc336&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2026&#x2F;01&#x2F;05&#x2F;ecab7c9cc336&#x2F;</a><br>
         
             <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
         
@@ -417,26 +409,12 @@
   
 	<div class="kira-post-nav">
 		<nav class="post-nav">
-			      
-			<!-- 先找到与当前文字相同的目录 -->
-			                     
-			<!-- 在找到当前文章所在的 index -->
-			                        
-			<!-- 上一篇文章 -->
-			<div class="old">
-				<span>上一章</span>
-				<a href="/2026/01/01/edde37d5539b/"> 给Photopea标题栏左上角加上个图标</a>
-			</div>
-			          
+			    
 		</nav>
 	</div>
 	
 	<div class="kira-post-meta kira-rainbow">
 		
-			<a class="kirafont icon-container-fill -link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
-		
-		
-			<a class="kirafont icon-tag-fill -none-link" href="/tags/Windows/" rel="tag">Windows</a> <a class="kirafont icon-tag-fill -none-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a>
 		
 	</div>
 	
