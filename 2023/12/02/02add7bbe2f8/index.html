@@ -1,488 +1,404 @@
 <!DOCTYPE html>
-<html 
-	lang="zh">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
-<link rel="stylesheet" href="/css/layout.css">
 
-		
-		<title> 设置文件资源管理器上下文菜单弹出位置 -  zfrg&#39;s blog</title>
-		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
-		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
-		
-<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
 
-		
-<script src="/lib/mdui/mdui.min.js"></script>
+<html theme="light" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
 
-		<!-- lazyload -->
-		
-<script src="/lib/lazysizes.js"></script>
+  
+  <title>设置文件资源管理器上下文菜单弹出位置 | zfrg&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- smooth-scrolling -->
-		
-<script src="/lib/smooth-scrolling.js"></script>
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-		<!-- highlight -->
-		
-<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+  <meta name="description" content="Windows10系统默认文件资源管理器鼠标右键菜单在光标左侧，在其他版本中却为右侧。多年以来，许多用户已习惯出现在光标右侧的右键菜单，他们安装完系统后发现这一变化但不知道如何修改。本文将提供一种修改方法。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="设置文件资源管理器上下文菜单弹出位置">
+<meta property="og:url" content="https://zfrg-blog.de5.net/2023/12/02/02add7bbe2f8/index.html">
+<meta property="og:site_name" content="zfrg&#39;s blog">
+<meta property="og:description" content="Windows10系统默认文件资源管理器鼠标右键菜单在光标左侧，在其他版本中却为右侧。多年以来，许多用户已习惯出现在光标右侧的右键菜单，他们安装完系统后发现这一变化但不知道如何修改。本文将提供一种修改方法。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://livefile.xesimg.com/programme/python_assets/e73fc15a899d2ed2bb6df2fab755be1a.webp">
+<meta property="article:published_time" content="2023-12-02T14:49:44.000Z">
+<meta property="article:modified_time" content="2026-01-25T09:46:54.720Z">
+<meta property="article:author" content="zfrg">
+<meta property="article:tag" content="Windows">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://livefile.xesimg.com/programme/python_assets/e73fc15a899d2ed2bb6df2fab755be1a.webp">
+  
+    <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-		
-<script src="/lib/highlight/highlight.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-		<!-- 预置 kiraicon -->
-		
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
-
-		
-		<link
-			rel="shortcut icon"
-			href="/favicon.ico"
-			type="image/x-icon"
-		/>
-		
-<link rel="stylesheet" href="/deps/css/APlayer.min.css">
-
-		
-			
-				
-<link rel="stylesheet" href="/custom.css">
-
-			
-		
-		
-<script src="/deps/js/APlayer.min.js"></script>
-<script src="/deps/js/Meting.min.js"></script>
-
-	<meta name="generator" content="Hexo 7.3.0"></head>
-
-	<body>
-		<div
-			class="kira-background"
-			style="background-image: url('https://livefile.xesimg.com/programme/python_assets/48844896287b3e1973b1e539184b069a.webp')"
-		></div>
-		<div class="kira-header">
-    <a
-        class="kira-drawer-button mdui-ripple"
-        title="导航栏"
-        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
-    >
-        <i class="kirafont icon-menu"></i>
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>zfrg's blog </div>
     </a>
-    <a href="/" title="zfrg&#39;s blog">
-        <img
-			src="https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg"
-			alt="zfrg"
-		/>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
     </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
 </div>
-		<div class="kira-body">
-			<div class="kira-sidebar" id="sidebar">
-	<div class="kira-avatar mdui-ripple">
-		<a target="_blank" rel="noopener" href="https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg" title="zfrg">
-			<img
-				src="https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg"
-				alt="zfrg"
-			/>
-		</a>
-	</div>
-	<div class="kira-count">
-		<div><span>文章</span>7</div>
-		<div><span>标签</span>6</div>
-		<div><span>分类</span>2</div>
-	</div>
-	<div class="kira-list">
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/"
-			title="回到首页"
-		>
-			<i
-				class="kirafont
-					
-						icon-home
-					"
-			></i>
-			<div class="kira-list-item-content">
-				回到首页
-			</div>
-		</a>
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/archive/"
-			title="文章归档"
-		>
-			<i
-				class="kirafont
-					
-						icon-container
-					"
-			></i>
-			<div class="kira-list-item-content">
-				文章归档
-			</div>
-		</a>
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/about/"
-			title="关于本人"
-		>
-			<i
-				class="kirafont
-					
-						icon-user
-					"
-			></i>
-			<div class="kira-list-item-content">
-				关于本人
-			</div>
-		</a>
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/friends/"
-			title="我的朋友"
-		>
-			<i
-				class="kirafont
-					
-						icon-team
-					"
-			></i>
-			<div class="kira-list-item-content">
-				我的朋友
-			</div>
-		</a>
-		
-	</div>
-	<aside id="kira-sidebar">
-		
-			<div class="kira-widget-wrap">
-	<div class="kira-widget kira-social">
-		
-			<a
-				class="mdui-ripple"
-				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2308792628&website=www.oicqzone.com"
-				target="_blank"
-				mdui-tooltip="{content: 'QQ'}"
-				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
-			>
-				<i
-					class="kirafont
-					
-						icon-QQ
-					"
-				></i>
-			</a>
-		
-			<a
-				class="mdui-ripple"
-				href="https://space.bilibili.com/3546590432201019"
-				target="_blank"
-				mdui-tooltip="{content: '哔哩哔哩'}"
-				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
-			>
-				<i
-					class="kirafont
-					
-						icon-bilibili
-					"
-				></i>
-			</a>
-		
-			<a
-				class="mdui-ripple"
-				href="https://github.com/zfrg"
-				target="_blank"
-				mdui-tooltip="{content: 'GitHub'}"
-				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
-			>
-				<i
-					class="kirafont
-					
-						icon-github
-					"
-				></i>
-			</a>
-		
-			<a
-				class="mdui-ripple"
-				href="mailto:zfruiguo2010@163.com"
-				target="_blank"
-				mdui-tooltip="{content: 'e-mail'}"
-				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
-			>
-				<i
-					class="kirafont
-					
-						icon-link
-					"
-				></i>
-			</a>
-		
-	</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">竹枫若官zfrg </div>
+      <div class="dot"></div>
+      <div class="subtitle">Hello World! </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/3546590432201019" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/zfrg" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        
+          <a class="link-btn" href="mailto:zfruiguo2010@163.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+         
+      </div>  
+    </div>
+  </div>
 </div>
 
-		
-			
-  <div class="kira-widget-wrap">
-    <h3 class="kira-widget-title">分类</h3>
-    <div class="kira-widget">
-      <ul class="category-list">
-        
-        
+  
+  <div class="sticky">
+    
+      
 
-        
-          <li class="category-list-item">
-            <a class="category-list-link" href="/categories/开发/">
-              开发
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">
+                杂谈
+                <div class="category-count">1</div>
             </a>
-            <span class="category-list-count">6</span>
-          </li>
         
-          <li class="category-list-item">
-            <a class="category-list-link" href="/categories/杂谈/">
-              杂谈
+            <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91/">
+                开发
+                <div class="category-count">6</div>
             </a>
-            <span class="category-list-count">1</span>
-          </li>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LanStar8/" rel="tag">LanStar8</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC/" rel="tag">用户脚本</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Archives</h3>
+      
+      
+        <a class="archive-link" href="/archives/2026/01 ">
+          一月 2026 
+          <div class="archive-count">3 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/12 ">
+          十二月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/11 ">
+          十一月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/07 ">
+          七月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/12 ">
+          十二月 2023 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/08 ">
+          八月 2023 
+          <div class="archive-count">1 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2026/01/02/f4a855b56a4a/" title="在最新的Win10系统中复活 Internet Explorer" >
+            <div class="recent-link-text">
+              在最新的Win10系统中复活 Internet Explorer
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2026/01/01/edde37d5539b/" title="给Photopea标题栏左上角加上个图标" >
+            <div class="recent-link-text">
+              给Photopea标题栏左上角加上个图标
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2026/01/01/8141504217ba/" title="TimeDisplay：全屏显示当前时间" >
+            <div class="recent-link-text">
+              TimeDisplay：全屏显示当前时间
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/12/14/ee688c6f08c5/" title="szy神人叫声珍贵录音" >
+            <div class="recent-link-text">
+              szy神人叫声珍贵录音
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/11/22/8d0a2d3e5f46/" title="破解 LanStar8 极简方案" >
+            <div class="recent-link-text">
+              破解 LanStar8 极简方案
+            </div>
+          </a>
         
       </ul>
     </div>
   </div>
 
-		
-			
-	<div class="kira-widget-wrap">
-		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
-			<a href="/tags/LanStar8/" style="font-size: 10px;">LanStar8</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 20px;">浏览器</a> <a href="/tags/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC/" style="font-size: 10px;">用户脚本</a> <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">网易云音乐</a>
-		</div>
-		
-			<script>
-				const maxTagCounts = parseInt(4);
-				const tagsLength = parseInt(6);
-				let tagsArr = [];
-				for(let i = 0; i < tagsLength; i++){
-					tagsArr.push(i);
-				}
-				tagsArr.sort(function (l, r) {
-					return Math.random() > 0.5 ? -1 : 1;
-				});
-				tagsArr = tagsArr.slice(0, maxTagCounts < tagsLength ? tagsLength - maxTagCounts : 0);
-				const tagCloudContainer = document.querySelector('#randomtagcloud');
-				for(let tagIdx = 0; tagIdx < tagsArr.length; tagIdx++){
-					tagCloudContainer.children[tagsArr[tagIdx]].style.display = 'none';
-				}
-			</script>
-		
-	</div>
-
-
-		
-			
-	<div class="kira-widget-wrap">
-		<h3 class="kira-widget-title">
-			文章归档
-		</h3>
-		<div class="kira-widget">
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li></ul>
-		</div>
-	</div>
-
-
-		
-	</aside>
-	<div class="kira-copyright">
-		&copy; 2026
-		<a href="/">zfrg</a>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
-		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
-		<br />
-		
-		
-	</div>
-</div>
-<div
-	class="kira-sidebar-modal"
-	id="sidebar-modal"
-	onclick="(function(self) {
-		self.classList.remove('show');
-		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
-	})(this)"
-></div>
-			<div class="kira-content">
-				<div id="kira-top-header"></div>
-				<div class="kira-main-content">
-					
-<link rel="stylesheet" href="/css/kira-image.css">
-
-
-<script src="/js/kira-image.js"></script>
-
-<div class="kira-image">
-    <div class="kira-image-modal">
-        <div class="kira-image-header">
-            <div class="kira-image-counter"></div>
-            <div class="kira-image-title"></div>
-            <div class="kira-image-operation">
-                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
-                    <i class="kirafont icon-zoom-in"></i>
-                </div>
-                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
-                    <i class="kirafont icon-close"></i>
-                </div>
-            </div>
-        </div>
-        <div class="kira-image-container">
-            <div class="kira-image-prev-button-panel">
-                <div class="kira-image-exchange-button">
-                    <i class="kirafont icon-left"></i>
-                </div>
-            </div>
-            <div class="kira-image-list">
-                <div class="kira-image-prev">
-                    <img />
-                </div>
-                <div class="kira-image-now">
-                    <img />
-                </div>
-                <div class="kira-image-next">
-                    <img />
-                </div>
-            </div>
-            <div class="kira-image-next-button-panel">
-                <div class="kira-image-exchange-button">
-                    <i class="kirafont icon-right"></i>
-                </div>
-            </div>
-        </div>
+    
+  </div>
+</sidebar>
     </div>
+    <div id="content-body">
+       
+
+
+<article id="post-设置文件资源管理器上下文菜单弹出位置" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        设置文件资源管理器上下文菜单弹出位置
+      </h1>
+    
+  
 </div>
 
-	
-<link rel="stylesheet" href="/css/kira-code-copy.css">
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-12-02T14:49:44.000Z" itemprop="datePublished">2023-12-02</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            236 words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li></ul>
 
-	
-<script src="/js/kira-code-copy.js"></script>
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <p>Windows10系统默认文件资源管理器鼠标右键菜单在光标左侧，在其他版本中却为右侧。多年以来，许多用户已习惯出现在光标右侧的右键菜单，他们安装完系统后发现这一变化但不知道如何修改。本文将提供一种修改方法。</p>
+<span id="more"></span>
 
-
-<div class="kira-post">
-	<article>
-		
-		<div class="kira-post-cover">
-			<img
-				data-src="https://livefile.xesimg.com/programme/python_assets/7a6b995642a4cc43539b984aef60383b.webp"
-				data-sizes="auto"
-				alt="设置文件资源管理器上下文菜单弹出位置"
-				class="lazyload kira-post-cover-image disabled-kira-image"
-			/>
-			<h1>设置文件资源管理器上下文菜单弹出位置</h1>
-		</div>
-		
-		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2023年12月02日</a>
-			<a><i class="kirafont icon-edit-fill"></i>165 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 1 分钟</a>
-		</div>
-		<html><head></head><body><p>Windows10系统默认文件资源管理器鼠标右键菜单在光标左侧，在其他版本中却为右侧。多年以来，许多用户已习惯出现在光标右侧的右键菜单，他们安装完系统后发现这一变化但不知道如何修改。本文将提供一种修改方法。</p>
 <p>以下为设置方法：</p>
 <ol>
 <li>调出<code>运行</code>或使用<code>资源管理器的地址栏</code></li>
-<li>输入 <code>shell:::{80F3F1D5-FECA-45F3-BC32-752C152E456E}</code>并执行。</li>
+<li>输入 <code>shell:::&#123;80F3F1D5-FECA-45F3-BC32-752C152E456E&#125;</code>并执行。</li>
 <li>在选项卡里选 <code>其它</code>。</li>
 <li>选择<code>惯用左手</code>或<code>惯用右手</code>。</li>
 <li>点击<code>应用</code>按钮。</li>
 </ol>
-<p><img data-fancybox="gallery" data-sizes="auto" data-src="https://livefile.xesimg.com/programme/python_assets/e73fc15a899d2ed2bb6df2fab755be1a.webp" alt="e73fc15a899d2ed2bb6df2fab755be1a.webp (504×503)" class="lazyload"></p>
+<p><img src="https://livefile.xesimg.com/programme/python_assets/e73fc15a899d2ed2bb6df2fab755be1a.webp" alt="e73fc15a899d2ed2bb6df2fab755be1a.webp (504×503)"></p>
 <p>完成了上面的步骤，关闭窗口后选项生效。</p>
-</body></html>
-	</article>
 
-	 
-    <div class="kira-post-copyright">
-        <strong>本文作者：</strong>zfrg<br>
-        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2023/12/02/02add7bbe2f8/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2023&#x2F;12&#x2F;02&#x2F;02add7bbe2f8&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2023&#x2F;12&#x2F;02&#x2F;02add7bbe2f8&#x2F;</a><br>
         
-            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-        
+      </div>
+
+         
     </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2025/07/06/e90c75f06bc7/"
+      title="2025年，让我们重新认识“浏览器”！"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        2025年，让我们重新认识“浏览器”！
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2023/08/05/125d760f5ff9/"
+      title="利用网易云音乐获取音频文件"
+     >
+
+    <p class="title-text">
+      
+        利用网易云音乐获取音频文件
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
 
   
-	<div class="kira-post-nav">
-		<nav class="post-nav">
-			      
-			<!-- 先找到与当前文字相同的目录 -->
-			      
-			<!-- 在找到当前文章所在的 index -->
-			    
-			<!-- 上一篇文章 -->
-			<div class="old">
-				<span>上一章</span>
-				<a href="/2023/08/05/125d760f5ff9/"> 利用网易云音乐获取音频文件</a>
-			</div>
-			       
-			<!-- 下一篇文章 -->
-			<div class="new">
-				<span>下一章</span>
-				<a href="/2025/11/22/8d0a2d3e5f46/"> 破解 LanStar8 极简方案</a>
-			</div>
-			                               
-		</nav>
-	</div>
-	
-	<div class="kira-post-meta kira-rainbow">
-		
-			<a class="kirafont icon-container-fill -link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
-		
-		
-			<a class="kirafont icon-tag-fill -none-link" href="/tags/Windows/" rel="tag">Windows</a>
-		
-	</div>
-	
-	<div class="kira-post-footer">
-		
+</article>
 
-		
-	<div class="giscus"></div>
-  
-    <script src="https://giscus.app/client.js"
-      data-repo="zfrg/zfrg.github.io"
-      data-repo-id="R_kgDOJ_cU7w"
-      data-category="Ideas"
-      data-category-id="DIC_kwDOJ_cU784CYgqM"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="light"
-      data-lang="zh-CN"
-      data-loading="lazy"
-      crossorigin="anonymous"
-      async  
-    ></script>
-  
 
-	</div>
-	
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2026 竹枫若官zfrg<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
 </div>
 
-				</div>
-			</div>
-			<div class="kira-right-column">
-	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
-		<button class="mdui-fab mdui-ripple">
-			<i class="kirafont icon-caret-up"></i>
-		</button>
-	</a>
-</div>
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
 
-		</div>
-	</body>
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
 </html>

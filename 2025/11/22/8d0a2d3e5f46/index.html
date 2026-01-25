@@ -1,413 +1,323 @@
 <!DOCTYPE html>
-<html 
-	lang="zh">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		
-<link rel="stylesheet" href="/css/layout.css">
 
-		
-		<title> 破解 LanStar8 极简方案 -  zfrg&#39;s blog</title>
-		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
-		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
-		
-<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
 
-		
-<script src="/lib/mdui/mdui.min.js"></script>
+<html theme="light" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/js/color.global.min.js" ></script>
+<script src="/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
 
-		<!-- lazyload -->
-		
-<script src="/lib/lazysizes.js"></script>
+  
+  <title>破解 LanStar8 极简方案 | zfrg&#39;s blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-		<!-- smooth-scrolling -->
-		
-<script src="/lib/smooth-scrolling.js"></script>
+  <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-		<!-- highlight -->
-		
-<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+  <meta name="description" content="用映像劫持的方法快速破解 LanStar8">
+<meta property="og:type" content="article">
+<meta property="og:title" content="破解 LanStar8 极简方案">
+<meta property="og:url" content="https://zfrg-blog.de5.net/2025/11/22/8d0a2d3e5f46/index.html">
+<meta property="og:site_name" content="zfrg&#39;s blog">
+<meta property="og:description" content="用映像劫持的方法快速破解 LanStar8">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2025-11-22T22:00:23.000Z">
+<meta property="article:modified_time" content="2026-01-25T09:46:49.996Z">
+<meta property="article:author" content="zfrg">
+<meta property="article:tag" content="LanStar8">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.ico">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
 
-		
-<script src="/lib/highlight/highlight.min.js"></script>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
-		<!-- 预置 kiraicon -->
-		
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
-
-		
-		<link
-			rel="shortcut icon"
-			href="/favicon.ico"
-			type="image/x-icon"
-		/>
-		
-<link rel="stylesheet" href="/deps/css/APlayer.min.css">
-
-		
-			
-				
-<link rel="stylesheet" href="/custom.css">
-
-			
-		
-		
-<script src="/deps/js/APlayer.min.js"></script>
-<script src="/deps/js/Meting.min.js"></script>
-
-	<meta name="generator" content="Hexo 7.3.0"></head>
-
-	<body>
-		<div
-			class="kira-background"
-			style="background-image: url('https://livefile.xesimg.com/programme/python_assets/48844896287b3e1973b1e539184b069a.webp')"
-		></div>
-		<div class="kira-header">
-    <a
-        class="kira-drawer-button mdui-ripple"
-        title="导航栏"
-        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
-    >
-        <i class="kirafont icon-menu"></i>
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>zfrg's blog </div>
     </a>
-    <a href="/" title="zfrg&#39;s blog">
-        <img
-			src="https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg"
-			alt="zfrg"
-		/>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
     </a>
+    
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/atom.xml" title="RSS Feed">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+    
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/">Home</a>
+    
+      <a class="nav-dropdown-link" href="/archives">Archives</a>
+    
+      <a class="nav-dropdown-link" href="/about">About</a>
+    
+    
+      <a class="nav-dropdown-link" href="/atom.xml" title="RSS Feed">RSS</a>
+     
+    </div>
 </div>
-		<div class="kira-body">
-			<div class="kira-sidebar" id="sidebar">
-	<div class="kira-avatar mdui-ripple">
-		<a target="_blank" rel="noopener" href="https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg" title="zfrg">
-			<img
-				src="https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg"
-				alt="zfrg"
-			/>
-		</a>
-	</div>
-	<div class="kira-count">
-		<div><span>文章</span>7</div>
-		<div><span>标签</span>6</div>
-		<div><span>分类</span>2</div>
-	</div>
-	<div class="kira-list">
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/"
-			title="回到首页"
-		>
-			<i
-				class="kirafont
-					
-						icon-home
-					"
-			></i>
-			<div class="kira-list-item-content">
-				回到首页
-			</div>
-		</a>
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/archive/"
-			title="文章归档"
-		>
-			<i
-				class="kirafont
-					
-						icon-container
-					"
-			></i>
-			<div class="kira-list-item-content">
-				文章归档
-			</div>
-		</a>
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/about/"
-			title="关于本人"
-		>
-			<i
-				class="kirafont
-					
-						icon-user
-					"
-			></i>
-			<div class="kira-list-item-content">
-				关于本人
-			</div>
-		</a>
-		
-		<a
-			class="kira-list-item mdui-ripple false"
-			href="/friends/"
-			title="我的朋友"
-		>
-			<i
-				class="kirafont
-					
-						icon-team
-					"
-			></i>
-			<div class="kira-list-item-content">
-				我的朋友
-			</div>
-		</a>
-		
-	</div>
-	<aside id="kira-sidebar">
-		
-			<div class="kira-widget-wrap">
-	<div class="kira-widget kira-social">
-		
-			<a
-				class="mdui-ripple"
-				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=2308792628&website=www.oicqzone.com"
-				target="_blank"
-				mdui-tooltip="{content: 'QQ'}"
-				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
-			>
-				<i
-					class="kirafont
-					
-						icon-QQ
-					"
-				></i>
-			</a>
-		
-			<a
-				class="mdui-ripple"
-				href="https://space.bilibili.com/3546590432201019"
-				target="_blank"
-				mdui-tooltip="{content: '哔哩哔哩'}"
-				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
-			>
-				<i
-					class="kirafont
-					
-						icon-bilibili
-					"
-				></i>
-			</a>
-		
-			<a
-				class="mdui-ripple"
-				href="https://github.com/zfrg"
-				target="_blank"
-				mdui-tooltip="{content: 'GitHub'}"
-				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
-			>
-				<i
-					class="kirafont
-					
-						icon-github
-					"
-				></i>
-			</a>
-		
-			<a
-				class="mdui-ripple"
-				href="mailto:zfruiguo2010@163.com"
-				target="_blank"
-				mdui-tooltip="{content: 'e-mail'}"
-				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
-			>
-				<i
-					class="kirafont
-					
-						icon-link
-					"
-				></i>
-			</a>
-		
-	</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=https://livefile.xesimg.com/programme/python_assets/d23711df4dbbd0ce2c3ac828fdedbc9d.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">竹枫若官zfrg </div>
+      <div class="dot"></div>
+      <div class="subtitle">Hello World! </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/3546590432201019" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/zfrg" title="GitHub"><i class="fa-brands fa-github"></i></a>
+        
+          <a class="link-btn" href="mailto:zfruiguo2010@163.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+         
+      </div>  
+    </div>
+  </div>
 </div>
 
-		
-			
-  <div class="kira-widget-wrap">
-    <h3 class="kira-widget-title">分类</h3>
-    <div class="kira-widget">
-      <ul class="category-list">
-        
-        
+  
+  <div class="sticky">
+    
+      
 
-        
-          <li class="category-list-item">
-            <a class="category-list-link" href="/categories/开发/">
-              开发
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Categories</h3>
+      <div class="category-box">
+            <a class="category-link" href="/categories/%E6%9D%82%E8%B0%88/">
+                杂谈
+                <div class="category-count">1</div>
             </a>
-            <span class="category-list-count">6</span>
-          </li>
         
-          <li class="category-list-item">
-            <a class="category-list-link" href="/categories/杂谈/">
-              杂谈
+            <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91/">
+                开发
+                <div class="category-count">6</div>
             </a>
-            <span class="category-list-count">1</span>
-          </li>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Tags</h3>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LanStar8/" rel="tag">LanStar8</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC/" rel="tag">用户脚本</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐</a></li></ul>
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Archives</h3>
+      
+      
+        <a class="archive-link" href="/archives/2026/01 ">
+          一月 2026 
+          <div class="archive-count">3 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/12 ">
+          十二月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/11 ">
+          十一月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2025/07 ">
+          七月 2025 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/12 ">
+          十二月 2023 
+          <div class="archive-count">1 </div>
+        </a>
+      
+        <a class="archive-link" href="/archives/2023/08 ">
+          八月 2023 
+          <div class="archive-count">1 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">Recent Posts</h3>
+      <ul>
+        
+          <a class="recent-link" href="/2026/01/02/f4a855b56a4a/" title="在最新的Win10系统中复活 Internet Explorer" >
+            <div class="recent-link-text">
+              在最新的Win10系统中复活 Internet Explorer
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2026/01/01/edde37d5539b/" title="给Photopea标题栏左上角加上个图标" >
+            <div class="recent-link-text">
+              给Photopea标题栏左上角加上个图标
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2026/01/01/8141504217ba/" title="TimeDisplay：全屏显示当前时间" >
+            <div class="recent-link-text">
+              TimeDisplay：全屏显示当前时间
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/12/14/ee688c6f08c5/" title="szy神人叫声珍贵录音" >
+            <div class="recent-link-text">
+              szy神人叫声珍贵录音
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2025/11/22/8d0a2d3e5f46/" title="破解 LanStar8 极简方案" >
+            <div class="recent-link-text">
+              破解 LanStar8 极简方案
+            </div>
+          </a>
         
       </ul>
     </div>
   </div>
 
-		
-			
-	<div class="kira-widget-wrap">
-		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
-			<a href="/tags/LanStar8/" style="font-size: 10px;">LanStar8</a> <a href="/tags/Python/" style="font-size: 10px;">Python</a> <a href="/tags/Windows/" style="font-size: 15px;">Windows</a> <a href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" style="font-size: 20px;">浏览器</a> <a href="/tags/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC/" style="font-size: 10px;">用户脚本</a> <a href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" style="font-size: 10px;">网易云音乐</a>
-		</div>
-		
-			<script>
-				const maxTagCounts = parseInt(4);
-				const tagsLength = parseInt(6);
-				let tagsArr = [];
-				for(let i = 0; i < tagsLength; i++){
-					tagsArr.push(i);
-				}
-				tagsArr.sort(function (l, r) {
-					return Math.random() > 0.5 ? -1 : 1;
-				});
-				tagsArr = tagsArr.slice(0, maxTagCounts < tagsLength ? tagsLength - maxTagCounts : 0);
-				const tagCloudContainer = document.querySelector('#randomtagcloud');
-				for(let tagIdx = 0; tagIdx < tagsArr.length; tagIdx++){
-					tagCloudContainer.children[tagsArr[tagIdx]].style.display = 'none';
-				}
-			</script>
-		
-	</div>
-
-
-		
-			
-	<div class="kira-widget-wrap">
-		<h3 class="kira-widget-title">
-			文章归档
-		</h3>
-		<div class="kira-widget">
-			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">2</span></li></ul>
-		</div>
-	</div>
-
-
-		
-	</aside>
-	<div class="kira-copyright">
-		&copy; 2026
-		<a href="/">zfrg</a>
-		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
-		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
-		<br />
-		
-		
-	</div>
-</div>
-<div
-	class="kira-sidebar-modal"
-	id="sidebar-modal"
-	onclick="(function(self) {
-		self.classList.remove('show');
-		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
-	})(this)"
-></div>
-			<div class="kira-content">
-				<div id="kira-top-header"></div>
-				<div class="kira-main-content">
-					
-<link rel="stylesheet" href="/css/kira-image.css">
-
-
-<script src="/js/kira-image.js"></script>
-
-<div class="kira-image">
-    <div class="kira-image-modal">
-        <div class="kira-image-header">
-            <div class="kira-image-counter"></div>
-            <div class="kira-image-title"></div>
-            <div class="kira-image-operation">
-                <div class="kira-image-operation-button" id="kira-image-operation-button-zoom">
-                    <i class="kirafont icon-zoom-in"></i>
-                </div>
-                <div class="kira-image-operation-button" id="kira-image-operation-button-close">
-                    <i class="kirafont icon-close"></i>
-                </div>
-            </div>
-        </div>
-        <div class="kira-image-container">
-            <div class="kira-image-prev-button-panel">
-                <div class="kira-image-exchange-button">
-                    <i class="kirafont icon-left"></i>
-                </div>
-            </div>
-            <div class="kira-image-list">
-                <div class="kira-image-prev">
-                    <img />
-                </div>
-                <div class="kira-image-now">
-                    <img />
-                </div>
-                <div class="kira-image-next">
-                    <img />
-                </div>
-            </div>
-            <div class="kira-image-next-button-panel">
-                <div class="kira-image-exchange-button">
-                    <i class="kirafont icon-right"></i>
-                </div>
-            </div>
-        </div>
+    
+  </div>
+</sidebar>
     </div>
+    <div id="content-body">
+       
+
+
+<article id="post-破解-LanStar8-极简方案" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        破解 LanStar8 极简方案
+      </h1>
+    
+  
 </div>
 
-	
-<link rel="stylesheet" href="/css/kira-code-copy.css">
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2025-11-22T22:00:23.000Z" itemprop="datePublished">2025-11-22</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            2.2k words 
+          </div>
+        </div>
+        
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LanStar8/" rel="tag">LanStar8</a></li></ul>
 
-	
-<script src="/js/kira-code-copy.js"></script>
-
-
-<div class="kira-post">
-	<article>
-		
-		<div class="kira-post-cover">
-			<img
-				data-src="https://livefile.xesimg.com/programme/python_assets/a6e7f3a71cc2355d242f799a6121bb23.webp"
-				data-sizes="auto"
-				alt="破解 LanStar8 极简方案"
-				class="lazyload kira-post-cover-image disabled-kira-image"
-			/>
-			<h1>破解 LanStar8 极简方案</h1>
-		</div>
-		
-		<div class="kira-post-meta kira-rainbow" style="margin:10px 0!important;">
-			<a><i class="kirafont icon-calendar-fill"></i>2025年11月22日</a>
-			<a><i class="kirafont icon-edit-fill"></i>1.3k 字</a>
-			<a><i class="kirafont icon-time-circle-fill"></i>大概 5 分钟</a>
-		</div>
-		<html><head></head><body><h2><span id="%E5%89%8D%E8%A8%80">前言</span></h2><p>初入高中，我作为编程爱好者，在拿到信息技术课本的第一时间就翻阅起来了。看到一半时我发现，按照课本意思，第一学期大概就能学到 Python 语言。说实话，我本来还怪欣喜的。前几次在机房上课真正上到 Python 算法，情景是 BMI 算法。我当时还特别高兴，觉得课程安排不错，因为这个算法适合新手学习，能当第一次上手。</p>
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>初入高中，我作为编程爱好者，在拿到信息技术课本的第一时间就翻阅起来了。看到一半时我发现，按照课本意思，第一学期大概就能学到 Python 语言。说实话，我本来还怪欣喜的。前几次在机房上课真正上到 Python 算法，情景是 BMI 算法。我当时还特别高兴，觉得课程安排不错，因为这个算法适合新手学习，能当第一次上手。</p>
 <p>但是，我反正是无法理解《一个<code>while</code>循环语句是怎么讲30分钟的》、《<code>for</code>循环语句有啥好角色扮演的》。对于我个人（还有一些对程序语言、算法思维理解力比较好的同学）来说，总认为是大可不必的。关键是我要想提前完成作业时信息老师be like:</p>
 <blockquote>
 <p>不行，给我老老实实看PPT</p>
 </blockquote>
 <p>好吧，我只好搞些小（啸）动作了，目前最大的成果就是本文的“<a href="#%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81">一行代码</a>”。后觉研究破解方法之过程有意义，特撰写此文以记之。</p>
-<h2><span id="%E6%AD%A3%E6%96%87%E9%83%A8%E5%88%86">正文部分</span></h2><h3><span id="%E5%88%9D%E8%AF%86">初识</span></h3><p>由于我的习性，我在第一次去机房打开电脑的时候就浏览了“开始菜单”中的所有应用。然后便找到了疑似机房控制的应用 <strong>LanStar 8极速版</strong> 。就非常的Amazing啊，我的直觉没错（文件夹里面赫然一个“被控端”）。</p>
+<h2 id="正文部分"><a href="#正文部分" class="headerlink" title="正文部分"></a>正文部分</h2><h3 id="初识"><a href="#初识" class="headerlink" title="初识"></a>初识</h3><p>由于我的习性，我在第一次去机房打开电脑的时候就浏览了“开始菜单”中的所有应用。然后便找到了疑似机房控制的应用 <strong>LanStar 8极速版</strong> 。就非常的Amazing啊，我的直觉没错（文件夹里面赫然一个“被控端”）。</p>
 <p>后来有一节上课时候没忍住，去仔细研究了一下这个 LanStar8 。那次的研究结果就是发现了主程序就是<code>LanClt.exe</code>，由于任务管理器被禁用了，所以当时还是费了些力气的。</p>
 <p>我当时思考了一下，感觉可以直接<code>taskkill</code>起手，就像当年初中的时候对付极域一样（那会还有再见极域用捏）。</p>
 <p>由于时间有限，我就没有在当时借机深入研究。</p>
-<h3><span id="%E7%A0%B4%E8%A7%A3">破解</span></h3><p>后来，我就去搜索引擎去搜索相关文章。然后就找到了<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">这篇文章</a>。（于 2013-06-07 13:12:57 发布，还是 LanStar7……真是篇有年代感的文章啊……）</p>
+<h3 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h3><p>后来，我就去搜索引擎去搜索相关文章。然后就找到了<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">这篇文章</a>。（于 2013-06-07 13:12:57 发布，还是 LanStar7……真是篇有年代感的文章啊……）</p>
 <blockquote>
 <p>好消息：有用，好用。（完整流程，过程详细，HingC大佬还是很强的👍）</p>
 <p>坏消息：不适用。（略复杂，学校机房这么搞动作太大了，不适合我这边使用）</p>
 </blockquote>
 <p>嗯……情况就是这么个情况。文章前面有比较容易处理的脚本，大概就是用<code>taskkill</code>结束几个进程（<code>taskkill</code>还是太好用辣），我测试下来比较重要的就两个，分别是<code>CtrlProcess.exe</code>和老熟人<code>LanClt.exe</code>。前者很显然就是控制进程的，大概也许可以理解为“守护进程”（？）。</p>
 <p>于是乎，下面的批处理脚本诞生了：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs batch">@echo off &amp;&amp; cls<br>taskkill /t /f /im CtrlProcess.exe<br>taskkill /t /f /im LanClt.exe<br>echo SUCCESS &amp;&amp; exit /b<br></code></pre></td></tr></tbody></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs batch">@echo off &amp;&amp; cls<br>taskkill /t /f /im CtrlProcess.exe<br>taskkill /t /f /im LanClt.exe<br>echo SUCCESS &amp;&amp; exit /b<br></code></pre></td></tr></table></figure>
 
 <p>经测试，此脚本可用（只需要中间两行就行）。运行一下就成功脱离了控制。但是只能在控制前执行，或者中途注销、拔插网线在短暂的时间差里执行。</p>
 <p>可是这么做还是太吃操作了，有没有什么优化的办法呢？答案是，有的。</p>
@@ -415,93 +325,95 @@
 <p><img src="data:image/webp;base64,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"></p>
 <p>我就想：如果把这个窗口的程序镜像劫持为脱控脚本，那是不是按5次<kbd>Shift</kbd>就能随时随地脱离控制了？（这辈子没想过粘滞键会在这里派上用场），然后我就把脚本移到<code>%WinDir%</code>，找这个对话框的程序（轻松使用对话主机），程序名为<code>EaseOfAccessDialog.exe</code>，在注册表编辑器找到<code>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options</code>，新建“项”，命名为<code>EaseOfAccessDialog.exe</code>，新建“字符串值”指向批处理脚本。</p>
 <p>结果就是成功了，而且整个过程十分迅速。</p>
-<h3><span id="%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81">一行代码</span></h3><p>然而时间紧张，在机房实际上可能并没有充足的时间完成上述操作。但是，整个课程过程中，机器是允许联网的，这时候我就想到了把整个过程结合成一段 CMD 指令，然后发到互联网上。使用的时候访问网站复制下来就行了。最后得到的成品如下：</p>
-<figure class="highlight plaintext"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs batch">CMD.exe /C reg add "HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EaseOfAccessDialog.exe" /v Debugger /t REG_SZ /d "k.bat" /f &amp; echo @echo off ^&amp;^&amp; cls &gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im CtrlProcess.exe &gt;&gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im LanClt.exe &gt;&gt; C:\Windows\k.bat &amp; echo echo success ^&amp;^&amp; exit /b &gt;&gt; C:\Windows\k.bat<br></code></pre></td></tr></tbody></table></figure>
+<h3 id="一行代码"><a href="#一行代码" class="headerlink" title="一行代码"></a>一行代码</h3><p>然而时间紧张，在机房实际上可能并没有充足的时间完成上述操作。但是，整个课程过程中，机器是允许联网的，这时候我就想到了把整个过程结合成一段 CMD 指令，然后发到互联网上。使用的时候访问网站复制下来就行了。最后得到的成品如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs batch">CMD.exe /C reg add &quot;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EaseOfAccessDialog.exe&quot; /v Debugger /t REG_SZ /d &quot;k.bat&quot; /f &amp; echo @echo off ^&amp;^&amp; cls &gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im CtrlProcess.exe &gt;&gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im LanClt.exe &gt;&gt; C:\Windows\k.bat &amp; echo echo success ^&amp;^&amp; exit /b &gt;&gt; C:\Windows\k.bat<br></code></pre></td></tr></table></figure>
 
 <p>使用方法也很简单，用 <kbd>Win</kbd>+<kbd>R</kbd> 呼出运行框，按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> 以管理员身份运行<code>CMD</code>，把复制下来的代码在终端执行，就能完成所有配置，和手动配置的效果完全相同。</p>
-<h3><span id="%E5%B9%B6%E6%9C%AA%E7%BB%93%E6%9D%9F">并未结束</span></h3><p>信息技术老师也是十分厉害。两块屏幕，一个放PPT，另一个就看我们有没有谁下线了。并且，这个 LanStar8 在重新连接上后就会放阴乐（）。阴乐还好，静音就行了。但是被发现下线了可就不好了。所以下一步，我的计划是利用<code>pywin32</code>结合那篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">文章</a>，用 Python 实现部分功能（若成功，我可能会发到一篇新文章）。</p>
-</body></html>
-	</article>
+<h3 id="并未结束"><a href="#并未结束" class="headerlink" title="并未结束"></a>并未结束</h3><p>信息技术老师也是十分厉害。两块屏幕，一个放PPT，另一个就看我们有没有谁下线了。并且，这个 LanStar8 在重新连接上后就会放阴乐（）。阴乐还好，静音就行了。但是被发现下线了可就不好了。所以下一步，我的计划是利用<code>pywin32</code>结合那篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">文章</a>，用 Python 实现部分功能（若成功，我可能会发到一篇新文章）。</p>
 
-	 
-    <div class="kira-post-copyright">
-        <strong>本文作者：</strong>zfrg<br>
-        <strong>本文链接：</strong><a href="https://zfrg-blog.de5.net/2025/11/22/8d0a2d3e5f46/" title="https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2025&#x2F;11&#x2F;22&#x2F;8d0a2d3e5f46&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;zfrg-blog.de5.net&#x2F;2025&#x2F;11&#x2F;22&#x2F;8d0a2d3e5f46&#x2F;</a><br>
         
-            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
-        
+      </div>
+
+         
     </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/2025/12/14/ee688c6f08c5/"
+      title="szy神人叫声珍贵录音"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        szy神人叫声珍贵录音
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/2025/07/06/e90c75f06bc7/"
+      title="2025年，让我们重新认识“浏览器”！"
+     >
+
+    <p class="title-text">
+      
+        2025年，让我们重新认识“浏览器”！
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
 
   
-	<div class="kira-post-nav">
-		<nav class="post-nav">
-			      
-			<!-- 先找到与当前文字相同的目录 -->
-			         
-			<!-- 在找到当前文章所在的 index -->
-			        
-			<!-- 上一篇文章 -->
-			<div class="old">
-				<span>上一章</span>
-				<a href="/2023/12/02/02add7bbe2f8/"> 设置文件资源管理器上下文菜单弹出位置</a>
-			</div>
-			       
-			<!-- 下一篇文章 -->
-			<div class="new">
-				<span>下一章</span>
-				<a href="/2026/01/01/8141504217ba/"> TimeDisplay：全屏显示当前时间</a>
-			</div>
-			                        
-		</nav>
-	</div>
-	
-	<div class="kira-post-meta kira-rainbow">
-		
-			<a class="kirafont icon-container-fill -link" href="/categories/%E5%BC%80%E5%8F%91/">开发</a>
-		
-		
-			<a class="kirafont icon-tag-fill -none-link" href="/tags/LanStar8/" rel="tag">LanStar8</a>
-		
-	</div>
-	
-	<div class="kira-post-footer">
-		
+</article>
 
-		
-	<div class="giscus"></div>
-  
-    <script src="https://giscus.app/client.js"
-      data-repo="zfrg/zfrg.github.io"
-      data-repo-id="R_kgDOJ_cU7w"
-      data-category="Ideas"
-      data-category-id="DIC_kwDOJ_cU784CYgqM"
-      data-mapping="pathname"
-      data-strict="0"
-      data-reactions-enabled="1"
-      data-emit-metadata="0"
-      data-input-position="top"
-      data-theme="light"
-      data-lang="zh-CN"
-      data-loading="lazy"
-      crossorigin="anonymous"
-      async  
-    ></script>
-  
 
-	</div>
-	
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2026 竹枫若官zfrg<br>
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
 </div>
 
-				</div>
-			</div>
-			<div class="kira-right-column">
-	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
-		<button class="mdui-fab mdui-ripple">
-			<i class="kirafont icon-caret-up"></i>
-		</button>
-	</a>
-</div>
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
 
-		</div>
-	</body>
+  </div>
+  <script src="/js/light-dark-switch.js"></script>
+</body>
 </html>
