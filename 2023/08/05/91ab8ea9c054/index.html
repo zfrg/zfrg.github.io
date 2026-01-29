@@ -14,26 +14,27 @@
   
 
   
-  <title>TimeDisplay：全屏显示当前时间 | zfrg&#39;s blog</title>
+  <title>利用网易云音乐获取音频文件 | zfrg&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <link rel="preload" href="/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <link rel="preload" href="/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
 
-  <meta name="description" content="自制的基于pywebview的全屏显示时间小工具">
+  <meta name="description" content="当你想离线听音乐，或者拷贝到MP3设备，你就需要寻找网站下载音频文件。你可能会用网易云音乐客户端下载音乐，但是很遗憾，文件格式并不是MP3、WAV之类的格式，绝大多数播放器无法识别。其实借助网易云官方的api也可以简单地获取到大多数音频播放器可读取的音频文件。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="TimeDisplay：全屏显示当前时间">
-<meta property="og:url" content="https://zfrg-blog.de5.net/2026/01/01/8141504217ba/index.html">
+<meta property="og:title" content="利用网易云音乐获取音频文件">
+<meta property="og:url" content="https://zfrg-blog.de5.net/2023/08/05/91ab8ea9c054/index.html">
 <meta property="og:site_name" content="zfrg&#39;s blog">
-<meta property="og:description" content="自制的基于pywebview的全屏显示时间小工具">
+<meta property="og:description" content="当你想离线听音乐，或者拷贝到MP3设备，你就需要寻找网站下载音频文件。你可能会用网易云音乐客户端下载音乐，但是很遗憾，文件格式并不是MP3、WAV之类的格式，绝大多数播放器无法识别。其实借助网易云官方的api也可以简单地获取到大多数音频播放器可读取的音频文件。">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://livefile.xesimg.com/programme/python_assets/607b033467afcc05682aa46e678451e9.webp">
-<meta property="article:published_time" content="2026-01-01T16:43:14.000Z">
-<meta property="article:modified_time" content="2026-01-25T09:47:12.672Z">
+<meta property="og:image" content="https://img.alicdn.com/imgextra/i3/769376516/O1CN01TA3ESH1y0NisqNYIc_!!769376516.png">
+<meta property="og:image" content="https://www.appmiu.com/wp-content/uploads/2024/12/image-7.webp">
+<meta property="article:published_time" content="2023-08-05T08:07:03.000Z">
+<meta property="article:modified_time" content="2026-01-25T13:00:27.143Z">
 <meta property="article:author" content="zfrg">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="网易云音乐">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://livefile.xesimg.com/programme/python_assets/607b033467afcc05682aa46e678451e9.webp">
+<meta name="twitter:image" content="https://img.alicdn.com/imgextra/i3/769376516/O1CN01TA3ESH1y0NisqNYIc_!!769376516.png">
   
     <link rel="alternate" href="/atom.xml" title="zfrg's blog" type="application/atom+xml">
   
@@ -44,7 +45,7 @@
   
 <link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 6.3.0"></head>
+<meta name="generator" content="Hexo 8.1.1"></head>
 
 <body>
   
@@ -154,7 +155,7 @@
         
             <a class="category-link" href="/categories/%E5%BC%80%E5%8F%91/">
                 开发
-                <div class="category-count">6</div>
+                <div class="category-count">5</div>
             </a>
         </div>
     </div>
@@ -166,7 +167,7 @@
   <div class="widget-wrap">
     <div class="widget">
       <h3 class="widget-title">Tags</h3>
-      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LanStar8/" rel="tag">LanStar8</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC/" rel="tag">用户脚本</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐</a></li></ul>
+      <ul class="widget-tag-list" itemprop="keywords"><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/LanStar8/" rel="tag">LanStar8</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/Windows/" rel="tag">Windows</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E6%B5%8F%E8%A7%88%E5%99%A8/" rel="tag">浏览器</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%94%A8%E6%88%B7%E8%84%9A%E6%9C%AC/" rel="tag">用户脚本</a></li><li class="widget-tag-list-item"><a class="widget-tag-list-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐</a></li></ul>
     </div>
   </div>
 
@@ -180,7 +181,7 @@
       
         <a class="archive-link" href="/archives/2026/01 ">
           一月 2026 
-          <div class="archive-count">3 </div>
+          <div class="archive-count">2 </div>
         </a>
       
         <a class="archive-link" href="/archives/2025/11 ">
@@ -214,33 +215,33 @@
       <h3 class="widget-title">Recent Posts</h3>
       <ul>
         
-          <a class="recent-link" href="/2026/01/02/f4a855b56a4a/" title="在最新的Win10系统中复活 Internet Explorer" >
+          <a class="recent-link" href="/2026/01/02/39ee11f34081/" title="在最新的Win10系统中复活 Internet Explorer" >
             <div class="recent-link-text">
               在最新的Win10系统中复活 Internet Explorer
             </div>
           </a>
         
-          <a class="recent-link" href="/2026/01/01/edde37d5539b/" title="给Photopea标题栏左上角加上个图标" >
+          <a class="recent-link" href="/2026/01/01/28de9c9581d8/" title="给Photopea标题栏左上角加上个图标" >
             <div class="recent-link-text">
               给Photopea标题栏左上角加上个图标
             </div>
           </a>
         
-          <a class="recent-link" href="/2026/01/01/8141504217ba/" title="TimeDisplay：全屏显示当前时间" >
-            <div class="recent-link-text">
-              TimeDisplay：全屏显示当前时间
-            </div>
-          </a>
-        
-          <a class="recent-link" href="/2025/11/22/8d0a2d3e5f46/" title="破解 LanStar8 极简方案" >
+          <a class="recent-link" href="/2025/11/22/a352870277a1/" title="破解 LanStar8 极简方案" >
             <div class="recent-link-text">
               破解 LanStar8 极简方案
             </div>
           </a>
         
-          <a class="recent-link" href="/2025/07/06/e90c75f06bc7/" title="2025年，让我们重新认识“浏览器”！" >
+          <a class="recent-link" href="/2025/07/06/c3f12c8856c9/" title="2025年，让我们重新认识“浏览器”！" >
             <div class="recent-link-text">
               2025年，让我们重新认识“浏览器”！
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/2023/12/02/ec75e915d18f/" title="设置文件资源管理器上下文菜单弹出位置" >
+            <div class="recent-link-text">
+              设置文件资源管理器上下文菜单弹出位置
             </div>
           </a>
         
@@ -256,7 +257,7 @@
        
 
 
-<article id="post-TimeDisplay：全屏显示当前时间" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+<article id="post-利用网易云音乐获取音频文件" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   
     
    
@@ -269,7 +270,7 @@
   
     
       <h1 class="p-name article-title" itemprop="headline name">
-        TimeDisplay：全屏显示当前时间
+        利用网易云音乐获取音频文件
       </h1>
     
   
@@ -277,7 +278,7 @@
 
         <div class='meta-info-bar'>
           <div class="meta-info">
-  <time class="dt-published" datetime="2026-01-01T16:43:14.000Z" itemprop="datePublished">2026-01-01</time>
+  <time class="dt-published" datetime="2023-08-05T08:07:03.000Z" itemprop="datePublished">2023-08-05</time>
 </div>
           <div class="need-seperator meta-info">
             <div class="meta-cate-flex">
@@ -288,61 +289,46 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            646 words 
+             words 
           </div>
         </div>
         
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/" rel="tag">Python</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90/" rel="tag">网易云音乐</a></li></ul>
 
       </header>
       <div class="e-content article-entry" itemprop="articleBody">
         
-          <h2 id="时间显示桌面应用"><a href="#时间显示桌面应用" class="headerlink" title="时间显示桌面应用"></a>时间显示桌面应用</h2><h3 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h3><p>这是一个基于 Python 的桌面应用程序，使用 <code>pywebview</code> 库构建。主要功能是在全屏窗口中实时显示当前时间，并提供一个简单的退出按钮界面。使用建议：大屏幕设备展示（如希沃白板）。</p>
-<h3 id="核心特点"><a href="#核心特点" class="headerlink" title="核心特点"></a>核心特点</h3><ul>
-<li>全屏时间显示：应用程序启动后以全屏模式展示，便于查看</li>
-<li>实时更新：时间每秒自动更新，确保显示准确</li>
-<li>简洁界面：包含一个专门设计的退出按钮，使用 SVG 图标增强视觉效果</li>
-</ul>
-<h3 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h3><p><strong>[推荐]如果你已安装了 Python：</strong></p>
+          <!-- toc -->
+
+<h2 id="Api方案"><a href="#Api方案" class="headerlink" title="Api方案"></a>Api方案</h2><h3 id="音乐ID"><a href="#音乐ID" class="headerlink" title="音乐ID"></a>音乐ID</h3><p><strong>注：由于官方限制游客浏览，未登录状态下官网访问有限制，无法搜索音乐。不想用网易云账号的请移步下文“资源嗅探”的“方法2：第三方”一节。</strong></p>
+<p>电脑进入<a target="_blank" rel="noopener" href="https://music.163.com/">网页版网易云音乐</a>，随便进一首歌，就会发现地址栏出现类似如下链接：</p>
+<p><a target="_blank" rel="noopener" href="https://music.163.com/#/song?id=1950897620">https://music.163.com/#/song?id=1950897620</a></p>
+<p>链接中<code>?id=</code>后面的数字是不固定的，这首歌是<code>1950897620</code>，每首歌都是不一样的，这串数字就是这首歌的音乐ID。</p>
+<h3 id="直链"><a href="#直链" class="headerlink" title="直链"></a>直链</h3><p>在搜索引擎搜一下就可以找到直链格式。<br>链接格式如下：</p>
+<p><code>https://music.163.com/song/media/outer/url?id={ID}.mp3</code></p>
+<p>以上面的那首歌为例，它的音乐ID是<code>1950897620</code>，则它的直链就是<a target="_blank" rel="noopener" href="https://music.163.com/song/media/outer/url?id=1950897620.mp3">https://music.163.com/song/media/outer/url?id=1950897620.mp3</a></p>
+<p>可惜，这个方法仅限于能直接听不用网易云音乐会员的音乐，否则会404。</p>
+<h2 id="资源嗅探"><a href="#资源嗅探" class="headerlink" title="资源嗅探"></a>资源嗅探</h2><h3 id="原理（非必读，后面讲方法）"><a href="#原理（非必读，后面讲方法）" class="headerlink" title="原理（非必读，后面讲方法）"></a>原理（非必读，后面讲方法）</h3><p>了解了上文的api后，你可能会疑惑：</p>
+<blockquote>
+<p>啊博主博主，难道我每次都必须手动按上面的步骤操作嘛？</p>
+</blockquote>
+<p>现在，让我们重新打开网易云音乐网页版。按 <kbd>F12</kbd> 打开“开发者工具”并选择“网络&#x2F;Network”一栏，再按 <kbd>Ctrl</kbd>+<kbd>R</kbd> 刷新，在页面选一首歌听，选择“媒体&#x2F;Media”。</p>
+<p>这时你就能在资源列表找到一个链接特别长的音频文件地址，长得和Api直链重定向后的地址特别像。事实是，这段地址背后就是生成的音频文件，格式也不仅限于 MP3 。</p>
+<p>现在，你已经学会了手动获取网页端请求的资源，这就是资源嗅探的原理。接下来让我们学习如何利用插件自动完成资源的获取。</p>
+<h3 id="方法1：插件"><a href="#方法1：插件" class="headerlink" title="方法1：插件"></a>方法1：插件</h3><p>这个方法还是基于官方的网页版网易云音乐，但是需要借助非官方的插件来完成。这里我拿“AIX 智能下载器(图片&#x2F;视频&#x2F;音乐&#x2F;文档)”举例。</p>
+<p><img src="https://img.alicdn.com/imgextra/i3/769376516/O1CN01TA3ESH1y0NisqNYIc_!!769376516.png" alt="AIX智能下载器"></p>
 <ol>
-<li>克隆仓库（<a target="_blank" rel="noopener" href="https://github.com/zfrg/TimeDisplay">zfrg/TimeDisplay</a>）</li>
+<li>如果你使用的是 Microsoft Edge 浏览器，你可以直接点击这个链接<a target="_blank" rel="noopener" href="https://microsoftedge.microsoft.com/addons/detail/aix%E6%99%BA%E8%83%BD%E4%B8%8B%E8%BD%BD%E5%99%A8%E5%9B%BE%E7%89%87%E8%A7%86%E9%A2%91%E9%9F%B3%E4%B9%90%E6%96%87%E6%A1%A3/pljfekbkmmbkdfhddpebdlmfngigcohc">AIX 智能下载器(图片&#x2F;视频&#x2F;音乐&#x2F;文档) - Microsoft Edge Addons</a>来安装这个插件。如果你使用谷歌浏览器或其他基于 Chromium 的浏览器，你可以前往<a target="_blank" rel="noopener" href="https://aixdownloader.com/">插件官网</a>下载适用于你的浏览器的插件。</li>
+<li>重新进入网易云音乐官网，打开扩展界面你就能更快捷地获取到音乐直链，它能帮助你获取到所有你能在网站上听到的。</li>
 </ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> https://github.com/zfrg/TimeDisplay.git<br><span class="hljs-built_in">cd</span> TimeDisplay<br></code></pre></td></tr></table></figure>
-
-<ol start="2">
-<li>环境准备<br>首先确保已安装必要的 Python 库：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pip install pywebview<br></code></pre></td></tr></table></figure>
-
-<ol start="3">
-<li>运行应用<br>运行<code>main.pyw</code>：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">python main.pyw<br></code></pre></td></tr></table></figure>
-
-<ol start="4">
-<li>操作方法</li>
-</ol>
-<ul>
-<li>应用启动后会自动进入全屏模式</li>
-<li>屏幕中央显示当前系统时间</li>
-<li>点击左下角的方形按钮即可退出应用</li>
-</ul>
-<p><strong>如果你未安装 Python：</strong></p>
-<ol>
-<li>前往 <a target="_blank" rel="noopener" href="https://github.com/zfrg/TimeDisplay/releases/latest">Github Release</a> 获取桌面端程序（Windows7+）</li>
-<li>网页版正在开发</li>
-</ol>
-<h3 id="技术说明"><a href="#技术说明" class="headerlink" title="技术说明"></a>技术说明</h3><ul>
-<li>界面使用 HTML/CSS/JavaScript 构建，通过 <code>pywebview</code> 在桌面环境中渲染</li>
-<li>退出功能通过 Python 与 JavaScript 的交互实现</li>
-<li>时间更新由 JavaScript 的 <code>setInterval</code> 函数驱动，确保显示流畅</li>
-</ul>
-<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
-<li>确保系统支持 Python 3.6 及以上版本</li>
-<li>应用依赖 <code>pywebview</code> 库，需要提前安装</li>
-<li>退出功能通过自定义的 <code>Api</code> 类实现，确保窗口正确关闭</li>
-</ul>
-<p><img src="https://livefile.xesimg.com/programme/python_assets/607b033467afcc05682aa46e678451e9.webp" alt="效果图" title="效果图"></p>
+<p>至此，你又学会了使用资源嗅探插件完成音频获取。</p>
+<blockquote>
+<p>关于资源嗅探插件的题外话：</p>
+<p>其实我本人更习惯用 IDM 的插件，能直接转到多线程下载器下载文件。同样的还有 FDM、NDM 之类的下载器，但资源嗅探方面肯定还是不如前文讲的那个插件强。</p>
+</blockquote>
+<h3 id="方法2：第三方"><a href="#方法2：第三方" class="headerlink" title="方法2：第三方"></a>方法2：第三方</h3><p>有些第三方网易云音乐播放器（客户端、网页端）支持直接下载音乐，比如开源的“洛雪音乐”（很遗憾这个播放器基本上很难使用了），桌面端的 Alger Music Player 也是能下载的。</p>
+<p><img src="https://www.appmiu.com/wp-content/uploads/2024/12/image-7.webp"></p>
+<p>我在用的是<a target="_blank" rel="noopener" href="https://music.alger.fun/">网页版的 Alger Music Player</a>，这是一个开源的基于网易云音乐的播放器，搭配资源嗅探插件也能完成下载。</p>
 
         
       </div>
@@ -357,25 +343,20 @@
 <nav id="article-nav">
   <a class="article-nav-btn left "
     
-      href="/2026/01/01/edde37d5539b/"
-      title="给Photopea标题栏左上角加上个图标"
+      href="/2023/12/02/ec75e915d18f/"
+      title="设置文件资源管理器上下文菜单弹出位置"
      >
     <i class="fa-solid fa-angle-left"></i>
     <p class="title-text">
       
-        给Photopea标题栏左上角加上个图标
+        设置文件资源管理器上下文菜单弹出位置
         
     </p>
   </a>
-  <a class="article-nav-btn right "
-    
-      href="/2025/11/22/8d0a2d3e5f46/"
-      title="破解 LanStar8 极简方案"
+  <a class="article-nav-btn right  disabled "
      >
 
     <p class="title-text">
-      
-        破解 LanStar8 极简方案
         
     </p>
     <i class="fa-solid fa-angle-right"></i>
