@@ -124,11 +124,11 @@
       <div class="subtitle">Hello World! </div>
       <div class="link-list">
         
-          <a class="link-btn" target="_blank" rel="noopener" href="https://space.bilibili.com/3546590432201019" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a>
+          <a class="link-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://space.bilibili.com/3546590432201019" title="Bilibili"><i class="fa-brands fa-bilibili"></i></a>
         
-          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com/zfrg" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a class="link-btn" target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/zfrg" title="GitHub"><i class="fa-brands fa-github"></i></a>
         
-          <a class="link-btn" href="mailto:zfruiguo2010@163.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a class="link-btn" href="mailto:zfruiguo2010@163.com" rel="external nofollow noreferrer" title="Email"><i class="fa-solid fa-envelope"></i></a>
          
       </div>  
     </div>
@@ -305,7 +305,7 @@
 <p>后来有一节上课时候没忍住，去仔细研究了一下这个 LanStar8 。那次的研究结果就是发现了主程序就是<code>LanClt.exe</code>，由于任务管理器被禁用了，所以当时还是费了些力气的。</p>
 <p>我当时思考了一下，感觉可以直接<code>taskkill</code>起手，就像当年初中的时候对付极域一样（那会还有再见极域用捏）。</p>
 <p>由于时间有限，我就没有在当时借机深入研究。</p>
-<h3 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h3><p>后来，我就去搜索引擎去搜索相关文章。然后就找到了<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">这篇文章</a>。（于 2013-06-07 13:12:57 发布，还是 LanStar7……真是篇有年代感的文章啊……）</p>
+<h3 id="破解"><a href="#破解" class="headerlink" title="破解"></a>破解</h3><p>后来，我就去搜索引擎去搜索相关文章。然后就找到了<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/gigzhu/article/details/9046383">这篇文章</a>。（于 2013-06-07 13:12:57 发布，还是 LanStar7……真是篇有年代感的文章啊……）</p>
 <blockquote>
 <p>好消息：有用，好用。（完整流程，过程详细，HingC大佬还是很强的👍）</p>
 <p>坏消息：不适用。（略复杂，学校机房这么搞动作太大了，不适合我这边使用）</p>
@@ -324,7 +324,7 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs batch">CMD.exe /C reg add &quot;HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\EaseOfAccessDialog.exe&quot; /v Debugger /t REG_SZ /d &quot;k.bat&quot; /f &amp; echo @echo off ^&amp;^&amp; cls &gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im CtrlProcess.exe &gt;&gt; C:\Windows\k.bat &amp; echo taskkill /t /f /im LanClt.exe &gt;&gt; C:\Windows\k.bat &amp; echo echo success ^&amp;^&amp; exit /b &gt;&gt; C:\Windows\k.bat<br></code></pre></td></tr></table></figure>
 
 <p>使用方法也很简单，用 <kbd>Win</kbd>+<kbd>R</kbd> 呼出运行框，按 <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Enter</kbd> 以管理员身份运行<code>CMD</code>，把复制下来的代码在终端执行，就能完成所有配置，和手动配置的效果完全相同。</p>
-<h3 id="并未结束"><a href="#并未结束" class="headerlink" title="并未结束"></a>并未结束</h3><p>信息技术老师也是十分厉害。两块屏幕，一个放PPT，另一个就看我们有没有谁下线了。并且，这个 LanStar8 在重新连接上后就会放阴乐（）。阴乐还好，静音就行了。但是被发现下线了可就不好了。所以下一步，我的计划是利用<code>pywin32</code>结合那篇<a target="_blank" rel="noopener" href="https://blog.csdn.net/gigzhu/article/details/9046383">文章</a>，用 Python 实现部分功能（若成功，我可能会发到一篇新文章）。</p>
+<h3 id="并未结束"><a href="#并未结束" class="headerlink" title="并未结束"></a>并未结束</h3><p>信息技术老师也是十分厉害。两块屏幕，一个放PPT，另一个就看我们有没有谁下线了。并且，这个 LanStar8 在重新连接上后就会放阴乐（）。阴乐还好，静音就行了。但是被发现下线了可就不好了。所以下一步，我的计划是利用<code>pywin32</code>结合那篇<a target="_blank" rel="noopener external nofollow noreferrer" href="https://blog.csdn.net/gigzhu/article/details/9046383">文章</a>，用 Python 实现部分功能（若成功，我可能会发到一篇新文章）。</p>
 
         
       </div>
@@ -380,7 +380,7 @@
   <div id="footer-info" class="inner">
     
     &copy; 2026 竹枫若官zfrg<br>
-    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
+    Powered by <a href="https://hexo.io/" rel="external nofollow noreferrer" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener external nofollow noreferrer" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a>
   </div>
 </footer>
 
