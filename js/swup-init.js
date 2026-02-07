@@ -1,9 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // 检查Swup是否正常加载（方便调试，可保留）
-  if (typeof Swup === 'undefined') {
-    console.warn('Swup核心库加载失败，请检查CDN地址');
-    return;
-  }
   // 初始化Swup，配置与Fuwari完全一致
   const swup = new Swup({
     containers: ['#content-body'], // 与Fuwari核心容器一致
