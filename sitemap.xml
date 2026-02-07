@@ -4,7 +4,16 @@
   <url>
     <loc>https://zfrg-blog.de5.net/about/index.html</loc>
     
-    <lastmod>2026-02-02</lastmod>
+    <lastmod>2026-02-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://zfrg-blog.de5.net/metingjs/index.html</loc>
+    
+    <lastmod>2026-02-07</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

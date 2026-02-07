@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <!-- 保留 APlayer 核心样式 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/aplayer@1.10.1/dist/APlayer.min.js"></script>
+  <style>
+    /* 1. 重置页面默认样式，消除全局边距 */
+    body,
+    .aplayer {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      max-height: 100vh;
+    }
+
+    aplayer-list * {
+      max-height: 100%;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 播放器容器 -->
+  <div id="manual-player"></div>
+
+  <script>
+    // 手动调用MetingJS的接口获取音乐数据，再初始化APlayer
+    async function createPlayer() {
+      const container = document.getElementById('manual-player');
+      const urlParams = new URLSearchParams(window.location.search);
+
+      // 配置（URL参数优先，兜底默认值）
+      const config = {
+        server: urlParams.get('server') || 'netease',
+        type: urlParams.get('type') || 'playlist',
+        id: urlParams.get('id') || '755597177'
+      };
+
+      try {
+        // 1. 调用MetingJS的API获取音乐数据（核心接口）
+        const data = await fetch(`https://api.i-meto.com/meting/api?server=${config.server}&type=${config.type}&id=${config.id}`);
+        const songs = await data.json();
+
+        // 2. 手动初始化APlayer（适配全屏样式）
+        const ap = new APlayer({
+          container: container,
+          audio: songs,
+          autoplay: urlParams.get('autoplay') || false,
+          theme: urlParams.get('theme') || '#AD7A86',       /* 主题色，可根据需求修改 */
+          loop: urlParams.get('loop') || 'all',            /* 循环模式：all/one/none */
+          volume: urlParams.get('volume') || 0.7,            /* 音量：0-1 */
+          lrcType: urlParams.get('lrcType') || 3,             /* 滚动歌词（全屏更适配） */
+          listFolded: urlParams.get('listFolded') || false,      /* 播放列表默认展开（全屏无需折叠） */
+          listMaxHeight: urlParams.get('listMaxHeight') || 'calc(100vh - 90px)',  /* 取消列表最大高度限制 */
+          mutex: urlParams.get('mutex') || true             /* 防止多个播放器同时播放 */
+        });
+
+        console.log('播放器创建成功', ap);
+      } catch (e) {
+        console.error('播放器创建失败', e);
+        alert('播放器创建失败：' + e.message);
+      }
+    }
+
+    // 页面加载完成后执行
+    window.addEventListener('load', createPlayer);
+  </script>
+</body>
+
+</html>
