@@ -3,6 +3,11 @@
     "icon": "Blog",
     "name": "博客",
     "link": "https://blog.imzfrg.top/"
+  },
+  {
+    "icon": "CompactDisc",
+    "name": "音乐",
+    "link": "http://music.alger.fun/#/music-list/4930339442?type=playlist"
   }
 ]
 
